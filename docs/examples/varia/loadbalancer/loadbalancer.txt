@@ -1,1 +1,0 @@
-See http://jboss.org/wiki/Wiki.jsp?page=HTTPLoadbalancer for documentation.
