@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ===================================================================== -->
+
+<!--                                                                       -->
+
+<!--  JBoss Server Configuration                                           -->
+
+<!--                                                                       -->
+
+<!-- ===================================================================== -->
+
+<!-- $Id: postgres-ds.xml,v 1.2 2006/01/05 20:55:39 rodrigo Exp $ -->
+
+<!-- ==================================================================== -->
+
+<!--  Datasource config for Postgres                                      -->
+
+<!-- ==================================================================== -->
+
+<!-- DESENV ANTIGO -->
+<!--<datasources>
+	<local-tx-datasource>      		
+		<jndi-name>PostgresDS</jndi-name>    		
+		<connection-url>jdbc:postgresql://10.20.100.106/comercial</connection-url>    		
+		<driver-class>org.postgresql.Driver</driver-class>    
+		<user-name>postgres</user-name>	
+		<password>desenv</password> 
+	
+		<min-pool-size>5</min-pool-size>		
+		<max-pool-size>200</max-pool-size>		
+		<idle-timeout-minutes>2</idle-timeout-minutes>		
+		<prepared-statement-cache-size>40</prepared-statement-cache-size>     
+	</local-tx-datasource>
+
+  	<local-tx-datasource>   	
+		<jndi-name>PostgresGerencialDS</jndi-name>
+		<connection-url>jdbc:postgresql://10.20.100.106/gerencial</connection-url>   	
+		<driver-class>org.postgresql.Driver</driver-class> 
+  		<user-name>postgres</user-name> 
+		<password>desenv</password>   
+	</local-tx-datasource>   
+</datasources>-->
+<!-- FIM DESENV ANTIGO -->
+
+
+
+<!-- HOMOLOGAÇÃO -->
+<datasources>
+	<local-tx-datasource>      		
+		<jndi-name>PostgresDS</jndi-name>    		
+		<connection-url>jdbc:postgresql://10.20.100.26/comercial</connection-url>    		
+		<driver-class>org.postgresql.Driver</driver-class>    
+		<user-name>pamela</user-name>	
+		<password>pamela</password>
+	
+		<min-pool-size>5</min-pool-size>		
+		<max-pool-size>200</max-pool-size>		
+		<idle-timeout-minutes>2</idle-timeout-minutes>		
+		<prepared-statement-cache-size>40</prepared-statement-cache-size>     
+	</local-tx-datasource>
+
+  	<local-tx-datasource>   	
+		<jndi-name>PostgresGerencialDS</jndi-name>
+		<connection-url>jdbc:postgresql://10.20.100.26/gerencial</connection-url>   	
+		<driver-class>org.postgresql.Driver</driver-class> 
+  		<user-name>pamela</user-name> 
+		<password>pamela</password>
+		
+	</local-tx-datasource>   
+</datasources>
+<!-- FIM HOMOLOGAÇÃO -->
+
+
+
+<!-- TREINAMENTO -->
+<!--<datasources>
+	<local-tx-datasource>      		
+		<jndi-name>PostgresDS</jndi-name>    		
+		<connection-url>jdbc:postgresql://10.20.1.15/comercial</connection-url>    		
+		<driver-class>org.postgresql.Driver</driver-class>    
+		<user-name>pamela</user-name>	
+		<password>pamela</password>
+	
+		<min-pool-size>5</min-pool-size>		
+		<max-pool-size>200</max-pool-size>		
+		<idle-timeout-minutes>2</idle-timeout-minutes>		
+		<prepared-statement-cache-size>40</prepared-statement-cache-size>     
+	</local-tx-datasource>
+
+  	<local-tx-datasource>   	
+		<jndi-name>PostgresGerencialDS</jndi-name>
+		<connection-url>jdbc:postgresql://10.20.1.15/gerencial</connection-url>   	
+		<driver-class>org.postgresql.Driver</driver-class> 
+  		<user-name>pamela</user-name> 
+		<password>pamela</password>
+		
+	</local-tx-datasource>   
+</datasources>-->
+<!-- FIM TREINAMENTO -->
+
+<!-- DESENV -->
+<!--<datasources>
+	<local-tx-datasource>      		
+		<jndi-name>PostgresDS</jndi-name>    		
+		<connection-url>jdbc:postgresql://10.20.100.38/comercial</connection-url>    		
+		<driver-class>org.postgresql.Driver</driver-class>    
+		<user-name>pamela</user-name>	
+		<password>pamela</password>
+	
+		<min-pool-size>5</min-pool-size>		
+		<max-pool-size>200</max-pool-size>		
+		<idle-timeout-minutes>2</idle-timeout-minutes>		
+		<prepared-statement-cache-size>40</prepared-statement-cache-size>     
+	</local-tx-datasource>
+
+  	<local-tx-datasource>   	
+		<jndi-name>PostgresGerencialDS</jndi-name>
+		<connection-url>jdbc:postgresql://10.20.100.38/gerencial</connection-url>
+		<driver-class>org.postgresql.Driver</driver-class> 
+  		<user-name>pamela</user-name> 
+		<password>pamela</password>
+	</local-tx-datasource>
+</datasources>-->
+<!-- FIM DESENV -->

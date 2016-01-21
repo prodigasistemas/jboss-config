@@ -1,0 +1,26 @@
+<?xml version = "1.0"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_Service.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest xmlns = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rs.xsd" xmlns:rim = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:rs = "urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1">  
+	<LeafRegistryObjectList>
+<Service id="urn:uuid:e3373a7b-4958-4e55-8820-d03a191fb76e">
+<Name>
+<LocalizedString lang="en_US" value =
+"service 1"/>
+</Name>
+<Description>
+<LocalizedString lang="en_US" value =
+"trial service"/>
+</Description>
+<Slot name = 'name1'>
+<ValueList>
+<Value>value1</Value>
+</ValueList>
+</Slot>
+<Slot name = 'name2'>
+<ValueList>
+<Value>value2</Value>
+</ValueList>
+</Slot>
+</Service>  		    
+	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

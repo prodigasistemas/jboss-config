@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Schema name="ResumoLigacaoEconomia">
+    <Cube name="ResumoLigacaoEconomia">
+        <Table name="resumo_ligacoes_economia"/>
+        <Dimension name="Categorias" foreignKey="catg_id">
+            <Hierarchy name="categoria" hasAll="true" allMemberName="Todas Categorias" primaryKey="catg_id">
+                <Table name="categoria" schema="cadastro"/>
+                <Level name="id" column="catg_id" uniqueMembers="false"/>
+            </Hierarchy>
+        </Dimension>
+        <Dimension name="LigacoesEsgotoSituacao" foreignKey="lest_id">
+            <Hierarchy name="ligacaoEsgotoSituacao" hasAll="true" allMemberName="Todas ligacoesEsgotoSituacao" primaryKey="lest_id">
+                <Table name="ligacao_esgoto_situacao" schema="atendimentopublico"/>
+                <Level name="id" column="lest_id" uniqueMembers="false"/>
+            </Hierarchy>
+        </Dimension>
+        <Dimension name="LigacoesAguaSituacao" foreignKey="last_id">
+            <Hierarchy name="ligacaoAguaSituacao" hasAll="true" allMemberName="Todas LigacoesAguaSituacao" primaryKey="last_id">
+                <Table name="ligacao_agua_situacao" schema="atendimentopublico"/>
+                <Level name="id" column="last_id" uniqueMembers="false"/>
+            </Hierarchy>
+        </Dimension>
+        <Dimension name="ImoveisPerfil" foreignKey="iper_id">
+            <Hierarchy name="imovelPerfil" hasAll="true" allMemberName="Todos ImoveisPerfil" primaryKey="iper_id">
+                <Table name="imovel_perfil" schema="cadastro"/>
+                <Level name="id" column="iper_id" uniqueMembers="false"/>
+            </Hierarchy>
+        </Dimension>
+        <Dimension name="Localidades" foreignKey="loca_id">
+        	<Table name="localidade" schema="cadastro"/>
+            <Hierarchy name="localidade" hasAll="true" allMemberName="Todas Localidades" primaryKey="loca_id">
+                <Join leftKey="stcm_id" rightKey="stcm_id">
+                    <Table name="rota" schema="micromedicao"/>
+                    <Table name="setor_comercial" schema="cadastro"/>
+                    <Join leftKey="loca_id" rightKey="loca_id">
+                        <Table name="setor_comercial" schema="cadastro"/>
+                        <Table name="localidade" schema="cadastro"/>
+                        <Level name="id" column="loca_id" uniqueMembers="false"/>
+                    </Join>
+                </Join>
+
+            </Hierarchy>
+        </Dimension>
+        <Dimension name="GerenciasRegionais" foreignKey="greg_id">
+        	<Table name="gerencia_regional" schema="cadastro"/>
+            <Hierarchy name="gerenciaRegional" hasAll="true" allMemberName="Todas GerenciasRegionais" primaryKey="greg_id">
+                <Join leftKey="stcm_id" rightKey="stcm_id">
+                    <Table name="rota" schema="micromedicao"/>
+                    <Table name="setor_comercial" schema="cadastro"/>
+                    <Join leftKey="loca_id" rightKey="loca_id">
+                        <Table name="setor_comercial" schema="cadastro"/>
+                        <Table name="localidade" schema="cadastro"/>
+                    </Join>
+                    <Join leftKey="greg_id" rightKey="greg_id">
+                        <Table name="localidade" schema="cadastro"/>
+                        <Table name="gerencia_regional" schema="cadastro"/>
+                        <Level name="id" column="greg_id" uniqueMembers="false"/>
+                    </Join>
+                </Join>
+                
+            </Hierarchy>
+        </Dimension>
+        <Dimension name="EsferasPoder" foreignKey="epod_id">
+            <Hierarchy name="esferaPoder" hasAll="true" allMemberName="Todas EsferasPoder" primaryKey="epod_id">
+                <Table name="esfera_poder" schema="cadastro"/>
+                <Level name="id" column="epod_id" uniqueMembers="false"/>
+            </Hierarchy>
+        </Dimension>
+        <Dimension name="Quadras" foreignKey="qdra_id">
+            <Hierarchy name="Quadra" hasAll="true" allMemberName="Todas Quadras" primaryKey="qdra_id">
+                <Table name="quadra" schema="cadastro"/>
+                <Level name="id"  column="qdra_id" uniqueMembers="false"/>
+            </Hierarchy>
+        </Dimension>
+        <Dimension name="Rotas" foreignKey="rota_id">
+            <Hierarchy name="rota" hasAll="true" allMemberName="Todas Rotas" primaryKey="rota_id">
+                <Table name="rota" schema="micromedicao"/>
+                <Level name="id" column="rota_id" uniqueMembers="false"/>
+            </Hierarchy>
+        </Dimension>
+        <Dimension name="SetoresComerciais" foreignKey="stcm_id">
+        	<Table name="setor_comercial" schema="cadastro"/>
+            <Hierarchy name="setorComercial" hasAll="true" allMemberName="Todos SetoresComerciais" primaryKey="stcm_id">
+                <Join leftKey="stcm_id" rightKey="stcm_id">
+                    <Table name="rota" schema="micromedicao"/>
+                    <Table name="setor_comercial" schema="cadastro"/>
+                </Join>
+                <Level name="id" table="setor_comercial" column="stcm_id" uniqueMembers="false"/>
+            </Hierarchy>
+        </Dimension>
+        <Measure name="Total Resumo_Ligacoes_Economia" column="lest_id" aggregator="sum" datatype="Integer" formatString="#.##0"/>
+    </Cube>
+</Schema>

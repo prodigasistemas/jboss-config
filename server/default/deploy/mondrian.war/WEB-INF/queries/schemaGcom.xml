@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Schema name="OLAPGcom">
+	<Cube name="ResumoLigacaoEconomia">
+		<Table name="resumo_ligacoes_economia" schema="cadastro" />
+		<Dimension name="Categorias" foreignKey="catg_id"
+			caption="Categoria">
+			<Hierarchy name="categoria" hasAll="true"
+				allMemberName="Todas Categorias" primaryKey="catg_id">
+				<Table name="categoria" schema="cadastro" />
+				<Level name="descricaoCategoria"
+					column="catg_dsabreviado" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="LigacoesEsgotoSituacao" foreignKey="lest_id"
+			caption="Situação de Esgoto">
+			<Hierarchy name="ligacaoEsgotoSituacao" hasAll="true"
+				allMemberName="Todas Situações de Esgoto" primaryKey="lest_id">
+				<Table name="ligacao_esgoto_situacao"
+					schema="atendimentopublico" />
+				<Level name="descricaoEsgotoSituacao"
+					column="lest_dsligacaoesgotosituacao" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="LigacoesAguaSituacao" foreignKey="last_id"
+			caption="Situação de Água">
+			<Hierarchy name="ligacaoAguaSituacao" hasAll="true"
+				allMemberName="Todas Situações de Água" primaryKey="last_id">
+				<Table name="ligacao_agua_situacao"
+					schema="atendimentopublico" />
+				<Level name="descricaoAguaSituacao"
+					column="last_dsligacaoaguasituacao" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="ImoveisPerfil" foreignKey="iper_id"
+			caption="Perfil do Imóvel">
+			<Hierarchy name="imovelPerfil" hasAll="true"
+				allMemberName="Todos Perfis de Imóvel" primaryKey="iper_id">
+				<Table name="imovel_perfil" schema="cadastro" />
+				<Level name="descricaoImovelPerfil"
+					column="iper_dsimovelperfil" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="Localidades" foreignKey="loca_id"
+			caption="Localidade">
+			<Hierarchy name="localidade" hasAll="true"
+				allMemberName="Todas Localidades" primaryKey="loca_id">
+				<Table name="localidade" schema="cadastro" />
+				<Level name="nomeLocalidade" column="loca_nmlocalidade"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+
+		<Dimension name="GerenciasRegionais" foreignKey="greg_id"
+			caption="Gerência Regional">
+			<Hierarchy name="gerenciaRegional" hasAll="true"
+				allMemberName="Todas Gerencias Regionais" primaryKey="greg_id">
+				<Table name="gerencia_regional" schema="cadastro" />
+				<Level name="nomeGerenciaRegional"
+					column="greg_nmregional" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="EsferasPoder" foreignKey="epod_id"
+			caption="Esfera Poder">
+			<Hierarchy name="esferaPoder" hasAll="true"
+				allMemberName="Todas Esferas Poder" primaryKey="epod_id">
+				<Table name="esfera_poder" schema="cadastro" />
+				<Level name="descricaoEsferaPoder"
+					column="epod_dsesferapoder" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="Quadras" foreignKey="qdra_id"
+			caption="Quadra">
+			<Hierarchy name="Quadra" hasAll="true"
+				allMemberName="Todas Quadras" primaryKey="qdra_id">
+				<Table name="quadra" schema="cadastro" />
+				<Level name="numeroQuadra" column="qdra_nnquadra"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="Rotas" foreignKey="rota_id" caption="Rota">
+			<Hierarchy name="rota" hasAll="true"
+				allMemberName="Todas Rotas" primaryKey="rota_id">
+				<Table name="rota" schema="micromedicao" />
+				<Level name="rota_id" column="rota_id"
+					uniqueMembers="false" />
+				<Level name="indicadorUsoRota" column="rota_icuso"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="SetoresComerciais" foreignKey="stcm_id"
+			caption="Setor Comercial">
+			<Hierarchy name="setorComercial" hasAll="true"
+				allMemberName="Todos Setores Comerciais" primaryKey="stcm_id">
+				<Table name="setor_comercial" schema="cadastro" />
+				<Level name="nomeSetorComercial"
+					column="stcm_nmsetorcomercial" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+
+
+		<Measure name="Total Resumo_Ligacoes_Economia" column="lest_id"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+		<Measure name="ligacoesComHidrometro"
+			caption="Ligações com Hidrômetro" column="rele_qtligchidrometro"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+		<Measure name="ligacoesSemHidrometro"
+			caption="Ligações sem Hidrômetro" column="rele_qtligshidrometro"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+		<Measure name="economiasComHidrometro"
+			caption="Economias com Hidrometro" column="rele_qtecochidrometro"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+		<Measure name="economiasSemHidrometro"
+			caption="Economias sem Hidrometro" column="rele_qtecoshidrometro"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+		<CalculatedMember name="TotalLigacoesHidrometro"
+			dimension="Measures" caption="Total Ligações">
+			<Formula>
+				[Measures].[ligacoesComHidrometro] +
+				[Measures].[ligacoesSemHidrometro]
+			</Formula>
+		</CalculatedMember>
+		<CalculatedMember name="TotalEconomiasHidrometro"
+			dimension="Measures" caption="Total de Economias">
+			<Formula>
+				[Measures].[economiasComHidrometro] +
+				[Measures].[economiasSemHidrometro]
+			</Formula>
+		</CalculatedMember>
+
+
+	</Cube>
+
+	<Cube name="ResumoSituacaoEspecialFaturamento">
+		<Table name="rfse" />
+		<Dimension name="Categorias" foreignKey="catg_id"
+			caption="Categoria">
+			<Hierarchy name="categoria" hasAll="true"
+				allMemberName="Todas Categorias" primaryKey="catg_id">
+				<Table name="categoria" schema="cadastro" />
+				<Level name="descricaoCategoria"
+					column="catg_dsabreviado" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="LigacoesEsgotoSituacao" foreignKey="lest_id"
+			caption="Situação de Esgoto">
+			<Hierarchy name="ligacaoEsgotoSituacao" hasAll="true"
+				allMemberName="Todas Situações de Esgoto" primaryKey="lest_id">
+				<Table name="ligacao_esgoto_situacao"
+					schema="atendimentopublico" />
+				<Level name="descricaoEsgotoSituacao"
+					column="lest_dsligacaoesgotosituacao" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="LigacoesAguaSituacao" foreignKey="last_id"
+			caption="Situação de Água">
+			<Hierarchy name="ligacaoAguaSituacao" hasAll="true"
+				allMemberName="Todas Situações de Água" primaryKey="last_id">
+				<Table name="ligacao_agua_situacao"
+					schema="atendimentopublico" />
+				<Level name="descricaoAguaSituacao"
+					column="last_dsligacaoaguasituacao" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="ImoveisPerfil" foreignKey="iper_id"
+			caption="Perfil do Imóvel">
+			<Hierarchy name="imovelPerfil" hasAll="true"
+				allMemberName="Todos Perfis de Imóvel" primaryKey="iper_id">
+				<Table name="imovel_perfil" schema="cadastro" />
+				<Level name="descricaoImovelPerfil"
+					column="iper_dsimovelperfil" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="Localidades" foreignKey="loca_id"
+			caption="Localidade">
+			<Hierarchy name="localidade" hasAll="true"
+				allMemberName="Todas Localidades" primaryKey="loca_id">
+				<Table name="localidade" schema="cadastro" />
+				<Level name="nomeLocalidade" column="loca_nmlocalidade"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="GerenciasRegionais" foreignKey="greg_id"
+			caption="Gerência Regional">
+			<Hierarchy name="gerenciaRegional" hasAll="true"
+				allMemberName="Todas Gerencias Regionais" primaryKey="greg_id">
+				<Table name="gerencia_regional" schema="cadastro" />
+				<Level name="nomeGerenciaRegional"
+					column="greg_nmregional" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="EsferasPoder" foreignKey="epod_id"
+			caption="Esfera Poder">
+			<Hierarchy name="esferaPoder" hasAll="true"
+				allMemberName="Todas Esferas Poder" primaryKey="epod_id">
+				<Table name="esfera_poder" schema="cadastro" />
+				<Level name="descricaoEsferaPoder"
+					column="epod_dsesferapoder" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="Quadras" foreignKey="qdra_id"
+			caption="Quadra">
+			<Hierarchy name="Quadra" hasAll="true"
+				allMemberName="Todas Quadras" primaryKey="qdra_id">
+				<Table name="quadra" schema="cadastro" />
+				<Level name="numeroQuadra" column="qdra_nnquadra"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="Rotas" foreignKey="rota_id" caption="Rota">
+			<Hierarchy name="rota" hasAll="true"
+				allMemberName="Todas Rotas" primaryKey="rota_id">
+				<Table name="rota" schema="micromedicao" />
+				<Level name="rota_id" column="rota_id"
+					uniqueMembers="false" />
+				<Level name="indicadorUsoRota" column="rota_icuso"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="FaturamentoSituacaoTipo" foreignKey="ftst_id"
+			caption="Tipo do Faturamento">
+			<Hierarchy name="faturamentoSituacaoTipo" hasAll="true"
+				allMemberName="Todos Tipos de Faturamento" primaryKey="ftst_id">
+				<Table name="faturamento_situacao_tipo"
+					schema="faturamento" />
+				<Level name="descricao"
+					column="ftst_dsfaturamentosituacaotipo" uniqueMembers="false" />
+
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="FaturamentoSituacaoMotivo" foreignKey="ftsm_id"
+			caption="Motivo do Faturamento">
+			<Hierarchy name="faturamentoSituacaoMotivo" hasAll="true"
+				allMemberName="Todos Motivos do Faturamento" primaryKey="ftsm_id">
+				<Table name="faturamento_situacao_motivo"
+					schema="faturamento" />
+				<Level name="descricao"
+					column="ftsm_dsfaturamentosituacaomotivo" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="SetoresComerciais" foreignKey="stcm_id"
+			caption="Setor Comercial">
+			<Hierarchy name="setorComercial" hasAll="true"
+				allMemberName="Todos Setores Comerciais" primaryKey="stcm_id">
+				<Table name="setor_comercial" schema="cadastro" />
+				<Level name="nomeSetorComercial"
+					column="stcm_nmsetorcomercial" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+
+		<Dimension name="Inicio">
+			<Hierarchy name="inicio" hasAll="true">
+				<Level name="inicio"
+					column="rfse_amfaturamentosituacaoinicio" uniqueMembers="false" />
+			</Hierarchy>
+
+		</Dimension>
+
+		<Dimension name="Término">
+			<Hierarchy name="termino" hasAll="true">
+				<Level name="termino"
+					column="rfse_amfaturamentosituacaofim" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+
+		<Measure name="Quantidade de Imóveis"
+			caption="Quantidade Paralisada" column="rfse_qtimoveis"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+
+		<Measure name="Quantidade de Ligações" column="rele_qtligacoes"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+
+		<Measure name="Faturamento Estimado" column="rfts_fatestimado"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+
+
+	</Cube>
+
+	<Cube name="ResumoAnormalidadesConsumo">
+		<Table name="resumo_anormalidade_consumo" schema="micromedicao" />
+		<Dimension name="Categorias" foreignKey="catg_id"
+			caption="Categoria">
+			<Hierarchy name="categoria" hasAll="true"
+				allMemberName="Todas Categorias" primaryKey="catg_id">
+				<Table name="categoria" schema="cadastro" />
+				<Level name="descricaoCategoria"
+					column="catg_dsabreviado" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="LigacoesEsgotoSituacao" foreignKey="lest_id"
+			caption="Situação de Esgoto">
+			<Hierarchy name="ligacaoEsgotoSituacao" hasAll="true"
+				allMemberName="Todas Situações de Esgoto" primaryKey="lest_id">
+				<Table name="ligacao_esgoto_situacao"
+					schema="atendimentopublico" />
+				<Level name="descricaoEsgotoSituacao"
+					column="lest_dsligacaoesgotosituacao" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="LigacoesAguaSituacao" foreignKey="last_id"
+			caption="Situação de Água">
+			<Hierarchy name="ligacaoAguaSituacao" hasAll="true"
+				allMemberName="Todas Situações de Água" primaryKey="last_id">
+				<Table name="ligacao_agua_situacao"
+					schema="atendimentopublico" />
+				<Level name="descricaoAguaSituacao"
+					column="last_dsligacaoaguasituacao" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="ImoveisPerfil" foreignKey="iper_id"
+			caption="Perfil do Imóvel">
+			<Hierarchy name="imovelPerfil" hasAll="true"
+				allMemberName="Todos Perfis de Imóvel" primaryKey="iper_id">
+				<Table name="imovel_perfil" schema="cadastro" />
+				<Level name="descricaoImovelPerfil"
+					column="iper_dsimovelperfil" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="Localidades" foreignKey="loca_id"
+			caption="Localidade">
+			<Hierarchy name="localidade" hasAll="true"
+				allMemberName="Todas Localidades" primaryKey="loca_id">
+				<Table name="localidade" schema="cadastro" />
+				<Level name="nomeLocalidade" column="loca_nmlocalidade"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="GerenciasRegionais" foreignKey="greg_id"
+			caption="Gerência Regional">
+			<Hierarchy name="gerenciaRegional" hasAll="true"
+				allMemberName="Todas Gerencias Regionais" primaryKey="greg_id">
+				<Table name="gerencia_regional" schema="cadastro" />
+				<Level name="nomeGerenciaRegional"
+					column="greg_nmregional" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="EsferasPoder" foreignKey="epod_id"
+			caption="Esfera Poder">
+			<Hierarchy name="esferaPoder" hasAll="true"
+				allMemberName="Todas Esferas Poder" primaryKey="epod_id">
+				<Table name="esfera_poder" schema="cadastro" />
+				<Level name="descricaoEsferaPoder"
+					column="epod_dsesferapoder" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="Quadras" foreignKey="qdra_id"
+			caption="Quadra">
+			<Hierarchy name="Quadra" hasAll="true"
+				allMemberName="Todas Quadras" primaryKey="qdra_id">
+				<Table name="quadra" schema="cadastro" />
+				<Level name="numeroQuadra" column="qdra_nnquadra"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="Rotas" foreignKey="rota_id" caption="Rota">
+			<Hierarchy name="rota" hasAll="true"
+				allMemberName="Todas Rotas" primaryKey="rota_id">
+				<Table name="rota" schema="micromedicao" />
+				<Level name="rota_id" column="rota_id"
+					uniqueMembers="false" />
+				<Level name="indicadorUsoRota" column="rota_icuso"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="SetoresComerciais" foreignKey="stcm_id"
+			caption="Setor Comercial">
+			<Hierarchy name="setorComercial" hasAll="true"
+				allMemberName="Todos Setores Comerciais" primaryKey="stcm_id">
+				<Table name="setor_comercial" schema="cadastro" />
+				<Level name="nomeSetorComercial"
+					column="stcm_nmsetorcomercial" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="ConsumoAnormalidades" foreignKey="csan_id" caption="Consumo Anormalidade">
+			<Hierarchy name="consumoAnormalidades" hasAll="true"
+				allMemberName="Todos Consumos Anormalidade" primaryKey="csan_id">
+				<Table name="consumo_anormalidade"
+					schema="micromedicao" />
+				<Level name="descricao"
+					column="csan_dsconsumoanormalidade" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="LigacaoTipo" foreignKey="lgti_id" caption="Ligação Tipo">
+			<Hierarchy name="ligacaoTipo" hasAll="true"
+				allMemberName="Todas Ligações Tipo" primaryKey="lgti_id">
+				<Table name="ligacao_tipo" schema="micromedicao" />
+				<Level name="descricao" column="lgti_dsligacaotipo"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+
+		<Dimension name="AnoMesReferencia" caption="Referência Ano/Mês">
+			<Hierarchy name="anoMesReferencia" hasAll="true">
+				<Level name="anoMesReferencia"
+					column="reac_amreferencia" uniqueMembers="false"
+					allMemberName="Todas Referências" />
+			</Hierarchy>
+
+		</Dimension>
+
+
+
+		<Measure name="QuantidadeDeLigacoes" column="reac_qtdligacao" caption="Quantidade de Ligações"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+
+		<CalculatedMember name="Percentual" dimension="Measures">
+			<Formula>
+				[Measures].[QuantidadeDeLigacoes]/([Measures].[QuantidadeDeLigacoes],[ConsumoAnormalidades].CurrentMember.Parent)*100
+			</Formula>
+		</CalculatedMember>
+
+
+	</Cube>
+
+	<Cube name="ResumoAnormalidadesLeitura">
+		<Table name="resumo_anormalidade_leitura" schema="micromedicao" />
+
+		<!--<Dimension name="AnoMes">
+			<Hierarchy name="anoMes" hasAll="true">
+			<Level name="anoMes" column="real_amreferencia" uniqueMembers="false" allMemberName="Todos AnosMes"/>
+			</Hierarchy>
+			</Dimension>-->
+
+
+		<Dimension name="Categorias" foreignKey="catg_id"
+			caption="Categoria">
+			<Hierarchy name="categoria" hasAll="true"
+				allMemberName="Todas Categorias" primaryKey="catg_id">
+				<Table name="categoria" schema="cadastro" />
+				<Level name="descricaoCategoria"
+					column="catg_dsabreviado" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="LigacoesEsgotoSituacao" foreignKey="lest_id"
+			caption="Situação de Esgoto">
+			<Hierarchy name="ligacaoEsgotoSituacao" hasAll="true"
+				allMemberName="Todas Situações de Esgoto" primaryKey="lest_id">
+				<Table name="ligacao_esgoto_situacao"
+					schema="atendimentopublico" />
+				<Level name="descricaoEsgotoSituacao"
+					column="lest_dsligacaoesgotosituacao" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="LigacoesAguaSituacao" foreignKey="last_id"
+			caption="Situação de Água">
+			<Hierarchy name="ligacaoAguaSituacao" hasAll="true"
+				allMemberName="Todas Situações de Água" primaryKey="last_id">
+				<Table name="ligacao_agua_situacao"
+					schema="atendimentopublico" />
+				<Level name="descricaoAguaSituacao"
+					column="last_dsligacaoaguasituacao" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="ImoveisPerfil" foreignKey="iper_id"
+			caption="Perfil do Imóvel">
+			<Hierarchy name="imovelPerfil" hasAll="true"
+				allMemberName="Todos Perfis de Imóvel" primaryKey="iper_id">
+				<Table name="imovel_perfil" schema="cadastro" />
+				<Level name="descricaoImovelPerfil"
+					column="iper_dsimovelperfil" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="Localidades" foreignKey="loca_id"
+			caption="Localidade">
+			<Hierarchy name="localidade" hasAll="true"
+				allMemberName="Todas Localidades" primaryKey="loca_id">
+				<Table name="localidade" schema="cadastro" />
+				<Level name="nomeLocalidade" column="loca_nmlocalidade"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="GerenciasRegionais" foreignKey="greg_id"
+			caption="Gerência Regional">
+			<Hierarchy name="gerenciaRegional" hasAll="true"
+				allMemberName="Todas Gerencias Regionais" primaryKey="greg_id">
+				<Table name="gerencia_regional" schema="cadastro" />
+				<Level name="nomeGerenciaRegional"
+					column="greg_nmregional" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="EsferasPoder" foreignKey="epod_id"
+			caption="Esfera Poder">
+			<Hierarchy name="esferaPoder" hasAll="true"
+				allMemberName="Todas Esferas Poder" primaryKey="epod_id">
+				<Table name="esfera_poder" schema="cadastro" />
+				<Level name="descricaoEsferaPoder"
+					column="epod_dsesferapoder" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="Quadras" foreignKey="qdra_id"
+			caption="Quadra">
+			<Hierarchy name="Quadra" hasAll="true"
+				allMemberName="Todas Quadras" primaryKey="qdra_id">
+				<Table name="quadra" schema="cadastro" />
+				<Level name="numeroQuadra" column="qdra_nnquadra"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="Rotas" foreignKey="rota_id" caption="Rota">
+			<Hierarchy name="rota" hasAll="true"
+				allMemberName="Todas Rotas" primaryKey="rota_id">
+				<Table name="rota" schema="micromedicao" />
+				<Level name="rota_id" column="rota_id"
+					uniqueMembers="false" />
+				<Level name="indicadorUsoRota" column="rota_icuso"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="SetoresComerciais" foreignKey="stcm_id"
+			caption="Setor Comercial">
+			<Hierarchy name="setorComercial" hasAll="true"
+				allMemberName="Todos Setores Comerciais" primaryKey="stcm_id">
+				<Table name="setor_comercial" schema="cadastro" />
+				<Level name="nomeSetorComercial"
+					column="stcm_nmsetorcomercial" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="LeituraAnormalidade" foreignKey="ltan_id" caption="Leitura Anormalidade">
+			<Hierarchy name="leituraAnormalidade" hasAll="true"
+				allMemberName="Todas Leituras Anormalidades" primaryKey="ltan_id">
+				<Table name="leitura_anormalidade"
+					schema="micromedicao" />
+				<Level name="descricao"
+					column="ltan_dsleituraanormalidade" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="MedicaoTipo" foreignKey="medt_id" caption="Tipo Medição"> 
+			<Hierarchy name="medicaoTipo" hasAll="true">
+				<Table name="medicao_tipo" schema="micromedicao" />
+				<Level name="descricao" column="medt_dsmedicaotipo"
+					uniqueMembers="false" allMemberName="Todos Tipos de Medições" />
+			</Hierarchy>
+		</Dimension>
+
+		<Measure name="QuantidadeDeMedicoes" column="real_qtdmedicao" caption="Quantidade de Medições"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+
+		<CalculatedMember name="Percentual" dimension="Measures"
+			formatString="#,##0.00">
+			<Formula>
+				[Measures].[QuantidadeDeMedicoes]/([Measures].[QuantidadeDeMedicoes],[LeituraAnormalidade].CurrentMember.Parent)*100
+			</Formula>
+		</CalculatedMember>
+
+	</Cube>
+
+	<Cube name="ResumoSituacaoEspecialCobranca">
+		<Table name="resumo_cob_situacao_especial" schema="cobranca" />
+		<Dimension name="Categorias" foreignKey="catg_id"
+			caption="Categoria">
+			<Hierarchy name="categoria" hasAll="true"
+				allMemberName="Todas Categorias" primaryKey="catg_id">
+				<Table name="categoria" schema="cadastro" />
+				<Level name="descricaoCategoria"
+					column="catg_dsabreviado" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="LigacoesEsgotoSituacao" foreignKey="lest_id"
+			caption="Situação de Esgoto">
+			<Hierarchy name="ligacaoEsgotoSituacao" hasAll="true"
+				allMemberName="Todas Situações de Esgoto" primaryKey="lest_id">
+				<Table name="ligacao_esgoto_situacao"
+					schema="atendimentopublico" />
+				<Level name="descricaoEsgotoSituacao"
+					column="lest_dsligacaoesgotosituacao" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="LigacoesAguaSituacao" foreignKey="last_id"
+			caption="Situação de Água">
+			<Hierarchy name="ligacaoAguaSituacao" hasAll="true"
+				allMemberName="Todas Situações de Água" primaryKey="last_id">
+				<Table name="ligacao_agua_situacao"
+					schema="atendimentopublico" />
+				<Level name="descricaoAguaSituacao"
+					column="last_dsligacaoaguasituacao" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="ImoveisPerfil" foreignKey="iper_id"
+			caption="Perfil do Imóvel">
+			<Hierarchy name="imovelPerfil" hasAll="true"
+				allMemberName="Todos Perfis de Imóvel" primaryKey="iper_id">
+				<Table name="imovel_perfil" schema="cadastro" />
+				<Level name="descricaoImovelPerfil"
+					column="iper_dsimovelperfil" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="Localidades" foreignKey="loca_id"
+			caption="Localidade">
+			<Hierarchy name="localidade" hasAll="true"
+				allMemberName="Todas Localidades" primaryKey="loca_id">
+				<Table name="localidade" schema="cadastro" />
+				<Level name="nomeLocalidade" column="loca_nmlocalidade"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="GerenciasRegionais" foreignKey="greg_id"
+			caption="Gerência Regional">
+			<Hierarchy name="gerenciaRegional" hasAll="true"
+				allMemberName="Todas Gerencias Regionais" primaryKey="greg_id">
+				<Table name="gerencia_regional" schema="cadastro" />
+				<Level name="nomeGerenciaRegional"
+					column="greg_nmregional" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="EsferasPoder" foreignKey="epod_id"
+			caption="Esfera Poder">
+			<Hierarchy name="esferaPoder" hasAll="true"
+				allMemberName="Todas Esferas Poder" primaryKey="epod_id">
+				<Table name="esfera_poder" schema="cadastro" />
+				<Level name="descricaoEsferaPoder"
+					column="epod_dsesferapoder" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="Quadras" foreignKey="qdra_id"
+			caption="Quadra">
+			<Hierarchy name="Quadra" hasAll="true"
+				allMemberName="Todas Quadras" primaryKey="qdra_id">
+				<Table name="quadra" schema="cadastro" />
+				<Level name="numeroQuadra" column="qdra_nnquadra"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="Rotas" foreignKey="rota_id" caption="Rota">
+			<Hierarchy name="rota" hasAll="true"
+				allMemberName="Todas Rotas" primaryKey="rota_id">
+				<Table name="rota" schema="micromedicao" />
+				<Level name="rota_id" column="rota_id"
+					uniqueMembers="false" />
+				<Level name="indicadorUsoRota" column="rota_icuso"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="SetoresComerciais" foreignKey="stcm_id"
+			caption="Setor Comercial">
+			<Hierarchy name="setorComercial" hasAll="true"
+				allMemberName="Todos Setores Comerciais" primaryKey="stcm_id">
+				<Table name="setor_comercial" schema="cadastro" />
+				<Level name="nomeSetorComercial"
+					column="stcm_nmsetorcomercial" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="CobrancaSituacaoMotivo" foreignKey="cbsm_id" caption="Cobrança Situação Motivo">
+			<Hierarchy name="cobrancaSituacaoMotivo" hasAll="true"
+				allMemberName="Todos Cobrança Situação Motivo" primaryKey="cbsm_id">
+				<Table name="cobranca_situacao_motivo"
+					schema="cobranca" />
+				<Level name="motivo"
+					column="cbsm_dscobrancasituacaomotivo" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="CobrancaSituacaoTipo" foreignKey="cbsp_id" caption="Cobrança Situação Tipo">
+			<Hierarchy name="cobrancaSituacaoTipo" hasAll="true"
+				allMemberName="Todos Cobrança Situação Tipo" primaryKey="cbsp_id">
+				<Table name="cobranca_situacao_tipo" schema="cobranca" />
+				<Level name="tipo" column="cbsp_dscobrancasituacaotipo"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="Inicio" caption="Início">
+			<Hierarchy name="inicio" hasAll="true">
+				<Level name="inicio"
+					column="rcse_amcobrancasituacaoinicio" uniqueMembers="false"/>
+			</Hierarchy>
+
+		</Dimension>
+
+		<Dimension name="Termino" caption="Término">
+			<Hierarchy name="termino" hasAll="true">
+				<Level name="termino"
+					column="rcse_amcobrancasituacaofim" uniqueMembers="false"/>
+			</Hierarchy>
+		</Dimension>
+
+
+		<Measure name="Quantidade de Imóveis"
+			caption="Quantidade Paralisada" column="rfse_qtimoveis"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+
+		<Measure name="Quantidade de Ligações" column="rele_qtligacoes"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+
+		<Measure name="Faturamento Estimado" column="rfts_fatestimado"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+
+
+	</Cube>
+
+	<Cube name="ResumoPendencia">
+		<Table name="resumo_pendencia" schema="cobranca" />
+		<Dimension name="Categorias" foreignKey="catg_id"
+			caption="Categoria">
+			<Hierarchy name="categoria" hasAll="true"
+				allMemberName="Todas Categorias" primaryKey="catg_id">
+				<Table name="categoria" schema="cadastro" />
+				<Level name="descricaoCategoria"
+					column="catg_dsabreviado" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="LigacoesEsgotoSituacao" foreignKey="lest_id"
+			caption="Situação de Esgoto">
+			<Hierarchy name="ligacaoEsgotoSituacao" hasAll="true"
+				allMemberName="Todas Situações de Esgoto" primaryKey="lest_id">
+				<Table name="ligacao_esgoto_situacao"
+					schema="atendimentopublico" />
+				<Level name="descricaoEsgotoSituacao"
+					column="lest_dsligacaoesgotosituacao" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="LigacoesAguaSituacao" foreignKey="last_id"
+			caption="Situação de Água">
+			<Hierarchy name="ligacaoAguaSituacao" hasAll="true"
+				allMemberName="Todas Situações de Água" primaryKey="last_id">
+				<Table name="ligacao_agua_situacao"
+					schema="atendimentopublico" />
+				<Level name="descricaoAguaSituacao"
+					column="last_dsligacaoaguasituacao" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="ImoveisPerfil" foreignKey="iper_id"
+			caption="Perfil do Imóvel">
+			<Hierarchy name="imovelPerfil" hasAll="true"
+				allMemberName="Todos Perfis de Imóvel" primaryKey="iper_id">
+				<Table name="imovel_perfil" schema="cadastro" />
+				<Level name="descricaoImovelPerfil"
+					column="iper_dsimovelperfil" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="Localidades" foreignKey="loca_id"
+			caption="Localidade">
+			<Hierarchy name="localidade" hasAll="true"
+				allMemberName="Todas Localidades" primaryKey="loca_id">
+				<Table name="localidade" schema="cadastro" />
+				<Level name="nomeLocalidade" column="loca_nmlocalidade"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="GerenciasRegionais" foreignKey="greg_id">
+			<Hierarchy name="gerenciaRegional" hasAll="true"
+				allMemberName="Todas GerenciasRegionais" primaryKey="greg_id">
+				<table name="gerencia_regional" schema="cadastro" />
+				<!--<Level name="gerenciaRegional_id" column="greg_id" uniqueMembers="false"/>-->
+				<Level name="nomeGerenciaRegional"
+					column="greg_nmregional" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="EsferasPoder" foreignKey="epod_id">
+			<Hierarchy name="esferaPoder" hasAll="true"
+				allMemberName="Todas EsferasPoder" primaryKey="epod_id">
+				<Table name="esfera_poder" schema="cadastro" />
+				<!--<Level name="esferaPoder_id" column="epod_id" uniqueMembers="false"/>-->
+				<Level name="descricaoEsferaPoder"
+					column="epod_dsesferapoder" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="Quadras" foreignKey="qdra_id">
+			<Hierarchy name="Quadra" hasAll="true"
+				allMemberName="Todas Quadras" primaryKey="qdra_id">
+				<Table name="quadra" schema="cadastro" />
+				<!--<Level name="quadra_id"  column="qdra_id" uniqueMembers="false"/>-->
+				<Level name="numeroQuadra" column="qdra_nnquadra"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="Rotas" foreignKey="rota_id">
+			<Hierarchy name="rota" hasAll="true"
+				allMemberName="Todas Rotas" primaryKey="rota_id">
+				<Table name="rota" schema="micromedicao" />
+				<Level name="rota_id" column="rota_id"
+					uniqueMembers="false" />
+
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="SetoresComerciais" foreignKey="stcm_id">
+			<Hierarchy name="setorComercial" hasAll="true"
+				allMemberName="Todos SetoresComerciais" primaryKey="stcm_id">
+				<Table name="setor_comercial" schema="cadastro" />
+				<!--<Level name="setorComercial_id" column="stcm_id" uniqueMembers="false"/>-->
+				<Level name="nomeSetorComercial"
+					column="stcm_nmsetorcomercial" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="FinanciamentoTipo" foreignKey="fntp_id" caption="Tipo Financiamento"> 
+			<Hierarchy name="financiamentoTipo" hasAll="true"
+				allMemberName="Todos Tipos de Financiamento" primaryKey="fntp_id">
+				<Table name="financiamento_tipo"
+					schema="financeiro" />
+				<Level name="financeiroTipo"
+					column="fntp_dsfinanciamentotipo" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="DocumentoTipo" foreignKey="dotp_id" caption="Tipo de Documento">
+			<Hierarchy name="documentoTipo" hasAll="true"
+				allMemberName="Todos Tipos de Documento" primaryKey="dotp_id">
+				<Table name="documento_tipo" schema="cobranca" />
+				<Level name="tipo" column="dotp_dsdocumentotipo"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="AnoMesReferencia" caption="Referência Ano/Mês">
+			<Hierarchy name="anoMesReferencia" hasAll="true">
+				<Level name="anoMesReferencia"
+					column="rpen_amreferencia" uniqueMembers="false"
+					allMemberName="Todas Referências Ano/Mês" />
+			</Hierarchy>
+
+		</Dimension>
+
+		<Dimension name="AnoMesReferenciaDocumento" caption="Referência Ano/Mês Documento">
+			<Hierarchy name="anoMesReferenciaDocumento" hasAll="true">
+				<Level name="anoMesReferenciaDocumento"
+					column="rpen_amreferenciadocumento" uniqueMembers="false"
+					allMemberName="Todas Referências Ano/Mês Documento" />
+			</Hierarchy>
+
+		</Dimension>
+
+		<Measure name="Valor Débito" column="rpen_vldebito"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+
+		<Measure name="Quantidade de Ligações" column="rpen_qtligacoes"
+			aggregator="sum" datatype="Numeric" formatString="#,##0.00" />
+
+		<Measure name="Quantidade de Documentos"
+			column="rpen_qtdocumentos" aggregator="sum" datatype="Integer"
+			formatString="#,##0.00" />
+
+
+	</Cube>
+
+
+
+</Schema>

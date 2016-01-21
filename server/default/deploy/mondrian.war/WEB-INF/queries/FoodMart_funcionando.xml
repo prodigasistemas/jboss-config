@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Schema name="ResumoAnormalidade">
+    <Cube name="Resumo">
+        <Table name="resumo_anormalidade_leitura" schema="micromedicao"/>
+        <Dimension name="Quadras" foreignKey="qdra_id">
+            <Hierarchy name="Quadra" hasAll="true" allMemberName="Todas as Quadras" primaryKey="qdra_id">
+                <Table name="quadra" schema="cadastro"/>
+                <Level name="Numero" column="qdra_nnquadra" uniqueMembers="true"/>
+                <Level name="Indicador Rede Agua" column="qdra_icredeagua" uniqueMembers="true"/>
+            </Hierarchy>
+        </Dimension>
+        <Dimension name="Localidades" foreignKey="loca_id">
+            <Hierarchy name="Localidade" hasAll="true" allMemberName="Todas as Localidades" primaryKey="loca_id">
+                <Table name="localidade" schema="cadastro"/>
+                <Level name="Fone" column="loca_nnfone" uniqueMembers="true"/>
+                <Level name="E-Mail" column="loca_dsemail" uniqueMembers="true"/>
+            </Hierarchy>
+        </Dimension>
+        <Measure name="Resumo Anormalidades" column="real_id" aggregator="count" datatype="Integer" formatString="#.##0"/>
+    </Cube>
+</Schema>

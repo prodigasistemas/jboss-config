@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_PostalAddressCodeScheme.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rs.xsd" xmlns:rim="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:rs="urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1">
+	<LeafRegistryObjectList>
+   <ClassificationScheme id = "urn:uuid:98381b26-7624-47ff-b7de-f71b2e82dce9" isInternal = "true" nodeType = "UniqueCode" xmlns = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0">                
+        <Name>                    
+                <LocalizedString charset = "UTF-8" value = "PostalAddressAttributes"/>                
+        </Name>                
+        <Description>                    
+                <LocalizedString charset = "UTF-8" value = "This is scheme is required by JAXR API 1.0."/>                
+        </Description>  
+        
+        <ClassificationNode id = "urn:uuid:040547be-2788-40f1-8fbe-f9ee52864eb4" code = "StreetNumber"/>                    
+        <ClassificationNode id = "urn:uuid:69dae376-ed1a-4dea-9817-a31afb30b429" code = "Street"/>                    
+        <ClassificationNode id = "urn:uuid:f132e1d7-69fc-4367-9e2a-a2d637303c67" code = "City"/>                    
+        <ClassificationNode id = "urn:uuid:68e7d923-0754-494b-9250-dc371a196f96" code = "State"/>                    
+        <ClassificationNode id = "urn:uuid:eee97122-a794-4fa9-a3f6-caaf9395afc8" code = "PostalCode"/>                    
+        <ClassificationNode id = "urn:uuid:16f38bb8-071b-4ca1-b8ba-d2d5ac1c52ae" code = "Country"/>                    
+   </ClassificationScheme>        
+	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

@@ -1,0 +1,142 @@
+#
+# An unexpected error has been detected by HotSpot Virtual Machine:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x6d741e39, pid=4720, tid=6092
+#
+# Java VM: Java HotSpot(TM) Client VM (1.5.0_22-b03 mixed mode)
+# Problematic frame:
+# V  [jvm.dll+0x1e39]
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x014efe08):  VMThread [id=6092]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x031001de
+
+Registers:
+EAX=0x031001da, EBX=0x63a80000, ECX=0x44fc98f8, EDX=0x031001da
+ESP=0x001af824, EBP=0x001af848, ESI=0x44fc98f8, EDI=0x44fc98f8
+EIP=0x6d741e39, EFLAGS=0x00010202
+
+Top of Stack: (sp=0x001af824)
+0x001af824:   44fc98f8 6d83c45e 031001da 6d74d395
+0x001af834:   44fc98f8 001af88c 001af88c 014349a0
+0x001af844:   0142e0e8 001af87c 6d795aa7 44fc9a9c
+0x001af854:   6d7b4293 44fc9a9c 0142df08 6d7b4925
+0x001af864:   0142e0b0 6d795712 001af88c 00000000
+0x001af874:   00000002 01434950 001af898 6d7b426c
+0x001af884:   001af88c 00000000 6d876d14 44fc9a9c
+0x001af894:   00000000 44fc9a9c 6d7b0699 44fc9a9c 
+
+Instructions: (pc=0x6d741e39)
+0x6d741e29:   e8 c2 49 06 00 5f 5e c9 c3 8b 54 24 04 56 8b f1
+0x6d741e39:   8b 42 04 85 c0 7f 25 7d 1b 83 c9 ff 2b c8 8b 46 
+
+
+Stack: [0x00170000,0x001b0000),  sp=0x001af824,  free space=254k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1e39]
+V  [jvm.dll+0x55aa7]
+V  [jvm.dll+0x7426c]
+
+VM_Operation (0x64adfbd8): full generation collection, mode: safepoint, requested by thread 0x646d4f70
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x699c07e8 JavaThread "
+[error occurred during error reporting, step 170, id 0xc0000005]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x001682e0/0x000000e4] Threads_lock - owner thread: 0x014efe08
+[0x01421510/0x00000120] Heap_lock - owner thread: 0x646d4f70
+
+Heap
+ def new generation   total 36864K, used 22436K [0x03590000, 0x05d80000, 0x08450000)
+  eden space 32832K,  67% used [0x03590000, 0x04b1c980, 0x055a0000)
+  from space 4032K,   9% used [0x055a0000, 0x055fc7f8, 0x05990000)
+  to   space 4032K,   0% used [0x05990000, 0x05990000, 0x05d80000)
+ tenured generation   total 483968K, used 215567K [0x08450000, 0x25cf0000, 0x43590000)
+   the space 483968K,  44% used [0x08450000, 0x156d3f40, 0x1538da00, 0x25cf0000)
+ compacting perm gen  total 81152K, used 81089K [0x43590000, 0x484d0000, 0x63590000)
+   the space 81152K,  99% used [0x43590000, 0x484c0538, 0x484ae600, 0x484d0000)
+No shared spaces configured.
+
+Dynamic libraries:
+0x00400000 - 0x0040d000 	C:\Program Files\Java\jdk1.5.0_22\bin\javaw.exe
+0x76e50000 - 0x76f8c000 	C:\Windows\SYSTEM32\ntdll.dll
+0x76ab0000 - 0x76b84000 	C:\Windows\system32\kernel32.dll
+0x750e0000 - 0x7512b000 	C:\Windows\system32\KERNELBASE.dll
+0x76a10000 - 0x76ab0000 	C:\Windows\system32\ADVAPI32.dll
+0x75960000 - 0x75a0c000 	C:\Windows\system32\msvcrt.dll
+0x76f90000 - 0x76fa9000 	C:\Windows\SYSTEM32\sechost.dll
+0x76c80000 - 0x76d21000 	C:\Windows\system32\RPCRT4.dll
+0x76b90000 - 0x76c59000 	C:\Windows\system32\USER32.dll
+0x76e00000 - 0x76e4e000 	C:\Windows\system32\GDI32.dll
+0x76c60000 - 0x76c6a000 	C:\Windows\system32\LPK.dll
+0x757f0000 - 0x7588e000 	C:\Windows\system32\USP10.dll
+0x75a10000 - 0x75a2f000 	C:\Windows\system32\IMM32.DLL
+0x75a30000 - 0x75afc000 	C:\Windows\system32\MSCTF.dll
+0x6d740000 - 0x6d8de000 	C:\Program Files\Java\jdk1.5.0_22\jre\bin\client\jvm.dll
+0x736e0000 - 0x73712000 	C:\Windows\system32\WINMM.dll
+0x74ed0000 - 0x74f1b000 	C:\Windows\system32\apphelp.dll
+0x6d300000 - 0x6d308000 	C:\Program Files\Java\jdk1.5.0_22\jre\bin\hpi.dll
+0x76c70000 - 0x76c75000 	C:\Windows\system32\PSAPI.DLL
+0x6d400000 - 0x6d435000 	C:\Program Files\Java\jdk1.5.0_22\jre\bin\jdwp.dll
+0x6d710000 - 0x6d71c000 	C:\Program Files\Java\jdk1.5.0_22\jre\bin\verify.dll
+0x6d380000 - 0x6d39d000 	C:\Program Files\Java\jdk1.5.0_22\jre\bin\java.dll
+0x6d730000 - 0x6d73f000 	C:\Program Files\Java\jdk1.5.0_22\jre\bin\zip.dll
+0x6d290000 - 0x6d297000 	C:\Program Files\Java\jdk1.5.0_22\jre\bin\dt_socket.dll
+0x77040000 - 0x77075000 	C:\Windows\system32\WS2_32.dll
+0x752a0000 - 0x752a6000 	C:\Windows\system32\NSI.dll
+0x73900000 - 0x73910000 	C:\Windows\system32\NLAapi.dll
+0x74a10000 - 0x74a4c000 	C:\Windows\System32\mswsock.dll
+0x748d0000 - 0x74914000 	C:\Windows\system32\DNSAPI.dll
+0x709f0000 - 0x709f8000 	C:\Windows\System32\winrnr.dll
+0x709b0000 - 0x709c0000 	C:\Windows\system32\napinsp.dll
+0x70990000 - 0x709a2000 	C:\Windows\system32\pnrpnsp.dll
+0x73580000 - 0x7359c000 	C:\Windows\system32\IPHLPAPI.DLL
+0x73570000 - 0x73577000 	C:\Windows\system32\WINNSI.DLL
+0x733d0000 - 0x73408000 	C:\Windows\System32\fwpuclnt.dll
+0x707e0000 - 0x707e6000 	C:\Windows\system32\rasadhlp.dll
+0x74530000 - 0x74535000 	C:\Windows\System32\wshtcpip.dll
+0x6d540000 - 0x6d553000 	C:\Program Files\Java\jdk1.5.0_22\jre\bin\net.dll
+0x74a00000 - 0x74a06000 	C:\Windows\System32\wship6.dll
+0x74a50000 - 0x74a66000 	C:\Windows\system32\CRYPTSP.dll
+0x747c0000 - 0x747fb000 	C:\Windows\system32\rsaenh.dll
+0x74600000 - 0x74617000 	C:\Windows\system32\USERENV.dll
+0x74fa0000 - 0x74fab000 	C:\Windows\system32\profapi.dll
+0x74f20000 - 0x74f2c000 	C:\Windows\system32\CRYPTBASE.dll
+0x6d560000 - 0x6d569000 	C:\Program Files\Java\jdk1.5.0_22\jre\bin\nio.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:51330 -Dprogram.name=run.bat -Djava.endorsed.dirs=C:/jboss-4.0.1sp1/bin/../lib/endorsed -Xms512m -Xmx1024m -XX:MaxPermSize=512m -Dfile.encoding=Cp1252 -Xbootclasspath:C:\Program Files\Java\jre1.5.0_22\lib\rt.jar;C:\Program Files\Java\jre1.5.0_22\lib\jsse.jar;C:\Program Files\Java\jre1.5.0_22\lib\jce.jar;C:\Program Files\Java\jre1.5.0_22\lib\charsets.jar;C:\Program Files\Java\jre1.5.0_22\lib\ext\dnsns.jar;C:\Program Files\Java\jre1.5.0_22\lib\ext\localedata.jar;C:\Program Files\Java\jre1.5.0_22\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jre1.5.0_22\lib\ext\sunpkcs11.jar
+java_command: org.jboss.Main -c default
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.5.0_22
+PATH=C:\Program Files\Java\jdk1.5.0_22\jre\bin;C:/Program Files/Java/jre6/bin/client;C:/Program Files/Java/jre6/bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\ant\bin
+USERNAME=Felipe
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 23 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 Build 7600 
+
+CPU:total 2 (cores per cpu 2, threads per core 1) family 6 model 7 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2
+
+Memory: 4k page, physical 2057112k(73116k free), swap 4114224k(491588k free)
+
+vm_info: Java HotSpot(TM) Client VM (1.5.0_22-b03) for windows-x86, built on Oct  9 2009 01:15:45 by "java_re" with MS VC++ 6.0
+
+time: Fri May 17 16:15:09 2013
+elapsed time: 1137 seconds
+

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Schema name="OLAPGcom">
+	<Cube name="ResumoLigacaoEconomia">
+		<Table name="un_resumo_ligacao_economia" schema="cadastro" />
+		<Dimension name="Categorias" foreignKey="catg_id"
+			caption="Categoria">
+			<Hierarchy name="categoria" hasAll="true"
+				allMemberName="Todas Categorias" primaryKey="catg_id">
+				<Table name="g_categoria" schema="cadastro" />
+				<Level name="descricaoCategoria"
+					column="catg_dsabreviado" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="LigacoesEsgotoSituacao" foreignKey="lest_id"
+			caption="Situação de Esgoto">
+			<Hierarchy name="ligacaoEsgotoSituacao" hasAll="true"
+				allMemberName="Todas Situações de Esgoto" primaryKey="lest_id">
+				<Table name="g_ligacao_esgoto_situacao"
+					schema="atendimentopublico" />
+				<Level name="descricaoEsgotoSituacao"
+					column="lest_dsligacaoesgotosituacao" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="LigacoesAguaSituacao" foreignKey="last_id"
+			caption="Situação de Água">
+			<Hierarchy name="ligacaoAguaSituacao" hasAll="true"
+				allMemberName="Todas Situações de Água" primaryKey="last_id">
+				<Table name="g_ligacao_agua_situacao"
+					schema="atendimentopublico" />
+				<Level name="descricaoAguaSituacao"
+					column="last_dsligacaoaguasituacao" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="ImoveisPerfil" foreignKey="iper_id"
+			caption="Perfil do Imóvel">
+			<Hierarchy name="imovelPerfil" hasAll="true"
+				allMemberName="Todos Perfis de Imóvel" primaryKey="iper_id">
+				<Table name="g_imovel_perfil" schema="cadastro" />
+				<Level name="descricaoImovelPerfil"
+					column="iper_dsimovelperfil" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="Localidades" foreignKey="loca_id"
+			caption="Localidade">
+			<Hierarchy name="localidade" hasAll="true"
+				allMemberName="Todas Localidades" primaryKey="loca_id">
+				<Table name="g_localidade" schema="cadastro" />
+				<Level name="nomeLocalidade" column="loca_nmlocalidade"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+
+		<Dimension name="GerenciasRegionais" foreignKey="greg_id"
+			caption="Gerência Regional">
+			<Hierarchy name="gerenciaRegional" hasAll="true"
+				allMemberName="Todas Gerencias Regionais" primaryKey="greg_id">
+				<Table name="g_gerencia_regional" schema="cadastro" />
+				<Level name="nomeGerenciaRegional"
+					column="greg_nmregional" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="EsferasPoder" foreignKey="epod_id"
+			caption="Esfera Poder">
+			<Hierarchy name="esferaPoder" hasAll="true"
+				allMemberName="Todas Esferas Poder" primaryKey="epod_id">
+				<Table name="g_esfera_poder" schema="cadastro" />
+				<Level name="descricaoEsferaPoder"
+					column="epod_dsesferapoder" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="Quadras" foreignKey="qdra_id"
+			caption="Quadra">
+			<Hierarchy name="Quadra" hasAll="true"
+				allMemberName="Todas Quadras" primaryKey="qdra_id">
+				<Table name="g_quadra" schema="cadastro" />
+				<Level name="numeroQuadra" column="qdra_nnquadra"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="Rotas" foreignKey="rota_id" caption="Rota">
+			<Hierarchy name="rota" hasAll="true"
+				allMemberName="Todas Rotas" primaryKey="rota_id">
+				<Table name="g_rota" schema="micromedicao" />
+				<Level name="rota_id" column="rota_id"
+					uniqueMembers="false" />
+				<Level name="indicadorUsoRota" column="rota_icuso"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="SetoresComerciais" foreignKey="stcm_id"
+			caption="Setor Comercial">
+			<Hierarchy name="setorComercial" hasAll="true"
+				allMemberName="Todos Setores Comerciais" primaryKey="stcm_id">
+				<Table name="g_setor_comercial" schema="cadastro" />
+				<Level name="nomeSetorComercial"
+					column="stcm_nmsetorcomercial" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="UnidadesNegocios" foreignKey="uneg_id"
+			caption="Unidade de Negócio">
+			<Hierarchy name="unidadeNegocio" hasAll="true"
+				allMemberName="Todas Unidades de Negócio" primaryKey="uneg_id">
+				<Table name="g_unidade_negocio" schema="cadastro" />
+				<Level name="nomeUnidadeNegocio"
+					column="uneg_nmunidadenegocio" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="SubCategorias" foreignKey="scat_id"
+			caption="SubCategoria">
+			<Hierarchy name="subCategoria" hasAll="true"
+				allMemberName="Todas SubCategorias" primaryKey="scat_id">
+				<Table name="g_subcategoria" schema="cadastro" />
+				<Level name="nomeSubCategoria"
+					column="scat_dssubcategoria" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="ClientesTipos" foreignKey="cltp_id"
+			caption="Tipo de Cliente">
+			<Hierarchy name="clienteTipo" hasAll="true"
+				allMemberName="Todos Tipos de Clientes" primaryKey="cltp_id">
+				<Table name="g_cliente_tipo" schema="cadastro" />
+				<Level name="nomeClienteTipo"
+					column="cltp_dsclientetipo" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="LigacoesAguaPerfil" foreignKey="lapf_id"
+			caption="Perfil de Ligação de Água">
+			<Hierarchy name="ligacaoAguaPerfil" hasAll="true"
+				allMemberName="Todos Perfis de Ligação de Água" primaryKey="lapf_id">
+				<Table name="g_ligacao_agua_perfil" schema="atendimentopublico" />
+				<Level name="nomeLigacaoAguaPerfil"
+					column="lapf_dsligacaoaguaperfil" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="LigacoesEsgotoPerfil" foreignKey="lepf_id"
+			caption="Perfil de Ligação de Esgoto">
+			<Hierarchy name="ligacaoEsgotoPerfil" hasAll="true"
+				allMemberName="Todos Perfis de Ligação de Esgoto" primaryKey="lepf_id">
+				<Table name="g_ligacao_esgoto_perfil" schema="atendimentopublico" />
+				<Level name="nomeLigacaoEsgotoPerfil"
+					column="lepf_dsligacaoesgotoperfil" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+		
+		<Dimension name="LigacoesEsgotoPerfil" foreignKey="lepf_id"
+			caption="Perfil de Ligação de Esgoto">
+			<Hierarchy name="ligacaoEsgotoPerfil" hasAll="true"
+				allMemberName="Todos Perfis de Ligação de Esgoto" primaryKey="lepf_id">
+				<Table name="g_ligacao_esgoto_perfil" schema="atendimentopublico" />
+				<Level name="nomeLigacaoEsgotoPerfil"
+					column="lepf_dsligacaoesgotoperfil" uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="Elos" foreignKey="loca_cdelo"
+			caption="Elo">
+			<Hierarchy name="elo" hasAll="true"
+				allMemberName="Todos Elos" primaryKey="loca_cdelo">
+				<Table name="g_localidade" schema="cadastro" />
+				<Level name="nomeLocalidade" column="loca_nmlocalidade"
+					uniqueMembers="false" />
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="CodigoSetorComercial" caption="Código do Setor Comercial">
+			<Hierarchy name="codigoSetorComercial" hasAll="true">
+				<Level name="codigoSetorComercial"
+					column="rele_cdsetorcomercial" uniqueMembers="false"
+					allMemberName="Todos Códigos do Setor Comercial" />
+			</Hierarchy>
+
+		</Dimension>
+
+		<Dimension name="NumeroQuadra" caption="Número da Quadra">
+			<Hierarchy name="numeroQuadra" hasAll="true">
+				<Level name="numeroQuadra"
+					column="rele_nnquadra" uniqueMembers="false"
+					allMemberName="Todos Número da Quadra" />
+			</Hierarchy>
+
+		</Dimension>
+
+		<Dimension name="IndicadorHidrometro" caption="Indicador de Hidrômetro">
+			<Hierarchy name="IndicadorHidrometro" hasAll="true">
+				<Level name="indicadorHidrometro"
+					column="rele_ichidrometro" uniqueMembers="false"
+					allMemberName="Todos Indicadores de Hidrômetros" />
+			</Hierarchy>
+
+		</Dimension>
+		
+		<Dimension name="IndicadorVolumeFixadoAgua" caption="Indicador de Volume Fixado da Água">
+			<Hierarchy name="IndicadorVolumeFixadoAgua" hasAll="true">
+				<Level name="indicadorVolumeFixadoAgua"
+					column="rele_icvolumefixadoagua" uniqueMembers="false"
+					allMemberName="Todos Indicadores Volume Fixado Água" />
+			</Hierarchy>
+
+		</Dimension>
+
+		<Dimension name="IndicadorVolumeFixadoEsgoto" caption="Indicador de Volume Fixado da Esgoto">
+			<Hierarchy name="IndicadorVolumeFixadoEsgoto" hasAll="true">
+				<Level name="indicadorVolumeFixadoEsgoto"
+					column="rele_icvolumefixadoesgoto" uniqueMembers="false"
+					allMemberName="Todos Indicadores Volume Fixado Esgoto" />
+			</Hierarchy>
+
+		</Dimension>
+
+		<Dimension name="IndicadorPoco" caption="Indicador de Poço">
+			<Hierarchy name="IndicadorPoco" hasAll="true">
+				<Level name="indicadorPoco"
+					column="rele_icpoco" uniqueMembers="false"
+					allMemberName="Todos Indicadores Poço" />
+			</Hierarchy>
+
+		</Dimension>
+
+		<Measure name="Quantidade Ligações" column="rele_qtligacoes"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+
+		<Measure name="Quantidade Economias" column="rele_qteconomias"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+
+		<!--<Measure name="Total Resumo_Ligacoes_Economia" column="lest_id"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+		<Measure name="ligacoesComHidrometro"
+			caption="Ligações com Hidrômetro" column="rele_qtligchidrometro"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+		<Measure name="ligacoesSemHidrometro"
+			caption="Ligações sem Hidrômetro" column="rele_qtligshidrometro"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+		<Measure name="economiasComHidrometro"
+			caption="Economias com Hidrometro" column="rele_qtecochidrometro"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+		<Measure name="economiasSemHidrometro"
+			caption="Economias sem Hidrometro" column="rele_qtecoshidrometro"
+			aggregator="sum" datatype="Integer" formatString="#,##0.00" />
+		<CalculatedMember name="TotalLigacoesHidrometro"
+			dimension="Measures" caption="Total Ligações">
+			<Formula>
+				[Measures].[ligacoesComHidrometro] +
+				[Measures].[ligacoesSemHidrometro]
+			</Formula>
+		</CalculatedMember>
+		<CalculatedMember name="TotalEconomiasHidrometro"
+			dimension="Measures" caption="Total de Economias">
+			<Formula>
+				[Measures].[economiasComHidrometro] +
+				[Measures].[economiasSemHidrometro]
+			</Formula>
+		</CalculatedMember>-->
+
+
+	</Cube>
+
+</Schema>

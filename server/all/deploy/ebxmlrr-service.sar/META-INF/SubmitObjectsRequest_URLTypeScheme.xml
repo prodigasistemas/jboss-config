@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_URLTypeScheme.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rs.xsd" xmlns:rim="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:rs="urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1">
+	<LeafRegistryObjectList>
+    <ClassificationScheme id = "urn:uuid:7817755e-8842-44b2-84f4-bf8a765619be" isInternal = "true" nodeType = "UniqueCode" xmlns = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0">                
+        <Name>                    
+                <LocalizedString charset = "UTF-8" value = "URLType"/>                
+        </Name>                
+        <Description>                    
+                <LocalizedString charset = "UTF-8" value = "This is scheme is required by JAXR API 1.0."/>                
+        </Description>  
+        
+        <ClassificationNode id = "urn:uuid:840a25ce-ffdd-408e-8789-c175d6c2e7af" code = "HTTP"/>                    
+        <ClassificationNode id = "urn:uuid:38fabbc3-4483-458b-8080-85ecfad98f96" code = "HTTPS"/>                    
+        <ClassificationNode id = "urn:uuid:f909c3b2-0926-456d-9335-a06e524dc1cc" code = "SMTP"/>                    
+        <ClassificationNode id = "urn:uuid:1a9b63bd-6c43-4cd0-b6bd-fca38c0f8c76" code = "PHONE"/>                    
+        <ClassificationNode id = "urn:uuid:30c1b846-c462-430e-8a45-d8df8b73811a" code = "FAX"/>                    
+        <ClassificationNode id = "urn:uuid:d5a1cd6e-e48c-486a-9fe1-edf8c2ac9ce8" code = "OTHER"/>                    
+   </ClassificationScheme>                       
+	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

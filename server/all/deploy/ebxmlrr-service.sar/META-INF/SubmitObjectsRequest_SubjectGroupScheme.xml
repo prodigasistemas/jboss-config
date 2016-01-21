@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_SubjectGroupScheme.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rs.xsd" xmlns:rim="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:rs="urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1">
+	<LeafRegistryObjectList>
+		<ClassificationScheme id="urn:uuid:7c07beae-c1c6-4a52-b1db-d3cf9b501b75" objectType="ClassificationScheme" isInternal="true" nodeType="UniqueCode" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">
+			<Name>
+				<LocalizedString lang="en-us" charset="UTF-8" value="SubjectGroup"/>
+			</Name>
+			<Description>
+				<LocalizedString lang="en-us" charset="UTF-8" value="Defines groups that may be used as subject groups in custom access control policies."/>
+			</Description>
+		</ClassificationScheme>
+	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

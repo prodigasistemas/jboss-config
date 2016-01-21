@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_PhoneTypeScheme.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest xmlns = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rs.xsd" xmlns:rim = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:rs = "urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1">
+    <LeafRegistryObjectList>            
+        <ClassificationScheme id = "urn:uuid:de95a42e-a0e3-40a3-abcc-ee6d88492639" isInternal = "true" nodeType = "UniqueCode" xmlns = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">                
+            <Name>                    
+                    <LocalizedString charset = "UTF-8" value = "PhoneType"/>                
+            </Name>                
+            <Description>                    
+                    <LocalizedString charset = "UTF-8" value = "This is the canonical ClassificationScheme for pre-defined telephone number types"/>                
+            </Description>  
+                          
+            <ClassificationNode id = "urn:uuid:06c99e31-b60c-4ec1-b355-cd450a6d9083" code = "OfficePhone"/>                    
+            <ClassificationNode id = "urn:uuid:6092c4af-346a-4cb6-b31e-cfc5987fba60" code = "HomePhone"/>                    
+            <ClassificationNode id = "urn:uuid:d60c3bff-c481-4c36-95eb-f2caddf34438" code = "MobilePhone"/>                    
+            <ClassificationNode id = "urn:uuid:dc37e328-2676-497c-85d7-87337b92c4b9" code = "Beeper"/>                    
+            <ClassificationNode id = "urn:uuid:daa06182-0175-49ed-8d45-e0243a0fe2b2" code = "FAX"/>                    
+        </ClassificationScheme>    
+    </LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

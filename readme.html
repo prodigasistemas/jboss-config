@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html" http-equiv="content-type">
+  <title>JBoss 4.0.1SP1 Readme</title>
+  <meta content="JBoss Inc." name="author">
+</head>
+<body>
+<a href="http://www.jboss.com"><img src='http://www.jboss.org/jbosscorp/images/logobar_left.jpg' alt="JBoss Inc."></a>
+<h1>JBoss 4.0.1SP1</h1>
+<p>The jboss-4.0.1sp1 for the J2EE&#153; 1.4 codebase. For information on the APIs
+that make up J2EE 1.4, see <a href='http://java.sun.com/j2ee/1.4/docs/index.html'>J2EE v1.4 Documentation</a>.
+For a comprehensive tutorial on J2EE 1.4, see <a href='http://java.sun.com/j2ee/1.4/docs/tutorial-update2/doc/index.html'>The J2EE&#153; 1.4 Tutorial</a>.
+A jboss-4.0.x getting started guide that is based on contents from the tutorial can be found on the JBoss web site
+documentation section, <a href='http://www.jboss.org/docs/index#free-40x'>4.0 Getting Started Guide</a>.
+</p>
+
+<h1>Change Notes</h1>
+The change note overviews and details are found on sourceforge. The key change notes for
+the 4.0.1sp1 release are:
+
+<ul>
+   <li><a href='https://sourceforge.net/docman/display_doc.php?docid=27004&group_id=22866'>Changes between 4.0.1SP1 and 4.0.1</a></li>
+</ul>
+
+<p>Note that this distribution has switched back to the 3.2.x types of 
+distribution configurations:</p>
+<ul>
+	<li>minimal: a minimal microkernel with logging, JNDI and hot deployment 
+	support</li>
+	<li>default: a base level J2EE 1.4 application server configuration</li>
+	<li>all: a full J2EE 1.4 server configuration with clustering and all 
+	optional services</li>
+</ul>
+<p>The standard configuration from the 4.0.0-4.0.1RC1 releases has been dropped 
+and the default flat class loading model from 3.0.x-3.2.x has been restored for 
+the default configuration. This change in behavior was done to restore 
+consistency with the 3.2.x class loading model. The 4.0.0 scoped class loading 
+behavior and call by value JNDI lookup behavior can be restored by:
+</p>
+<ol>
+<li> Editing conf/jboss-service.xml and setting the NamingService CallByValue to true:
+<pre>
+   &lt;mbean code="org.jboss.naming.NamingService"
+      name="jboss:service=Naming"&gt;
+      &lt;!-- The call by value mode. true if all lookups are unmarshalled using
+      the caller's TCL, false if in VM lookups return the value by reference.
+      --&gt;
+      <b>&lt;attribute name="CallByValue"&gt;true&lt;/attribute&gt;</b>
+      &lt;!-- The listening port for the bootstrap JNP service. Set this to -1
+        to run the NamingService without the JNP invoker listening port.
+      --&gt;
+      ...
+   &lt;/mbean&gt;
+</pre>
+</li>
+
+<li>Editing the deploy/ear-deployer.xml and setting the Isolated and CallByValue attribute to true:
+<pre>
+&lt;server&gt;
+   &lt;!-- EAR deployer, remove if you are not using ear deployments --&gt;
+   &lt;mbean code="org.jboss.deployment.EARDeployer"
+      name="jboss.j2ee:service=EARDeployer"&gt;
+      &lt;!-- A flag indicating if ear deployments should have their own scoped
+      class loader to isolate their classes from other deployments.
+      --&gt;
+      &lt;attribute name="Isolated"&gt;true&lt;/attribute&gt;
+      &lt;!-- A flag indicating if the ear components should have in VM call
+      optimization disabled.
+      --&gt;
+      &lt;attribute name="CallByValue"&gt;true&lt;/attribute&gt;
+   &lt;/mbean&gt;
+&lt;/server&gt;
+</pre>
+</li>Editing the deploy/jbossweb-tomcat50.sar/META-INF/jboss-service.xml and set the
+Java2ClassLoadingCompliance and UseJBossWebLoader attributes to false:
+<li>
+<pre>
+&lt;server&gt;
+
+   &lt;mbean code="org.jboss.web.tomcat.tc5.Tomcat5"
+      name="jboss.web:service=WebServer"&gt;
+
+      &lt;!-- Get the flag indicating if the normal Java2 parent first class
+           loading model should be used over the servlet 2.3 web container first
+           model.
+      --&gt;
+      &lt;attribute name="Java2ClassLoadingCompliance"&gt;false&lt;/attribute&gt;
+
+      &lt;attribute name="LenientEjbLink"&gt;true&lt;/attribute&gt;
+
+      &lt;!-- A flag indicating if the JBoss Loader should be used. This loader
+           uses a unified class loader as the class loader rather than the tomcat
+           specific class loader.
+      --&gt;
+      &lt;attribute name="UseJBossWebLoader"&gt;false&lt;/attribute&gt;
+</pre>
+Note that jboss-4.0.0 had Java2ClassLoadingCompliance=true and UseJBossWebLoader=false which means
+that wars did not load from classes from the war preferentially so it was not being scoped.
+</li>
+</ol>
+
+<h1>Documentation and Help</h1>
+Documentation and help may be obtained from the JBoss site.
+<ul>
+	<li><a href='http://www.jboss.org/docs/index#free-40x'>4.0 Getting Started Guide</a></li>
+	<li><a href='http://www.jboss.org/wiki/Wiki.jsp'>JBoss Wikis</a></li>
+	<li><a href='http://www.jboss.org/index.html?module=bb'>JBoss Forums</a></li>
+</ul>
+
+<h1>Licenses</h1>
+<p>JBoss is licensed under the LGPL. The licence texts for JBoss and the thirdparty components
+it uses may be found in the docs/licenses directory of the distribution.
+<a href="docs/licenses">Browse Licences</a>
+</p>
+
+<h1>About JBoss Inc.</h1>
+<p>JBoss Inc. is in the business of providing superior technical support
+to our customers. Our goal is to make Professional Open Source&#153; the <b>SAFE
+CHOICE</b>
+for you. We accomplish this by backing up our open source Java products
+with technical support services that are delivered by the core
+developers themselves. We can help you to train your staff and provide
+you with support at every stage of the application lifecycle - from
+development and integration through deployment and maintenance. Visit
+the <a href="http://www.jboss.org/services/index">JBoss Services</a>
+page for more information.
+</p>
+</body>
+</html>
+

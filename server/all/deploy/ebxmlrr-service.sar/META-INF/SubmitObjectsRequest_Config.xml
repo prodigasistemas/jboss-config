@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_Config.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<!--Must be loaded after SubmitObjectsRequest_objectTypesSchemes -->
+<rs:SubmitObjectsRequest xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rs.xsd" xmlns:rim="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:rs="urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1">
+	<LeafRegistryObjectList>
+		<Organization id="urn:uuid:388678e9-40df-4412-ac65-c42bbb265e7d" primaryContact="urn:uuid:921284f0-bbed-4a4c-9342-ecaf0625f9d7">
+			<Name>
+				<LocalizedString lang="en-US" value="ebxmlrr test registry"/>
+			</Name>
+			<Description>
+				<LocalizedString lang="en-US" value="ebxmlrr test registry"/>
+			</Description>
+			<Address streetNumber="1" street="Network Dr." city="Burlington" stateOrProvince="MA" postalCode="01867" country="USA"/>
+			<TelephoneNumber countryCode="1" areaCode="781" number="442-0703" phoneType="office"/>
+			<TelephoneNumber countryCode="1" areaCode="781" number="442-0704" phoneType="fax"/>
+		</Organization>
+		<Service id="urn:uuid:4bcfc370-7a71-4c50-a6ed-ade41d836613">
+			<Name>
+				<LocalizedString lang="en-US" value="Default XML Cataloging Service"/>
+			</Name>
+			<Description>
+				<LocalizedString lang="en-US" value="Default XML Cataloging Service"/>
+			</Description>
+			<!--ContentManagementService classification-->
+			<Classification classificationNode="urn:uuid:bfe64895-37d4-4d18-a776-cbb1dcba52a3" classifiedObject="urn:uuid:4bcfc370-7a71-4c50-a6ed-ade41d836613">
+				<Name>
+					<LocalizedString lang="en-US" value="ContentCatalogingService"/>
+				</Name>
+			</Classification>
+			<!--InvocationModel classification-->
+			<Classification classificationNode="urn:uuid:1365e3f7-9899-4647-bc0f-ea2ccf5144b7" classifiedObject="urn:uuid:4bcfc370-7a71-4c50-a6ed-ade41d836613">
+				<Name>
+					<LocalizedString lang="en-US" value="Inline"/>
+				</Name>
+			</Classification>
+			<!--ErrorHandlingModel classification-->
+			<Classification classificationNode="urn:uuid:112e3809-65b4-41b4-a8c5-e08756385c6d" classifiedObject="urn:uuid:4bcfc370-7a71-4c50-a6ed-ade41d836613">
+				<Name>
+					<LocalizedString lang="en-US" value="FailOnError"/>
+				</Name>
+			</Classification>
+			<ServiceBinding id="urn:uuid:5efdd028-8358-48c9-8fd4-c1cd1edf2dd5" accessURI="">
+				<Name>
+					<LocalizedString lang="en-US" value="Default XML Cataloging Service binding"/>
+				</Name>
+				<Description>
+					<LocalizedString lang="en-US" value="Service Binding to Default XML Cataloging Service"/>
+				</Description>
+			</ServiceBinding>
+		</Service>
+		<Association associationType="ProviderOf" sourceObject="urn:uuid:388678e9-40df-4412-ac65-c42bbb265e7d" targetObject="urn:uuid:4bcfc370-7a71-4c50-a6ed-ade41d836613"/>
+		<!--Assoc between default XML Cataloging Service and xml ClassificationNode in ObjectTypes scheme -->
+		<Association associationType="ContentManagementServiceFor" sourceObject="urn:uuid:4bcfc370-7a71-4c50-a6ed-ade41d836613" targetObject="urn:uuid:4a13dacb-a9e8-4819-bd1a-faf50976e5d4"/>
+		<!--The default ACP for the Registry -->
+		<ExtrinsicObject id="urn:uuid:38aff259-d20c-486f-8907-b4c97d99bdc5" objectType="urn:uuid:7c50351e-0022-4a65-950c-ac8cda6f3e0b">
+			<Name>
+				<LocalizedString value="The default Access Control Policy for the Registry"/>
+			</Name>
+			<Description>
+				<LocalizedString value="Applies to RegistryObjects that do not have a custom Policy"/>
+			</Description>
+			<!--Add a Slot with value for each composed policy. This will be automated in future via cataloging of PolicySets -->
+			<Slot name="ComposedPolicies">
+				<ValueList>
+					<Value>urn:oasis:names:tc:ebxml-regrep:3.0:rim:acp:policy:policyid:permit-anyone-to-read</Value>
+					<Value>urn:oasis:names:tc:ebxml-regrep:3.0:rim:acp:policy:policyid:permit-owner-all</Value>
+					<Value>urn:oasis:names:tc:ebxml-regrep:3.0:rim:acp:policy:policyid:permit-registryadministrator-all</Value>
+				</ValueList>
+			</Slot>
+		</ExtrinsicObject>
+		<!--User for RegistryOperator -->
+		<ObjectRef id="urn:uuid:921284f0-bbed-4a4c-9342-ecaf0625f9d7"/>
+		<!--xml ObjectType, Defined in SubmitObjectsRequest_objectTypesSchemes -->
+		<ObjectRef id="urn:uuid:4a13dacb-a9e8-4819-bd1a-faf50976e5d4"/>
+	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

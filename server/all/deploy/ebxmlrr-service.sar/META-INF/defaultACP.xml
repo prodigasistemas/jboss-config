@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/defaultACP.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<PolicySet xmlns="urn:oasis:names:tc:xacml:1.0:policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xacml:1.0:policy
+	C:\tmp\xacml\cs-xacml-schema-policy-01.xsd" PolicySetId="urn:oasis:names:tc:ebxml-regrep:2.5:rim:acp:policy:default-access-control-policy" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:permit-overrides">
+	<Description>
+	This PolicySet defines the default Access Control Policy for all registry resources.
+	</Description>
+	<Target>
+		<Subjects>
+			<AnySubject/>
+		</Subjects>
+		<Resources>
+			<AnyResource/>
+		</Resources>
+		<Actions>
+			<AnyAction/>
+		</Actions>
+	</Target>
+	<Policy PolicyId="urn:oasis:names:tc:ebxml-regrep:2.5:rim:acp:policy:policyid:permit-anyone-to-read" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides">
+		<Target>
+			<Subjects>
+				<AnySubject/>
+			</Subjects>
+			<Resources>
+				<AnyResource/>
+			</Resources>
+			<Actions>
+				<AnyAction/>
+			</Actions>
+		</Target>
+		<Rule RuleId="urn:oasis:names:tc:ebxml-regrep:2.5:rim:acp:rule:ruleid:permit-anyone-to-read" Effect="Permit">
+			<Description>
+			Any Subject can perform read action on any resource.
+			</Description>
+			<Target>
+				<Subjects>
+					<AnySubject/>
+				</Subjects>
+				<Resources>
+					<AnyResource/>
+				</Resources>
+				<Actions>
+					<Action>
+						<ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue>
+							<ActionAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+						</ActionMatch>
+					</Action>
+				</Actions>
+			</Target>
+		</Rule>
+	</Policy>
+	<Policy PolicyId="urn:oasis:names:tc:ebxml-regrep:2.5:rim:acp:policy:policyid:permit-owner-all" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides">
+		<Target>
+			<Subjects>
+				<AnySubject/>
+			</Subjects>
+			<Resources>
+				<AnyResource/>
+			</Resources>
+			<Actions>
+				<AnyAction/>
+			</Actions>
+		</Target>
+		<Rule RuleId="urn:oasis:names:tc:ebxml-regrep:2.5:rim:acp:rule:ruleid:permit-owner-all" Effect="Permit">
+			<Description>
+			A Subject with role of ContenOwner can perform any action on resources owned by them.
+			</Description>
+			<Target>
+				<Subjects>
+					<AnySubject/>
+				</Subjects>
+				<Resources>
+					<AnyResource/>
+				</Resources>
+				<Actions>
+					<AnyAction/>
+				</Actions>
+			</Target>
+			<Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:anyURI-equal">
+				<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:anyURI-one-and-only">
+					<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" DataType="http://www.w3.org/2001/XMLSchema#anyURI"/>
+				</Apply>
+				<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:anyURI-one-and-only">
+					<ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:ebxml-regrep:2.5:rim:acp:resource:owner" DataType="http://www.w3.org/2001/XMLSchema#anyURI"/>
+				</Apply>
+			</Condition>
+		</Rule>
+	</Policy>
+	<Policy PolicyId="urn:oasis:names:tc:ebxml-regrep:2.5:rim:acp:policy:policyid:permit-registryadministrator-all" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides">
+		<Target>
+			<Subjects>
+				<AnySubject/>
+			</Subjects>
+			<Resources>
+				<AnyResource/>
+			</Resources>
+			<Actions>
+				<AnyAction/>
+			</Actions>
+		</Target>
+		<Rule RuleId="urn:oasis:names:tc:ebxml-regrep:2.5:rim:acp:rule:ruleid:permit-registryadministrator-all" Effect="Permit">
+			<Description>
+			A Subject with role of RegistryAdministrator can perform any action on any resource.
+			</Description>
+			<Target>
+				<Subjects>
+					<Subject>
+						<SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">RegistryAdministrator</AttributeValue>
+							<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:ebxml-regrep:2.5:rim:acp:subject:role" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+						</SubjectMatch>
+					</Subject>
+				</Subjects>
+				<Resources>
+					<AnyResource/>
+				</Resources>
+				<Actions>
+					<AnyAction/>
+				</Actions>
+			</Target>
+		</Rule>
+	</Policy>
+</PolicySet>

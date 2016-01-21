@@ -1,0 +1,51 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_extSchemes.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest 
+	xmlns = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" 
+	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rs.xsd" 
+	xmlns:rim = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" 
+	xmlns:rs = "urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1">  
+
+	<LeafRegistryObjectList>
+		<ClassificationScheme id="urn:uuid:8d0b7b54-0dae-427f-9793-868407b74ea9"
+		    isInternal="false" nodeType="UniqueCode" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">
+		    <Name>
+		        <LocalizedString charset="UTF-8" value="NYSE Ticker"/>
+		    </Name>
+		    <Description>
+		        <LocalizedString charset="UTF-8" value="This is the identification scheme for New York Stock Exchange Ticker symbols"/>
+		    </Description>
+		</ClassificationScheme>
+
+		<ClassificationScheme id="urn:uuid:7bd5567e-41a0-4f13-88bb-efac33c762fc"
+		    isInternal="false" nodeType="UniqueCode" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">
+		    <Name>
+		        <LocalizedString charset="UTF-8" value="US Taxpayer Id"/>
+		    </Name>
+		    <Description>
+		        <LocalizedString charset="UTF-8" value="This is the identification scheme for the IRS to identify a tax payer in the US."/>
+		    </Description>
+		</ClassificationScheme>	
+	
+		<ClassificationScheme id="urn:uuid:fc9bd8fd-73c4-4d83-8dd6-8a07eec79dda"
+		    isInternal="false" nodeType="UniqueCode" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">
+		    <Name>
+		        <LocalizedString charset="UTF-8" value="DUNS"/>
+		    </Name>
+		    <Description>
+		        <LocalizedString charset="UTF-8" value="This is the identification scheme for the DUNS and Bradstreet number identifying a corporation."/>
+		    </Description>
+		</ClassificationScheme>	
+	
+		<ClassificationScheme id="urn:uuid:d307741c-f6e7-4dbf-bfbb-dad06214522d"
+		    isInternal="false" nodeType="UniqueCode" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">
+		    <Name>
+		        <LocalizedString charset="UTF-8" value="US Social Security Number"/>
+		    </Name>
+		    <Description>
+		        <LocalizedString charset="UTF-8" value="This is the identification scheme used by US government to identify people."/>
+		    </Description>
+		</ClassificationScheme>	
+	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

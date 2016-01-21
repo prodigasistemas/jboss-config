@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_RegisterFarrukh.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest 
+	xmlns = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0" 
+	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0 http://www.oasis-open.org/committees/regrep/documents/2.0/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.0 http://www.oasis-open.org/committees/regrep/documents/2.0/schema/rs.xsd" 
+	xmlns:rim = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0" 
+	xmlns:rs = "urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.0">  
+
+	<LeafRegistryObjectList>
+
+		<User id="urn:uuid:977d9380-00e2-4ce8-9cdc-d8bf6a4157be" organization="urn:uuid:dafa4da3-1d92-4757-8fd8-ff2b8ce7a1bf">
+			<Address streetNumber="1" street="Network Dr." city="Burlington" stateOrProvince="MA" country="USA" />
+			<PersonName firstName="Farrukh" middleName="Saladin" lastName="Najmi" />
+			<TelephoneNumber countryCode="1" areaCode="781" number="942-7277" phoneType="office"/>
+			<TelephoneNumber countryCode="1" areaCode="781" number="942-7278" phoneType="fax"/>
+			<EmailAddress address="Farrukh.Najmi@Sun.COM" type="work"/>
+			<EmailAddress address="farrukh_najmi@yahoo.com" type="alternate work" />
+		</User>
+
+	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

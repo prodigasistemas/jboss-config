@@ -1,0 +1,16 @@
+<?xml version = "1.0"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_CPA1.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest xmlns = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rs.xsd" xmlns:rim = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:rs = "urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1">  
+	<LeafRegistryObjectList>
+		<ExtrinsicObject id = "cpa1id" objectType = "CPA">                        
+			<Name>
+				<LocalizedString value = "TemplateTradingProfile"/>
+			</Name>
+			<Description>
+				<LocalizedString value = "This template CPA is distrubuted by GM for third party suppliers"/>
+			</Description>       
+		</ExtrinsicObject>        
+		    
+		    
+	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

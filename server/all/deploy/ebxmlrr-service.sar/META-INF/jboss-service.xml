@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE server>
+<server>
+
+  <!-- The ebxmlrr service configration
+  -->
+  <mbean code="org.jboss.jaxr.ebxmlrr.EbxmlrrService"
+    name="jboss:service=Ebxmlrr">
+     <!-- Whether we want to run the db initialization scripts
+      -->
+     <!-- Should all tables be created on Start-->
+     <attribute name="CreateOnStart">false</attribute>
+      <!-- Should all tables be dropped on Stop-->
+     <attribute name="DropOnStop">false</attribute>
+      <!-- Should all tables be dropped on Start-->
+     <attribute name="DropOnStart">false</attribute>
+      <!-- Datasource to Database-->
+     <attribute name="DataSourceUrl">java:/DefaultDS</attribute>
+      <!-- Alias to the registry-->
+     <attribute name="RegistryOperator">RegistryOperator</attribute>
+      <!-- Should I load NAICS data fresh (Remember it may take upto an Hour)-->
+     <attribute name="LoadNAICS">false</attribute>
+       <!-- Should I load UNSPC data fresh (Remember it may take upto an Hour)-->
+     <attribute name="LoadUNSPSC">false</attribute>
+      <!-- Should I bind a Context to which JaxrConnectionFactory bound-->
+     <attribute name="ShouldBindJaxr">false</attribute>
+       <!-- Context to which JaxrConnectionFactory to bind to. This binds to the
+      java namespace. If you have remote clients, please bind it to the global
+      namespace. Just remove the java:/ -->
+     <attribute name="BindJaxr">java:/JAXR</attribute>
+
+     <depends>jboss.web:service=WebServer</depends>
+     <!--<depends>jboss:service=Hypersonic,database=localDB</depends>-->
+     <depends>jboss.jca:service=DataSourceBinding,name=DefaultDS</depends>
+  </mbean>
+</server>

@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_RegisterNikola.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest 
+	xmlns = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0" 
+	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0 http://www.oasis-open.org/committees/regrep/documents/2.0/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.0 http://www.oasis-open.org/committees/regrep/documents/2.0/schema/rs.xsd" 
+	xmlns:rim = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0" 
+	xmlns:rs = "urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.0">  
+
+	<LeafRegistryObjectList>
+
+	    <User id="urn:uuid:85428d8e-1bd5-473b-a8c8-b9d595f82728" organization="urn:uuid:1dfcfec4-acdf-4adc-8a68-937ecd72bf16">
+		    <Address streetNumber="19" street="Terazije" city="Ithaca" stateOrProvince="NY" country="FRANCE" />
+		    <PersonName firstName="Nikola" middleName="" lastName="Stojanovic" />
+		    <TelephoneNumber countryCode="381" areaCode="11" number="222-2222" phoneType="office"/>
+		    <TelephoneNumber countryCode="381" areaCode="44" number="444-4444" phoneType="home"/>
+		    <EmailAddress address="nikola.stojanovic@taraba.com" type="work"/>
+	    </User>
+	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

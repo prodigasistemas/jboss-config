@@ -1,0 +1,1353 @@
+#
+# An unexpected error has been detected by HotSpot Virtual Machine:
+#
+#  SIGSEGV (0xb) at pc=0x00007f7db05406c4, pid=22633, tid=140176061511424
+#
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (1.5.0_22-b03 mixed mode)
+# Problematic frame:
+# V  [libjvm.so+0x5376c4]
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000405b9030):  VMThread [id=22638]
+
+siginfo:si_signo=11, si_errno=0, si_code=128, si_addr=0x0000000000000000
+
+Registers:
+RAX=0x0000000000000690, RBX=0x00007f7db086fee8, RCX=0xb000007f7d2800d1, RDX=0x000000004056d7c0
+RSP=0x00007f7d485a2760, RBP=0x00007f7d485a2770, RSI=0x00007f7d2800d181, RDI=0x00007f7d4009eca0
+R8 =0x00007f7d48d70408, R9 =0x0000000000000005, R10=0x0000000000000001, R11=0x0000000000000010
+R12=0x00007f7db09757c0, R13=0x0000000000000000, R14=0x00007f7d485a28dc, R15=0x00007f7d485a2790
+RIP=0x00007f7db05406c4, EFL=0x0000000000010206, CSGSFS=0x0000000000000033, ERR=0x0000000000000000
+  TRAPNO=0x000000000000000d
+
+Top of Stack: (sp=0x00007f7d485a2760)
+0x00007f7d485a2760:   00007f7d485a28dc 000000004056d7e0
+0x00007f7d485a2770:   00007f7d485a2810 00007f7db05b13e5
+0x00007f7d485a2780:   000000000005e410 000000000000bc82
+0x00007f7d485a2790:   0000000100000000 00007f7d00000001
+0x00007f7d485a27a0:   0000000000000000 00007f7db0a14580
+0x00007f7d485a27b0:   00007f7d00000000 000000000005e410
+0x00007f7d485a27c0:   0000000040507760 00007f7db0573318
+0x00007f7d485a27d0:   000000004056d7e0 000000000000bc82
+0x00007f7d485a27e0:   00007f7d485a2810 000000004056d7e0
+0x00007f7d485a27f0:   000000000000bc82 00007f7d485a28f0
+0x00007f7d485a2800:   00007f7db086fef0 000000004052f9c0
+0x00007f7d485a2810:   00007f7d485a2a50 00007f7db05b067e
+0x00007f7d485a2820:   00007f7d485a2840 00007f7db0575943
+0x00007f7d485a2830:   00007f7d485a2850 00007f7db02b65e5
+0x00007f7d485a2840:   00000000485a2860 00000000405b7e40
+0x00007f7d485a2850:   00007f7d51495740 000000000ce99300
+0x00007f7d485a2860:   00000000002d2500 0000000016661b58
+0x00007f7d485a2870:   0000000008735740 0000000016934058
+0x00007f7d485a2880:   0000000040531330 00007f7d485a2940
+0x00007f7d485a2890:   00007f7d485a2950 00007f7d485a2990
+0x00007f7d485a28a0:   00007f7d485a29f0 00000000405318e0
+0x00007f7d485a28b0:   000000004052fd80 000000004052fcf0
+0x00007f7d485a28c0:   000000003912e638 00007f7d3912e638
+0x00007f7d485a28d0:   00000000651fb524 00000000651f6e45
+0x00007f7d485a28e0:   004347206c6c7546 00000000405b7b60
+0x00007f7d485a28f0:   00007f7db08768d0 0000000000000000
+0x00007f7d485a2900:   000000004052fee0 00000000405b7e40
+0x00007f7d485a2910:   00007f7db08768b0 00000000405b7e40
+0x00007f7d485a2920:   00007f7db085f1c0 00000000405b7520
+0x00007f7d485a2930:   0000000000000000 0000000000000000
+0x00007f7d485a2940:   0000000000000001 00000000651f6e8f
+0x00007f7d485a2950:   0000000000000000 00000000651fbe7a 
+
+Instructions: (pc=0x00007f7db05406c4)
+0x00007f7db05406b4:   7a 08 ff c8 89 02 48 98 48 8b 34 c7 48 8b 4e 08
+0x00007f7db05406c4:   48 8b 51 10 48 8d 79 10 ff 92 b8 00 00 00 48 8b 
+
+Stack: [0x00007f7d484a3000,0x00007f7d485a4000),  sp=0x00007f7d485a2760,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x5376c4]
+V  [libjvm.so+0x5a83e5]
+V  [libjvm.so+0x5a767e]
+V  [libjvm.so+0x5a72b0]
+V  [libjvm.so+0x670477]
+V  [libjvm.so+0x66fa5a]
+V  [libjvm.so+0x66f176]
+V  [libjvm.so+0x66f3eb]
+V  [libjvm.so+0x66ef7a]
+V  [libjvm.so+0x56ff45]
+
+VM_Operation (0x00007f7d3912e600): parallel gc system gc, mode: safepoint, requested by thread 0x00007f7d0c42c5b0
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f7d0d8a1020 JavaThread "TP-Monitor" daemon [_thread_blocked, id=22901]
+  0x00007f7d0fbed720 JavaThread "TP-Processor4" daemon [_thread_in_native, id=22900]
+  0x00007f7d0fbec7a0 JavaThread "TP-Processor3" daemon [_thread_blocked, id=22899]
+  0x00007f7d0cedc7b0 JavaThread "TP-Processor2" daemon [_thread_blocked, id=22898]
+  0x00007f7d0d201160 JavaThread "TP-Processor1" daemon [_thread_blocked, id=22897]
+  0x00007f7d0ef9b800 JavaThread "http-0.0.0.0-8080-Monitor" [_thread_blocked, id=22896]
+  0x00007f7d0ef9a000 JavaThread "http-0.0.0.0-8080-Processor25" daemon [_thread_blocked, id=22895]
+  0x00007f7d0e3b1130 JavaThread "http-0.0.0.0-8080-Processor24" daemon [_thread_blocked, id=22894]
+  0x00007f7d0e3b00b0 JavaThread "http-0.0.0.0-8080-Processor23" daemon [_thread_blocked, id=22893]
+  0x00007f7d0d90bae0 JavaThread "http-0.0.0.0-8080-Processor22" daemon [_thread_in_native, id=22892]
+  0x00007f7d0d90aa10 JavaThread "http-0.0.0.0-8080-Processor21" daemon [_thread_blocked, id=22891]
+  0x00007f7d0ee10c40 JavaThread "http-0.0.0.0-8080-Processor20" daemon [_thread_blocked, id=22890]
+  0x00007f7d0ee0fba0 JavaThread "http-0.0.0.0-8080-Processor19" daemon [_thread_blocked, id=22889]
+  0x00007f7d0e22e610 JavaThread "http-0.0.0.0-8080-Processor18" daemon [_thread_blocked, id=22888]
+  0x00007f7d0e22d540 JavaThread "http-0.0.0.0-8080-Processor17" daemon [_thread_blocked, id=22887]
+  0x00007f7d0ea6a430 JavaThread "http-0.0.0.0-8080-Processor16" daemon [_thread_blocked, id=22886]
+  0x00007f7d0ea69360 JavaThread "http-0.0.0.0-8080-Processor15" daemon [_thread_blocked, id=22885]
+  0x00007f7cf891e090 JavaThread "http-0.0.0.0-8080-Processor14" daemon [_thread_blocked, id=22884]
+  0x00007f7cf891cfc0 JavaThread "http-0.0.0.0-8080-Processor13" daemon [_thread_blocked, id=22883]
+  0x00007f7d0dffbad0 JavaThread "http-0.0.0.0-8080-Processor12" daemon [_thread_blocked, id=22882]
+  0x00007f7d0dffaa00 JavaThread "http-0.0.0.0-8080-Processor11" daemon [_thread_blocked, id=22881]
+  0x00007f7d0ea122e0 JavaThread "http-0.0.0.0-8080-Processor10" daemon [_thread_blocked, id=22880]
+  0x00007f7d0c639880 JavaThread "http-0.0.0.0-8080-Processor9" daemon [_thread_blocked, id=22879]
+  0x00007f7d0c6387b0 JavaThread "http-0.0.0.0-8080-Processor8" daemon [_thread_blocked, id=22878]
+  0x00007f7d0d5d0e50 JavaThread "http-0.0.0.0-8080-Processor7" daemon [_thread_blocked, id=22877]
+  0x00007f7d0d5cfd80 JavaThread "http-0.0.0.0-8080-Processor6" daemon [_thread_blocked, id=22876]
+  0x00007f7d0ee7dc20 JavaThread "http-0.0.0.0-8080-Processor5" daemon [_thread_blocked, id=22875]
+  0x00007f7d0ee7cc30 JavaThread "http-0.0.0.0-8080-Processor4" daemon [_thread_blocked, id=22874]
+  0x00007f7d0d200160 JavaThread "http-0.0.0.0-8080-Processor3" daemon [_thread_blocked, id=22873]
+  0x00007f7d0d89c0e0 JavaThread "http-0.0.0.0-8080-Processor2" daemon [_thread_blocked, id=22872]
+  0x00007f7d0d89c850 JavaThread "http-0.0.0.0-8080-Processor1" daemon [_thread_blocked, id=22871]
+  0x00007f7d0d89c500 JavaThread "JBossLifeThread" [_thread_blocked, id=22870]
+  0x00007f7d0d95db00 JavaThread "IdleRemover" [_thread_blocked, id=22866]
+  0x00007f7d0d809bd0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:297/a33ce3be59ca2826dcbea4be0844e200 destination=QUEUE.ControladorBatchMicromedicaoGCOM messageSelector=null Local Create] id=149" [_thread_blocked, id=22860]
+  0x00007f7d0f07c7e0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:295/cd80d14309bbbc2b77de63c743eacda0 destination=QUEUE.ControladorBatchFaturamentoGCOM messageSelector=null Local Create] id=148" [_thread_blocked, id=22859]
+  0x00007f7d0f07b900 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:293/6025a7ab15d3d95b363d6e75c808ffd4 destination=QUEUE.ControladorBatchArrecadacaoGCOM messageSelector=null Local Create] id=147" [_thread_blocked, id=22858]
+  0x00007f7d0e1293c0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:291/4fef92af9ce243b1c4bfb4902ed6246a destination=QUEUE.BatchVerificarFaturamentoImoveisCortadosMDB messageSelector=null Local Create] id=146" [_thread_blocked, id=22857]
+  0x00007f7d0e6bc350 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:289/8ca6f1694d1cb7398b219d576935a258 destination=QUEUE.BatchSuspenderLeituraParaImovelComHidrometroRetiradoMDB messageSelector=null Local Create] id=145" [_thread_blocked, id=22856]
+  0x00007f7d0e6bc770 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:287/f3fe22041fb13b27fbcd963409f5ecaf destination=QUEUE.BatchSuspenderLeituraParaImovelComConsumoRealNaoSuperiorA10MDB messageSelector=null Local Create] id=144" [_thread_blocked, id=22855]
+  0x00007f7d0eb64a90 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:285/bb79901f4e3cb35b1b2a282cb7d8c87b destination=QUEUE.BatchSuspenderImovelEmProgramaEspecialMDB messageSelector=null Local Create] id=143" [_thread_blocked, id=22854]
+  0x00007f7d0dc3ff60 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:283/416c40f22d4a17adcdd55d95a7f1f6e2 destination=QUEUE.BatchRetirarImovelTarifaSocialMDB messageSelector=null Local Create] id=142" [_thread_blocked, id=22853]
+  0x00007f7d0df5b260 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:281/1940f5ec88d3d2c436a0f6491b5b7a53 destination=QUEUE.BatchRetificarConjuntoContaConsumosMDB messageSelector=null Local Create] id=141" [_thread_blocked, id=22852]
+  0x00007f7d0e162210 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:279/3f17e5bc733ea2879696ff7906a37fc8 destination=QUEUE.BatchReligarImoveisCortadosComConsumoRealMDB messageSelector=null Local Create] id=140" [_thread_blocked, id=22851]
+  0x00007f7d0e1629b0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:277/1e51b040b6cf2fc9c3108070cda89192 destination=QUEUE.BatchRelatorioContasBaixadasContabilmenteMDB messageSelector=null Local Create] id=139" [_thread_blocked, id=22850]
+  0x00007f7d0c566130 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:275/800331c4899dd3257de71f0e6ea6ff61 destination=QUEUE.BatchProgramacaoAutoRoteiroAcompServicoMDB messageSelector=null Local Create] id=138" [_thread_blocked, id=22849]
+  0x00007f7d0e161b30 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:273/73a54d0d93bae5b6abdd717142036624 destination=QUEUE.BatchProcessarPagamentosDiferencaDoisReaisMDB messageSelector=null Local Create] id=137" [_thread_blocked, id=22848]
+  0x00007f7d0d9259b0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:271/d5c875c5036fb8da2325836ea2cedfb8 destination=QUEUE.BatchProcessarEncerramentoOSFiscalizacaoDecursoPrazoMDB messageSelector=null Local Create] id=136" [_thread_blocked, id=22847]
+  0x00007f7d0d925620 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:269/fcd2d6a5dcb9cddf101ae894f5467fe2 destination=QUEUE.BatchProcessarEncerramentoOSAcaoCobrancaMDB messageSelector=null Local Create] id=135" [_thread_blocked, id=22846]
+  0x00007f7d0c828790 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:267/02806031bb925e9f15117a076d6616e4 destination=QUEUE.BatchProcessarComandoGeradoMDB messageSelector=null Local Create] id=134" [_thread_blocked, id=22845]
+  0x00007f7d0c828bb0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:265/150c96c63b5eff7177300a5d532c9a6e destination=QUEUE.BatchProcessarArquivoTxtEncerramentoOSCobrancaMDB messageSelector=null Local Create] id=133" [_thread_blocked, id=22844]
+  0x00007f7d0c827870 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:263/a62efb9613d1e0c1cddd8450f8ff4e69 destination=QUEUE.BatchPrescreverDebitosImoveisPublicosManualMDB messageSelector=null Local Create] id=132" [_thread_blocked, id=22843]
+  0x00007f7d0e2b3d90 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:261/16af2d96402ccffb2bb55be1bfb0780c destination=QUEUE.BatchPrescreverDebitosImoveisPublicosAutomaticoMDB messageSelector=null Local Create] id=131" [_thread_blocked, id=22842]
+  0x00007f7d0c7a7b00 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:259/3fecbd0940b6ef2d439694e28b0067bf destination=QUEUE.BatchInserirResumoAcoesCobrancaEventualMDB messageSelector=null Local Create] id=130" [_thread_blocked, id=22841]
+  0x00007f7d0c7a7f20 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:257/497b6deae5babcb7fd018f9aaaeed4f3 destination=QUEUE.BatchInserirResumoAcoesCobrancaCronogramaMDB messageSelector=null Local Create] id=129" [_thread_blocked, id=22840]
+  0x00007f7d0cc95da0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:255/a4f0add8d454d707ec3d199209385119 destination=QUEUE.BatchInserirPagamentosFaturasEspeciaisMDB messageSelector=null Local Create] id=128" [_thread_blocked, id=22839]
+  0x00007f7d0e0f1280 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:253/0e6bad423ee14770256b73bde613dfec destination=QUEUE.BatchIncluirDebitoACobrarEntradaParcelamentoNaoPagaMDB messageSelector=null Local Create] id=127" [_thread_blocked, id=22838]
+  0x00007f7d0cc951a0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:251/1298c077fa7094569f78f6ec4bb741f5 destination=QUEUE.BatchGerarValorVolumesConsumidosNaoFaturadosMDB messageSelector=null Local Create] id=126" [_thread_blocked, id=22837]
+  0x00007f7d0f07bc50 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:249/f35c696cb2d0f3596b9e82fb381cb016 destination=QUEUE.BatchGerarTxtOsInspecaoAnormalidadeMDB messageSelector=null Local Create] id=125" [_thread_blocked, id=22836]
+  0x00007f7d0e0f0230 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:247/eccda5a97736521f5b76ee5fae0f49db destination=QUEUE.BatchGerarTxtImpressaoContasBrailleMDB messageSelector=null Local Create] id=124" [_thread_blocked, id=22835]
+  0x00007f7d0c84e660 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:245/a3a10a4093a8e0e3dd5ed9138c048ef8 destination=QUEUE.BatchGerarTaxaPercentualTarifaMinimaCortadoMDB messageSelector=null Local Create] id=123" [_thread_blocked, id=22834]
+  0x00007f7d0e8147a0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:243/be8660c09ffec3ffcdd1c9673db68f84 destination=QUEUE.BatchGerarTaxaEntregaOutroEnderecoMDB messageSelector=null Local Create] id=122" [_thread_blocked, id=22833]
+  0x00007f7d0fcf5680 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:241/addd4f96db2ef9276dc1bfd2c633866c destination=QUEUE.BatchGerarTabelasTemporariasAtualizacaoCadastralMDB messageSelector=null Local Create] id=121" [_thread_blocked, id=22832]
+  0x00007f7d0fcf4830 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:239/b6336d26687df43da106ae365be92151 destination=QUEUE.BatchGerarResumoSituacaoEspecialFaturamentoMDB messageSelector=null Local Create] id=120" [_thread_blocked, id=22831]
+  0x00007f7d0c8305b0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:237/7d42ec8a1d3f7a4a13da40415fbb87a5 destination=QUEUE.BatchGerarResumoSituacaoEspecialCobrancaMDB messageSelector=null Local Create] id=119" [_thread_blocked, id=22830]
+  0x00007f7d0c82f9b0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:235/67ca43af2b3fef6340df17e937007546 destination=QUEUE.BatchGerarResumoSimulacaoFaturamentoMDB messageSelector=null Local Create] id=118" [_thread_blocked, id=22829]
+  0x00007f7d0ca47040 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:233/d387eaf667df582df5100e3a48f19b07 destination=QUEUE.BatchGerarResumoRegistroAtendimentoPorAnoMDB messageSelector=null Local Create] id=117" [_thread_blocked, id=22828]
+  0x00007f7d0c46c620 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:231/2e585f05bba54b902d67df048d5aa9ea destination=QUEUE.BatchGerarResumoRegistroAtendimentoMDB messageSelector=null Local Create] id=116" [_thread_blocked, id=22827]
+  0x00007f7d0c46c290 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:229/0b5eeb1518b90c260cf403e690560b54 destination=QUEUE.BatchGerarResumoReceitaMDB messageSelector=null Local Create] id=115" [_thread_blocked, id=22826]
+  0x00007f7d0e83c320 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:227/6bb64eaa65c04f4d90479e410c29dc28 destination=QUEUE.BatchGerarResumoReFaturamentoOlapMDB messageSelector=null Local Create] id=114" [_thread_blocked, id=22825]
+  0x00007f7d0e84cd10 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:225/5c6ca0b54c1013fd79f2ba03e5eb5ef4 destination=QUEUE.BatchGerarResumoReFaturamentoNovoMDB messageSelector=null Local Create] id=113" [_thread_blocked, id=22824]
+  0x00007f7d0deb0b30 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:223/e138bfdf6aed3762fa299c1f075f31bf destination=QUEUE.BatchGerarResumoReFaturamentoMDB messageSelector=null Local Create] id=112" [_thread_blocked, id=22823]
+  0x00007f7d0deb07a0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:221/dfc35dd3f78226593ed73c59be687c56 destination=QUEUE.BatchGerarResumoPendenciaPorAnoMDB messageSelector=null Local Create] id=111" [_thread_blocked, id=22822]
+  0x00007f7d0da40b50 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:219/25276df7d22d77a96b73a552265e5b8b destination=QUEUE.BatchGerarResumoPendenciaMDB messageSelector=null Local Create] id=110" [_thread_blocked, id=22821]
+  0x00007f7d0e0b7fb0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:217/f8c7645cc2be16647ed6a12ef7e01672 destination=QUEUE.BatchGerarResumoParcelamentoPorAnoMDB messageSelector=null Local Create] id=109" [_thread_blocked, id=22820]
+  0x00007f7d0e0b7910 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:215/b5ee045b333929ec37d836152c6f3582 destination=QUEUE.BatchGerarResumoParcelamentoMDB messageSelector=null Local Create] id=108" [_thread_blocked, id=22819]
+  0x00007f7d0e0b82e0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:213/5326492d004cd142e9f6dc4a77acd559 destination=QUEUE.BatchGerarResumoNegativacaoMDB messageSelector=null Local Create] id=107" [_thread_blocked, id=22818]
+  0x00007f7d0e9a1e00 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:211/59fa857852e2bc2d5ac30d209c08ba1f destination=QUEUE.BatchGerarResumoMetasMDB messageSelector=null Local Create] id=106" [_thread_blocked, id=22817]
+  0x00007f7d0da08140 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:209/d34efcadc2d6886fb6ecc3e6adfbdd6e destination=QUEUE.BatchGerarResumoMetasAcumuladoMDB messageSelector=null Local Create] id=105" [_thread_blocked, id=22816]
+  0x00007f7d0d4ee740 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:207/63b68411b7484a95583791f98929d92e destination=QUEUE.BatchGerarResumoLigacoesEconomiasPorAnoMDB messageSelector=null Local Create] id=104" [_thread_blocked, id=22814]
+  0x00007f7d0e1b2c20 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:205/5aeea100c7921b4e7b82ba24ae49fa6e destination=QUEUE.BatchGerarResumoLigacoesEconomiasMDB messageSelector=null Local Create] id=103" [_thread_blocked, id=22813]
+  0x00007f7d0cc391d0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:203/e0929badc048fb2630355051f3936fa1 destination=QUEUE.BatchGerarResumoLeituraAnormalidadeMDB messageSelector=null Local Create] id=102" [_thread_blocked, id=22812]
+  0x00007f7cf890e540 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:201/964a4cbef720216bede6b101ebd895fd destination=QUEUE.BatchGerarResumoInstalacoesHidrometrosPorAnoMDB messageSelector=null Local Create] id=101" [_thread_blocked, id=22811]
+  0x00007f7d0c4438f0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:199/d076db622b44338fdbd0eae43cfa133b destination=QUEUE.BatchGerarResumoInstalacoesHidrometrosMDB messageSelector=null Local Create] id=100" [_thread_blocked, id=22810]
+  0x00007f7d0c5355d0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:197/7de29633f2c0e80c141014e579c14ee6 destination=QUEUE.BatchGerarResumoIndicadoresMicromedicaoPorAnoMDB messageSelector=null Local Create] id=99" [_thread_blocked, id=22809]
+  0x00007f7d0edb67d0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:195/7d81f4ac5edbb11e9901c5d6328f9972 destination=QUEUE.BatchGerarResumoIndicadoresMicromedicaoMDB messageSelector=null Local Create] id=98" [_thread_blocked, id=22808]
+  0x00007f7d0d8423a0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:193/7a4940e492f8a3d4b685633a1b3a606b destination=QUEUE.BatchGerarResumoIndicadoresFaturamentoMDB messageSelector=null Local Create] id=97" [_thread_blocked, id=22807]
+  0x00007f7d0c9fea60 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:191/6564f06a46c107744d4cdaf73d470e8e destination=QUEUE.BatchGerarResumoIndicadoresComercializacaoMDB messageSelector=null Local Create] id=96" [_thread_blocked, id=22806]
+  0x00007f7d0eb460c0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:189/d8e505b2b8b0c743e564c08b634076ea destination=QUEUE.BatchGerarResumoIndicadoresCobrancaMDB messageSelector=null Local Create] id=95" [_thread_blocked, id=22805]
+  0x00007f7d0fefc170 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:187/8029e30757fa2f2c44970faead41df6c destination=QUEUE.BatchGerarResumoHistogramaAguaEsgotoSemQuadraMDB messageSelector=null Local Create] id=94" [_thread_blocked, id=22804]
+  0x00007f7cf88fa980 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:185/d098ab40818325ce16de1c617de70fbc destination=QUEUE.BatchGerarResumoHistogramaAguaEsgotoMDB messageSelector=null Local Create] id=93" [_thread_blocked, id=22803]
+  0x00007f7d0c20d330 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:183/edeea10c7363e6b01ff0d80aef355db2 destination=QUEUE.BatchGerarResumoHidrometroMDB messageSelector=null Local Create] id=92" [_thread_blocked, id=22802]
+  0x00007f7d0c47eed0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:181/050b378fbebdf9b0cda4cb630ff8dddf destination=QUEUE.BatchGerarResumoFaturamentoPorAnoMDB messageSelector=null Local Create] id=91" [_thread_blocked, id=22801]
+  0x00007f7d0e748460 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:179/10e99b6940ce8d6d925a0b8411f970cb destination=QUEUE.BatchGerarResumoFaturamentoMDB messageSelector=null Local Create] id=90" [_thread_blocked, id=22800]
+  0x00007f7d0c20db10 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:177/98cac0fcf15abccdbf5a4da5f037e1f6 destination=QUEUE.BatchGerarResumoFaturamentoAguaEsgotoMDB messageSelector=null Local Create] id=89" [_thread_blocked, id=22799]
+  0x00007f7d0de1da50 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:175/695817bb46f1eb479ec8ecfc16f896d3 destination=QUEUE.BatchGerarResumoDocumentosAReceberMDB messageSelector=null Local Create] id=88" [_thread_blocked, id=22798]
+  0x00007f7d0d324f00 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:173/a74e128504ca8d17df234d6e0f0c3e8e destination=QUEUE.BatchGerarResumoDiarioNegativacaoMDB messageSelector=null Local Create] id=87" [_thread_blocked, id=22797]
+  0x00007f7d0d324b70 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:171/b4e2ae23b9d4d49e70bac8c4ab183c6c destination=QUEUE.BatchGerarResumoDevedoresDuvidososMDB messageSelector=null Local Create] id=86" [_thread_blocked, id=22796]
+  0x00007f7d0cc39820 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:169/f5622eca12d3e61367287929f4916530 destination=QUEUE.BatchGerarResumoConsumoAguaMDB messageSelector=null Local Create] id=85" [_thread_blocked, id=22795]
+  0x00007f7d0cc394c0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:167/9e2e4e82765b601645396ce9325f40c7 destination=QUEUE.BatchGerarResumoColetaEsgotoPorAnoMDB messageSelector=null Local Create] id=84" [_thread_blocked, id=22794]
+  0x00007f7d0e5df450 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:165/3f08c9cae1d0171bba2e44b32529def2 destination=QUEUE.BatchGerarResumoColetaEsgotoMDB messageSelector=null Local Create] id=83" [_thread_blocked, id=22793]
+  0x00007f7d0d87b330 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:163/9c3575ec235e13c3db421e59d00dfa67 destination=QUEUE.BatchGerarResumoArrecadacaoPorAnoMDB messageSelector=null Local Create] id=82" [_thread_blocked, id=22792]
+  0x00007f7d0d87af80 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:161/fea0033f13acf7a3280444337d7fd038 destination=QUEUE.BatchGerarResumoArrecadacaoMDB messageSelector=null Local Create] id=81" [_thread_blocked, id=22791]
+  0x00007f7d0c53b100 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:159/64d836114f8584189e1a576d33d950b5 destination=QUEUE.BatchGerarResumoAnormalidadesMDB messageSelector=null Local Create] id=80" [_thread_blocked, id=22790]
+  0x00007f7d0c9ff0d0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:157/51e0cd21fbcfe18d7afe39d48e536602 destination=QUEUE.BatchGerarResumoAcoesCobrancaEventualMDB messageSelector=null Local Create] id=79" [_thread_blocked, id=22789]
+  0x00007f7d0ccd81c0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:155/8d531a0a36f924c5e86e00027c084a5f destination=QUEUE.BatchGerarResumoAcoesCobrancaCronogramaMDB messageSelector=null Local Create] id=78" [_thread_blocked, id=22788]
+  0x00007f7d0c74e980 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:153/0fd94b74e2d9ccf9b6e5c81eeee693b4 destination=QUEUE.BatchGerarResumoAcoesCobrancaCronogramaEncerrarOSMDB messageSelector=null Local Create] id=77" [_thread_blocked, id=22787]
+  0x00007f7d0d4eee10 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:151/3440abc36d0ed500020ec79e1fc0e699 destination=QUEUE.BatchGerarRAOSAnormalidadeConsumoMDB messageSelector=null Local Create] id=76" [_thread_blocked, id=22786]
+  0x00007f7d0c623980 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:149/a09da340b99939a437adcd4ab8d6c75b destination=QUEUE.BatchGerarPrescreverDebitosDeImoveisMDB messageSelector=null Local Create] id=75" [_thread_blocked, id=22785]
+  0x00007f7d0d87c2c0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:147/0357e55514490813d42f5df25833c9fc destination=QUEUE.BatchGerarMovimentoRetornoNegativacaoMDB messageSelector=null Local Create] id=74" [_thread_blocked, id=22784]
+  0x00007f7cf84dd780 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:145/6621b3d6008a67aebbf6bf97a0af1267 destination=QUEUE.BatchGerarMovimentoHidrometroMDB messageSelector=null Local Create] id=73" [_thread_blocked, id=22783]
+  0x00007f7d0e76a3e0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:143/e100396c8d1292a4e945667bbbdeb2c3 destination=QUEUE.BatchGerarMovimentoExtensaoContasCobrancaPorEmpresaMDB messageSelector=null Local Create] id=72" [_thread_blocked, id=22782]
+  0x00007f7d0ccd9310 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:141/78d0db331c0d7dabcb22de58cb0cae25 destination=QUEUE.BatchGerarMovimentoExclusaoNegativacaoMDB messageSelector=null Local Create] id=71" [_thread_blocked, id=22781]
+  0x00007f7d0da41d80 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:139/8e7602dde2669c0d1cec37c8e802c338 destination=QUEUE.BatchGerarMovimentoContasCobrancaPorEmpresaMDB messageSelector=null Local Create] id=70" [_thread_blocked, id=22780]
+  0x00007f7d0d7cff30 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:137/144f6f934ff3736b72989bdd0e943428 destination=QUEUE.BatchGerarLancamentosContabeisFaturamentoMDB messageSelector=null Local Create] id=69" [_thread_blocked, id=22779]
+  0x00007f7d0df20de0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:135/c8faddbbd8442c006633cceb20b4fe2b destination=QUEUE.BatchGerarLancamentosContabeisDevedoresDuvidososMDB messageSelector=null Local Create] id=68" [_thread_blocked, id=22777]
+  0x00007f7d0c20df30 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:133/2b6d1bdbd326037629474aef8fc202d8 destination=QUEUE.BatchGerarLancamentosContabeisAvisosBancariosMDB messageSelector=null Local Create] id=67" [_thread_blocked, id=22776]
+  0x00007f7d0db96720 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:131/2dcea7b8ed8d4b07248692172497d13e destination=QUEUE.BatchGerarLancamentosContabeisArrecadacaoMDB messageSelector=null Local Create] id=66" [_thread_blocked, id=22775]
+  0x00007f7d0cbb64c0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:129/bed01a6fafb704ce4ad87a3d96d8e96d destination=QUEUE.BatchGerarHistoricoParaEncerrarFaturamentoMesMDB messageSelector=null Local Create] id=65" [_thread_blocked, id=22774]
+  0x00007f7cf88fada0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:127/1475f4702f6df001b886eee378e504e1 destination=QUEUE.BatchGerarHistoricoParaEncerrarArrecadacaoMesMDB messageSelector=null Local Create] id=64" [_thread_blocked, id=22773]
+  0x00007f7d0cbb6850 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:125/1956be2c386a8464e7c1461779ce93ca destination=QUEUE.BatchGerarHistoricoContaMDB messageSelector=null Local Create] id=63" [_thread_blocked, id=22772]
+  0x00007f7d0d842d70 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:123/d20d489e329d63283766ee8a75b2b8b0 destination=QUEUE.BatchGerarGuiaPagamentoPorClienteResumoPendenciaMDB messageSelector=null Local Create] id=62" [_thread_blocked, id=22771]
+  0x00007f7d0d8a8610 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:121/765d83e01b3829ae599faccf6424c112 destination=QUEUE.BatchGerarFaturaClienteResponsavelMDB messageSelector=null Local Create] id=61" [_thread_blocked, id=22770]
+  0x00007f7d0d321430 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:119/2d3440d3c97f7fd0d7865d56a6064f6d destination=QUEUE.BatchGerarDebitoACobrarDoacaoMDB messageSelector=null Local Create] id=60" [_thread_blocked, id=22769]
+  0x00007f7d0f0d1460 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:117/881e3d1ea69a11ff9cbb056786e917d9 destination=QUEUE.BatchGerarDebitoACobrarDeAcrescimoPorImpontualidadeMDB messageSelector=null Local Create] id=59" [_thread_blocked, id=22768]
+  0x00007f7d0cc6a3b0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:115/38fc70e68c86e7eb32a9c74817b44e2a destination=QUEUE.BatchGerarDadosRelatorioBIGMDB messageSelector=null Local Create] id=58" [_thread_blocked, id=22767]
+  0x00007f7d0d335c20 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:113/0de1782b64e7f95ed8805f76dd5d7ba0 destination=QUEUE.BatchGerarDadosParaLeituraMDB messageSelector=null Local Create] id=57" [_thread_blocked, id=22766]
+  0x00007f7d0ef7ca80 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:111/3b1f0467f74ea2b049efcd3a330ef610 destination=QUEUE.BatchGerarDadosDiariosArrecadacaoMDB messageSelector=null Local Create] id=56" [_thread_blocked, id=22765]
+  0x00007f7d0e665540 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:109/157bc78c53d8a05ed8fb1d859290750c destination=QUEUE.BatchGerarDadosDeclaracaoQuitacaoAnualDebitosMDB messageSelector=null Local Create] id=55" [_thread_blocked, id=22764]
+  0x00007f7d0ddcdc90 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:107/59edfe927c0060831047a36568b90074 destination=QUEUE.BatchGerarDadosArquivoAcompanhamentoServicoMDB messageSelector=null Local Create] id=54" [_thread_blocked, id=22763]
+  0x00007f7d0f098810 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:105/75af45f0c476c96b6ed15759007bb21c destination=QUEUE.BatchGerarCreditoSituacaoEspecialFaturamentoMDB messageSelector=null Local Create] id=53" [_thread_blocked, id=22762]
+  0x00007f7d0de1d720 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:103/882fdbc04cde88600dc4799cb5d869b6 destination=QUEUE.BatchGerarContasAReceberContabilMDB messageSelector=null Local Create] id=52" [_thread_blocked, id=22761]
+  0x00007f7d0d997190 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:101/e200b5a12e20a6a10e0837eb50c78d98 destination=QUEUE.BatchGerarCartasDeFinalDeAnoMDB messageSelector=null Local Create] id=51" [_thread_blocked, id=22760]
+  0x00007f7d0db25010 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:99/caa0f0e892dda8888d2c128130820345 destination=QUEUE.BatchGerarCartasCampanhaSolidariedadeCriancaParaNegociacaoAVistaMDB messageSelector=null Local Create] id=50" [_thread_blocked, id=22759]
+  0x00007f7d0e7b9c20 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:97/fdcabe8bf549f927fc90fa49f825cc00 destination=QUEUE.BatchGerarCartaTarifaSocialMDB messageSelector=null Local Create] id=49" [_thread_blocked, id=22758]
+  0x00007f7d0ed7db80 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:95/c45da992cb83275bc4c5e38b46b723d3 destination=QUEUE.BatchGerarBonusTarifaSocialMDB messageSelector=null Local Create] id=48" [_thread_blocked, id=22757]
+  0x00007f7d0e70f6b0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:93/478c733613ef79800fc50739166339ae destination=QUEUE.BatchGerarAtividadeAcaoCobrancaMDB messageSelector=null Local Create] id=47" [_thread_blocked, id=22756]
+  0x00007f7d0e9f17c0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:91/bfe9a6982bef6078d200e30bfdbac5b8 destination=QUEUE.BatchGerarArquivoTextoParaLeituristaMDB messageSelector=null Local Create] id=46" [_thread_blocked, id=22755]
+  0x00007f7d0e82b4e0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:89/c499f1a1abbb9ac9d93424eb97ac8d82 destination=QUEUE.BatchGerarArquivoTextoPagamentosContasCobrancaEmpresaMDB messageSelector=null Local Create] id=45" [_thread_blocked, id=22754]
+  0x00007f7d0ea9bb50 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:87/d4f540d0dfab65dfbb16211b66b2bcb5 destination=QUEUE.BatchGerarArquivoTextoOSContasPagasParceladasMDB messageSelector=null Local Create] id=44" [_thread_blocked, id=22753]
+  0x00007f7d0ec9aa40 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:85/e7bab3460498c0b538ee50e0d24677e4 destination=QUEUE.BatchGerarArquivoTextoDeclaracaoQuitacaoAnualDebitosMDB messageSelector=null Local Create] id=43" [_thread_blocked, id=22752]
+  0x00007f7d0eed25e0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:83/6d0a7a4251a1ade2ccdcc6a9893ea20b destination=QUEUE.BatchGerarArquivoTextoContasProjetosEspeciaisMDB messageSelector=null Local Create] id=42" [_thread_blocked, id=22751]
+  0x00007f7d0dd73270 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:81/9df690f3ffba993e273f64d8a49f75f5 destination=QUEUE.BatchGerarArquivoTextoContasCobrancaEmpresaMDB messageSelector=null Local Create] id=41" [_thread_blocked, id=22750]
+  0x00007f7d0e864150 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:79/4673eebda0ff9bf334d0549e108bc17c destination=QUEUE.BatchGerarArquivoTextoAtualizacaoCadastralMDB messageSelector=null Local Create] id=40" [_thread_blocked, id=22749]
+  0x00007f7d0de78300 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:77/126900c60d4ee0781e3f867191fd0734 destination=QUEUE.BatchGerarArquivoOrdemDeFiscalizacaoMDB messageSelector=null Local Create] id=39" [_thread_blocked, id=22748]
+  0x00007f7d0eb0d470 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:75/42401d4f74b62197e00091b69a1a620c destination=QUEUE.BatchFaturarGrupoFaturamentoMDB messageSelector=null Local Create] id=38" [_thread_blocked, id=22747]
+  0x00007f7d0ef43e00 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:73/f83c84b125884c10dc4a1e3e31a87759 destination=QUEUE.BatchExecutarComandoNegativacaoMDB messageSelector=null Local Create] id=37" [_thread_blocked, id=22746]
+  0x00007f7d0e6d6a60 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:71/40d43b1f2a1d2665d1c7125d19bf53b6 destination=QUEUE.BatchExecutarComandoEncerramentoRAMDB messageSelector=null Local Create] id=36" [_thread_blocked, id=22745]
+  0x00007f7d0ebb78e0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:69/d5bf7e6a4e9fca72674ded7fa7ab3e22 destination=QUEUE.BatchExcluirImoveisDaTarifaSocialMDB messageSelector=null Local Create] id=35" [_thread_blocked, id=22744]
+  0x00007f7d0ef0b1b0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:67/d96c30846dc0d1be5441f8320944100c destination=QUEUE.BatchEnvioEmailContaParaClienteMDB messageSelector=null Local Create] id=34" [_thread_blocked, id=22743]
+  0x00007f7d0ed44f80 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:65/eeb61b4aad19f5693f2f5fed77c7b034 destination=QUEUE.BatchEncerrarFaturamentoMesMDB messageSelector=null Local Create] id=33" [_thread_blocked, id=22742]
+  0x00007f7d0d8b4dc0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:63/3ff820bc230a9e623eb1ed6a53c11b7c destination=QUEUE.BatchEncerrarComandosDeCobrancaPorEmpresaMDB messageSelector=null Local Create] id=32" [_thread_blocked, id=22741]
+  0x00007f7d0ed0c550 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:61/08001b9853a6a6e546938a21e0093708 destination=QUEUE.BatchEncerrarComandoOSSeletivaInspecaoAnormalidadeMDB messageSelector=null Local Create] id=31" [_thread_blocked, id=22740]
+  0x00007f7d0daeb5f0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:59/29983531076b3c764b977ff332ddfb30 destination=QUEUE.BatchEncerrarArrecadacaoMesMDB messageSelector=null Local Create] id=30" [_thread_blocked, id=22739]
+  0x00007f7d0c6bff70 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:57/e88c103554aa53a88af878e49e1ee0b6 destination=QUEUE.BatchEmitirOrdemDeFiscalizacaoMDB messageSelector=null Local Create] id=29" [_thread_blocked, id=22738]
+  0x00007f7d0eabd9b0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:55/cfc6d1744f766bd9bb9d55e1681576f5 destination=QUEUE.BatchEmitirExtratoConsumoImovelCondominioMDB messageSelector=null Local Create] id=28" [_thread_blocked, id=22737]
+  0x00007f7d0f05fc70 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:53/9e59374fd7f6f983a9847519fa941690 destination=QUEUE.BatchEmitirDocumentoCobrancaMDB messageSelector=null Local Create] id=27" [_thread_blocked, id=22736]
+  0x00007f7d0dcc8e30 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:51/192fb9e50759ca56232cde890e8c294e destination=QUEUE.BatchEmitirContasOrgaoPublicoMDB messageSelector=null Local Create] id=26" [_thread_blocked, id=22735]
+  0x00007f7d0ec61f20 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:49/4f329f89290501eae0409b256f0cdc03 destination=QUEUE.BatchEmitirContasMDB messageSelector=null Local Create] id=25" [_thread_blocked, id=22734]
+  0x00007f7d0f027040 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:47/37dfcaba53eb03d8978e0130844f18ea destination=QUEUE.BatchEmitirCartasDeFinalDeAnoMDB messageSelector=null Local Create] id=24" [_thread_blocked, id=22733]
+  0x00007f7d0ca2e1f0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:45/54fcd27ac033a953a7db2ed8193141c3 destination=QUEUE.BatchEmitirCartasCampanhaSolidariedadeCriancaParaNegociacaoAVistaMDB messageSelector=null Local Create] id=23" [_thread_blocked, id=22732]
+  0x00007f7d0cbe2090 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:43/c5089e9d7e695f75944a4b503d5dbe28 destination=QUEUE.BatchEmitirBoletosMDB messageSelector=null Local Create] id=22" [_thread_blocked, id=22731]
+  0x00007f7d0d506910 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:41/600457bf88da418d7df0e5945319ffd2 destination=QUEUE.BatchEmitirBoletimCadastroMDB messageSelector=null Local Create] id=21" [_thread_blocked, id=22730]
+  0x00007f7d0d494fe0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:39/0b7b5bbdf4a1455d08c76b23f9572d0c destination=QUEUE.BatchEfetuarRateioConsumoMDB messageSelector=null Local Create] id=20" [_thread_blocked, id=22729]
+  0x00007f7d0c677d50 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:37/8181c1b29cfa03a164556347789b6856 destination=QUEUE.BatchDeterminarConfirmacaoDaNegativacaoMDB messageSelector=null Local Create] id=19" [_thread_blocked, id=22728]
+  0x00007f7d0dee9ee0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:35/a7b829358475fb857b6344c891c64367 destination=QUEUE.BatchDesfazerParcelamentoPorEntradaNaoPagaMDB messageSelector=null Local Create] id=18" [_thread_blocked, id=22727]
+  0x00007f7d0c6779a0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:33/3ab211d04be9f1f1d25e4d488c6d6067 destination=QUEUE.BatchConsistirLeiturasCalcularConsumosMDB messageSelector=null Local Create] id=17" [_thread_blocked, id=22726]
+  0x00007f7d0d4ef600 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:31/807a7e0431ef2f76e97d7e0c802da471 destination=QUEUE.BatchClassificarPagamentosDevolucoesMDB messageSelector=null Local Create] id=16" [_thread_blocked, id=22725]
+  0x00007f7d0c9ea9a0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:29/b12391069415b9a03d1ca3e5e1fdfc33 destination=QUEUE.BatchCancelarGuiasPagamentoNaoPagas messageSelector=null Local Create] id=15" [_thread_blocked, id=22723]
+  0x00007f7d0d60b390 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:27/befba0bfd53e987b037512c6cb70dd16 destination=QUEUE.BatchAutomatizarPerfisDeGrandesConsumidoresMDB messageSelector=null Local Create] id=14" [_thread_blocked, id=22722]
+  0x00007f7d0e459990 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:25/da9a646ba381d7f5a31eaf420aee1aca destination=QUEUE.BatchAtualizarResumoDevedoresDuvidososMDB messageSelector=null Local Create] id=13" [_thread_blocked, id=22720]
+  0x00007f7d0c6c0db0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:23/d84859b0b84ff7a6943472b6ece24c08 destination=QUEUE.BatchAtualizarPagamentosContasCobrancaMDB messageSelector=null Local Create] id=12" [_thread_blocked, id=22719]
+  0x00007f7d0c48cd50 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:21/e0773ecb25ed7e4358a707904d03c753 destination=QUEUE.BatchAtualizarNumeroExecucaoResumoNegativacaoMDB messageSelector=null Local Create] id=11" [_thread_blocked, id=22718]
+  0x00007f7d0d816900 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:19/09a6fd457811a9e65fef6b39bbc3dc21 destination=QUEUE.BatchAtualizarLigacaoAguaLigadoAnaliseParaLigadoMDB messageSelector=null Local Create] id=10" [_thread_blocked, id=22717]
+  0x00007f7d0c79e340 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:17/1aa8a15552d9737d75940e208be6ef69 destination=QUEUE.BatchAtualizarConjuntoHidrometroMDB messageSelector=null Local Create] id=9" [_thread_blocked, id=22716]
+  0x00007f7d0de3f5d0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:15/d73f0e82a7c908d382049ec55bf4f6d1 destination=QUEUE.BatchAtualizarComandoAtividadeAcaoCobrancaMDB messageSelector=null Local Create] id=8" [_thread_blocked, id=22715]
+  0x00007f7d0d7602f0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:13/629d0b9f6a0fe5204f46253e1ae0ad67 destination=QUEUE.BatchAtualizarCodigoDebitoAutomaticoMDB messageSelector=null Local Create] id=7" [_thread_blocked, id=22714]
+  0x00007f7d0d6b6060 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:11/aede4806b0ba4b3f8e494593e81944ee destination=QUEUE.BatchAtualizarAutosInfracaoPrazoRecursoVencidoMDB messageSelector=null Local Create] id=6" [_thread_blocked, id=22713]
+  0x00007f7d0d7d0ea0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:9/261c4ccaa93c04ec4ae02c351cd58a1c destination=QUEUE.BatchAtualizacaoCadastralMDB messageSelector=null Local Create] id=5" [_thread_blocked, id=22712]
+  0x00007f7d0d445d20 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:7/ad3370fd62312c37abfeaa9b86f45583 destination=QUEUE.BatchAtualizaQuantidadeParcelaPagaConsecutivaParcelaBonusMDB messageSelector=null Local Create] id=4" [_thread_blocked, id=22711]
+  0x00007f7d0ed599e0 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:5/62b6c769b17c2616fe27dd9ca1c3edad destination=QUEUE.BatchApagarResumoDevedoresDuvidososMDB messageSelector=null Local Create] id=3" [_thread_blocked, id=22710]
+  0x00007f7d0c539650 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:3/b8957f7f71d3923743a6ab7ea69a8511 destination=QUEUE.BatchAlterarInscricaoImovelMDB messageSelector=null Local Create] id=2" [_thread_blocked, id=22709]
+  0x00007f7d0c787410 JavaThread "Connection Consumer for dest Subscription[subId=-2147483648connection=ConnectionToken:ID:1/cfd267d7dde8d2a9d556f57fce5c4210 destination=QUEUE.BatchAcompanharPagamentoDoParcelamentoMDB messageSelector=null Local Create] id=1" [_thread_blocked, id=22708]
+  0x00007f7d0c50f900 JavaThread "Thread-5" daemon [_thread_blocked, id=22698]
+  0x00007f7d0ca75d10 JavaThread "UILServerILService Accept Thread" [_thread_in_native, id=22688]
+  0x00007f7d0c8c7b70 JavaThread "TimeoutFactory" daemon [_thread_blocked, id=22687]
+  0x00007f7d0c60e220 JavaThread "JCA PoolFiller" [_thread_blocked, id=22686]
+  0x00007f7d0c889f50 JavaThread "Timer-2" daemon [_thread_blocked, id=22685]
+  0x00007f7d0c8fb130 JavaThread "HSQLDB Timer @2ac510e3" daemon [_thread_blocked, id=22684]
+  0x00007f7d0c90e510 JavaThread "WorkManager(3)-1" daemon [_thread_blocked, id=22680]
+  0x00007f7d0c21ca40 JavaThread "JBossMQ Cache Reference Softner" daemon [_thread_blocked, id=22679]
+  0x00007f7d0cc10be0 JavaThread "ContainerBackgroundProcessor[StandardEngine[jboss.web]]" daemon [_thread_blocked, id=22677]
+  0x00007f7d0c417400 JavaThread "PooledInvokerAcceptor#0-4445" [_thread_in_native, id=22675]
+  0x00007f7d0c3f8840 JavaThread "RMI TCP Accept-4444" daemon [_thread_in_native, id=22674]
+  0x00007f7d0c4c8ce0 JavaThread "ClassLoadingPool(2)-1" daemon [_thread_in_native, id=22673]
+  0x00007f7d0c122cd0 JavaThread "JBoss System Threads(1)-1" daemon [_thread_in_native, id=22672]
+  0x00007f7d0c42c5b0 JavaThread "GC Daemon" daemon [_thread_blocked, id=22671]
+  0x00007f7d0c41c770 JavaThread "RMI Reaper" [_thread_blocked, id=22670]
+  0x00007f7d0c428d00 JavaThread "Timer-1" daemon [_thread_blocked, id=22669]
+  0x00007f7d0c41baf0 JavaThread "RMI TCP Accept-8099" daemon [_thread_in_native, id=22668]
+  0x00007f7d0c41d910 JavaThread "ScannerThread" daemon [_thread_blocked, id=22667]
+  0x00007f7d0c3eaa50 JavaThread "Timer-0" daemon [_thread_blocked, id=22663]
+  0x000000004050d0c0 JavaThread "DestroyJavaVM" [_thread_blocked, id=22633]
+  0x00000000405dff40 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=22660]
+  0x00000000405de4e0 JavaThread "CompilerThread1" daemon [_thread_blocked, id=22659]
+  0x00000000405dd140 JavaThread "CompilerThread0" daemon [_thread_blocked, id=22658]
+  0x00000000405dbd30 JavaThread "AdapterThread" daemon [_thread_blocked, id=22657]
+  0x00000000405da9d0 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=22655]
+  0x00007f7d28000d80 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=22651]
+  0x00000000405d97c0 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=22650]
+  0x00000000405d7240 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=22647]
+  0x00000000405bdbc0 JavaThread "Finalizer" daemon [_thread_blocked, id=22644]
+  0x00000000405bd3c0 JavaThread "Reference Handler" daemon [_thread_blocked, id=22641]
+
+Other Threads:
+=>0x00000000405b9030 VMThread [id=22638]
+  0x0000000040533300 WatcherThread [id=22661]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000000004050be20/0x000000004050be70] Threads_lock - owner thread: 0x00000000405b9030
+[0x000000004050c510/0x000000004050c540] Heap_lock - owner thread: 0x00007f7d0c42c5b0
+
+Heap
+ PSYoungGen      total 262784K, used 2889K [0x00007f7d93810000, 0x00007f7da4ad0000, 0x00007f7da8d60000)
+  eden space 247168K, 0% used [0x00007f7d93810000,0x00007f7d93810000,0x00007f7da2970000)
+  from space 15616K, 18% used [0x00007f7da3b90000,0x00007f7da3e62500,0x00007f7da4ad0000)
+  to   space 17088K, 0% used [0x00007f7da2970000,0x00007f7da2970000,0x00007f7da3a20000)
+ PSOldGen        total 699072K, used 366982K [0x00007f7d68d60000, 0x00007f7d93810000, 0x00007f7d93810000)
+  object space 699072K, 52% used [0x00007f7d68d60000,0x00007f7d7f3c1b58,0x00007f7d93810000)
+ PSPermGen       total 142656K, used 138453K [0x00007f7d48d60000, 0x00007f7d518b0000, 0x00007f7d68d60000)
+  object space 142656K, 97% used [0x00007f7d48d60000,0x00007f7d51495740,0x00007f7d518b0000)
+
+Dynamic libraries:
+40000000-4000e000 r-xp 00000000 08:04 1451705                            /usr/lib/jvm/jdk1.5.0_22/bin/java
+4010d000-40110000 rwxp 0000d000 08:04 1451705                            /usr/lib/jvm/jdk1.5.0_22/bin/java
+40506000-40645000 rwxp 00000000 00:00 0                                  [heap]
+7f7cef2be000-7f7cef2c1000 ---p 00000000 00:00 0 
+7f7cef2c1000-7f7cef3bf000 rwxp 00000000 00:00 0                          [stack:22901]
+7f7cef3bf000-7f7cef3c2000 ---p 00000000 00:00 0 
+7f7cef3c2000-7f7cef4c0000 rwxp 00000000 00:00 0                          [stack:22900]
+7f7cef4c0000-7f7cef4c3000 ---p 00000000 00:00 0 
+7f7cef4c3000-7f7cef5c1000 rwxp 00000000 00:00 0                          [stack:22899]
+7f7cef5c1000-7f7cef5c4000 ---p 00000000 00:00 0 
+7f7cef5c4000-7f7cef6c2000 rwxp 00000000 00:00 0                          [stack:22898]
+7f7cef6c2000-7f7cef6c5000 ---p 00000000 00:00 0 
+7f7cef6c5000-7f7cef7c3000 rwxp 00000000 00:00 0                          [stack:22897]
+7f7cef7c3000-7f7cef7c6000 ---p 00000000 00:00 0 
+7f7cef7c6000-7f7cef8c4000 rwxp 00000000 00:00 0                          [stack:22896]
+7f7cef8c4000-7f7cef8c7000 ---p 00000000 00:00 0 
+7f7cef8c7000-7f7cef9c5000 rwxp 00000000 00:00 0                          [stack:22895]
+7f7cef9c5000-7f7cef9c8000 ---p 00000000 00:00 0 
+7f7cef9c8000-7f7cefac6000 rwxp 00000000 00:00 0                          [stack:22894]
+7f7cefac6000-7f7cefac9000 ---p 00000000 00:00 0 
+7f7cefac9000-7f7cefbc7000 rwxp 00000000 00:00 0                          [stack:22893]
+7f7cefbc7000-7f7cefbca000 ---p 00000000 00:00 0 
+7f7cefbca000-7f7cefcc8000 rwxp 00000000 00:00 0                          [stack:22892]
+7f7cefcc8000-7f7cefccb000 ---p 00000000 00:00 0 
+7f7cefccb000-7f7cefdc9000 rwxp 00000000 00:00 0                          [stack:22891]
+7f7cefdc9000-7f7cefdcc000 ---p 00000000 00:00 0 
+7f7cefdcc000-7f7cefeca000 rwxp 00000000 00:00 0                          [stack:22890]
+7f7cefeca000-7f7cefecd000 ---p 00000000 00:00 0 
+7f7cefecd000-7f7ceffcb000 rwxp 00000000 00:00 0                          [stack:22889]
+7f7ceffcb000-7f7ceffce000 ---p 00000000 00:00 0 
+7f7ceffce000-7f7cf00cc000 rwxp 00000000 00:00 0                          [stack:22888]
+7f7cf00cc000-7f7cf00cf000 ---p 00000000 00:00 0 
+7f7cf00cf000-7f7cf01cd000 rwxp 00000000 00:00 0                          [stack:22887]
+7f7cf01cd000-7f7cf01d0000 ---p 00000000 00:00 0 
+7f7cf01d0000-7f7cf02ce000 rwxp 00000000 00:00 0                          [stack:22886]
+7f7cf02ce000-7f7cf02d1000 ---p 00000000 00:00 0 
+7f7cf02d1000-7f7cf03cf000 rwxp 00000000 00:00 0                          [stack:22885]
+7f7cf03cf000-7f7cf03d2000 ---p 00000000 00:00 0 
+7f7cf03d2000-7f7cf04d0000 rwxp 00000000 00:00 0                          [stack:22884]
+7f7cf04d0000-7f7cf04d3000 ---p 00000000 00:00 0 
+7f7cf04d3000-7f7cf05d1000 rwxp 00000000 00:00 0                          [stack:22883]
+7f7cf05d1000-7f7cf05d4000 ---p 00000000 00:00 0 
+7f7cf05d4000-7f7cf06d2000 rwxp 00000000 00:00 0                          [stack:22882]
+7f7cf06d2000-7f7cf06d5000 ---p 00000000 00:00 0 
+7f7cf06d5000-7f7cf07d3000 rwxp 00000000 00:00 0                          [stack:22881]
+7f7cf07d3000-7f7cf07d6000 ---p 00000000 00:00 0 
+7f7cf07d6000-7f7cf08d4000 rwxp 00000000 00:00 0                          [stack:22880]
+7f7cf08d4000-7f7cf08d7000 ---p 00000000 00:00 0 
+7f7cf08d7000-7f7cf09d5000 rwxp 00000000 00:00 0                          [stack:22879]
+7f7cf09d5000-7f7cf09d8000 ---p 00000000 00:00 0 
+7f7cf09d8000-7f7cf0ad6000 rwxp 00000000 00:00 0                          [stack:22878]
+7f7cf0ad6000-7f7cf0ad9000 ---p 00000000 00:00 0 
+7f7cf0ad9000-7f7cf0bd7000 rwxp 00000000 00:00 0                          [stack:22877]
+7f7cf0bd7000-7f7cf0bda000 ---p 00000000 00:00 0 
+7f7cf0bda000-7f7cf0cd8000 rwxp 00000000 00:00 0                          [stack:22876]
+7f7cf0cd8000-7f7cf0cdb000 ---p 00000000 00:00 0 
+7f7cf0cdb000-7f7cf0dd9000 rwxp 00000000 00:00 0                          [stack:22875]
+7f7cf0dd9000-7f7cf0ddc000 ---p 00000000 00:00 0 
+7f7cf0ddc000-7f7cf0eda000 rwxp 00000000 00:00 0                          [stack:22874]
+7f7cf0eda000-7f7cf0edd000 ---p 00000000 00:00 0 
+7f7cf0edd000-7f7cf0fdb000 rwxp 00000000 00:00 0                          [stack:22873]
+7f7cf0fdb000-7f7cf0fde000 ---p 00000000 00:00 0 
+7f7cf0fde000-7f7cf10dc000 rwxp 00000000 00:00 0                          [stack:22872]
+7f7cf10dc000-7f7cf10df000 ---p 00000000 00:00 0 
+7f7cf10df000-7f7cf11dd000 rwxp 00000000 00:00 0                          [stack:22871]
+7f7cf11dd000-7f7cf11e0000 ---p 00000000 00:00 0 
+7f7cf11e0000-7f7cf12de000 rwxp 00000000 00:00 0                          [stack:22870]
+7f7cf12de000-7f7cf12e1000 ---p 00000000 00:00 0 
+7f7cf12e1000-7f7cf13df000 rwxp 00000000 00:00 0                          [stack:22866]
+7f7cf13df000-7f7cf155b000 r-xs 00000000 08:04 2133396                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/itext-1.3.1.jar
+7f7cf155b000-7f7cf15f1000 r-xs 00000000 08:04 2133401                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/jxl.jar
+7f7cf15f1000-7f7cf1a26000 r-xs 00000000 08:04 2133395                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/iReport.jar
+7f7cf1a26000-7f7cf1bda000 r-xs 00000000 08:04 2133404                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/xalan.jar
+7f7cf1bda000-7f7cf1d17000 r-xs 00000000 08:04 2133397                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/jasperreports-1.2.2.jar
+7f7cf1d17000-7f7cf1daf000 r-xs 00000000 08:04 2133403                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/poi-2.0-final-20040126.jar
+7f7cf1daf000-7f7cf1e4e000 r-xs 00000000 08:04 2133422                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/jhgcom.jar
+7f7cf1e4e000-7f7cf1f74000 r-xs 00000000 08:04 2133405                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/xercesImpl.jar
+7f7cf1f74000-7f7cf209c000 r-xs 00000000 08:04 2133399                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/jdt-compiler-3.1.1.jar
+7f7cf209c000-7f7cf21a2000 r-xs 00000000 08:04 2133400                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/jfreechart-1.0.0.jar
+7f7cf21a2000-7f7cf21a5000 ---p 00000000 00:00 0 
+7f7cf21a5000-7f7cf22a3000 rwxp 00000000 00:00 0                          [stack:22860]
+7f7cf22a3000-7f7cf22a6000 ---p 00000000 00:00 0 
+7f7cf22a6000-7f7cf23a4000 rwxp 00000000 00:00 0                          [stack:22859]
+7f7cf23a4000-7f7cf23a7000 ---p 00000000 00:00 0 
+7f7cf23a7000-7f7cf24a5000 rwxp 00000000 00:00 0                          [stack:22858]
+7f7cf24a5000-7f7cf24a8000 ---p 00000000 00:00 0 
+7f7cf24a8000-7f7cf25a6000 rwxp 00000000 00:00 0                          [stack:22857]
+7f7cf25a6000-7f7cf25a9000 ---p 00000000 00:00 0 
+7f7cf25a9000-7f7cf26a7000 rwxp 00000000 00:00 0                          [stack:22856]
+7f7cf26a7000-7f7cf26aa000 ---p 00000000 00:00 0 
+7f7cf26aa000-7f7cf27a8000 rwxp 00000000 00:00 0                          [stack:22855]
+7f7cf27a8000-7f7cf27ab000 ---p 00000000 00:00 0 
+7f7cf27ab000-7f7cf28a9000 rwxp 00000000 00:00 0                          [stack:22854]
+7f7cf28a9000-7f7cf28ac000 ---p 00000000 00:00 0 
+7f7cf28ac000-7f7cf29aa000 rwxp 00000000 00:00 0                          [stack:22853]
+7f7cf29aa000-7f7cf29ad000 ---p 00000000 00:00 0 
+7f7cf29ad000-7f7cf2aab000 rwxp 00000000 00:00 0                          [stack:22852]
+7f7cf2aab000-7f7cf2aae000 ---p 00000000 00:00 0 
+7f7cf2aae000-7f7cf2bac000 rwxp 00000000 00:00 0                          [stack:22851]
+7f7cf2bac000-7f7cf2baf000 ---p 00000000 00:00 0 
+7f7cf2baf000-7f7cf2cad000 rwxp 00000000 00:00 0                          [stack:22850]
+7f7cf2cad000-7f7cf2cb0000 ---p 00000000 00:00 0 
+7f7cf2cb0000-7f7cf2dae000 rwxp 00000000 00:00 0                          [stack:22849]
+7f7cf2dae000-7f7cf2db1000 ---p 00000000 00:00 0 
+7f7cf2db1000-7f7cf2eaf000 rwxp 00000000 00:00 0                          [stack:22848]
+7f7cf2eaf000-7f7cf2eb2000 ---p 00000000 00:00 0 
+7f7cf2eb2000-7f7cf2fb0000 rwxp 00000000 00:00 0                          [stack:22847]
+7f7cf2fb0000-7f7cf2fb3000 ---p 00000000 00:00 0 
+7f7cf2fb3000-7f7cf30b1000 rwxp 00000000 00:00 0                          [stack:22846]
+7f7cf30b1000-7f7cf30b4000 ---p 00000000 00:00 0 
+7f7cf30b4000-7f7cf31b2000 rwxp 00000000 00:00 0                          [stack:22845]
+7f7cf31b2000-7f7cf31b5000 ---p 00000000 00:00 0 
+7f7cf31b5000-7f7cf32b3000 rwxp 00000000 00:00 0                          [stack:22844]
+7f7cf32b3000-7f7cf32b6000 ---p 00000000 00:00 0 
+7f7cf32b6000-7f7cf33b4000 rwxp 00000000 00:00 0                          [stack:22843]
+7f7cf33b4000-7f7cf33b7000 ---p 00000000 00:00 0 
+7f7cf33b7000-7f7cf34b5000 rwxp 00000000 00:00 0                          [stack:22842]
+7f7cf34b5000-7f7cf34b8000 ---p 00000000 00:00 0 
+7f7cf34b8000-7f7cf35b6000 rwxp 00000000 00:00 0                          [stack:22841]
+7f7cf35b6000-7f7cf35b9000 ---p 00000000 00:00 0 
+7f7cf35b9000-7f7cf36b7000 rwxp 00000000 00:00 0                          [stack:22840]
+7f7cf36b7000-7f7cf36ba000 ---p 00000000 00:00 0 
+7f7cf36ba000-7f7cf37b8000 rwxp 00000000 00:00 0                          [stack:22839]
+7f7cf37b8000-7f7cf37bb000 ---p 00000000 00:00 0 
+7f7cf37bb000-7f7cf38b9000 rwxp 00000000 00:00 0                          [stack:22838]
+7f7cf38b9000-7f7cf38bc000 ---p 00000000 00:00 0 
+7f7cf38bc000-7f7cf39ba000 rwxp 00000000 00:00 0                          [stack:22837]
+7f7cf39ba000-7f7cf39bd000 ---p 00000000 00:00 0 
+7f7cf39bd000-7f7cf3abb000 rwxp 00000000 00:00 0                          [stack:22836]
+7f7cf3abb000-7f7cf3abe000 ---p 00000000 00:00 0 
+7f7cf3abe000-7f7cf3bbc000 rwxp 00000000 00:00 0                          [stack:22835]
+7f7cf3bbc000-7f7cf3bbf000 ---p 00000000 00:00 0 
+7f7cf3bbf000-7f7cf3cbd000 rwxp 00000000 00:00 0                          [stack:22834]
+7f7cf3cbd000-7f7cf3cc0000 ---p 00000000 00:00 0 
+7f7cf3cc0000-7f7cf3dbe000 rwxp 00000000 00:00 0                          [stack:22833]
+7f7cf3dbe000-7f7cf3dc1000 ---p 00000000 00:00 0 
+7f7cf3dc1000-7f7cf3ebf000 rwxp 00000000 00:00 0                          [stack:22832]
+7f7cf3ebf000-7f7cf3ec2000 ---p 00000000 00:00 0 
+7f7cf3ec2000-7f7cf3fc0000 rwxp 00000000 00:00 0                          [stack:22831]
+7f7cf3fc0000-7f7cf3fc3000 ---p 00000000 00:00 0 
+7f7cf3fc3000-7f7cf40c1000 rwxp 00000000 00:00 0                          [stack:22830]
+7f7cf40c1000-7f7cf40c4000 ---p 00000000 00:00 0 
+7f7cf40c4000-7f7cf41c2000 rwxp 00000000 00:00 0                          [stack:22829]
+7f7cf41c2000-7f7cf41c5000 ---p 00000000 00:00 0 
+7f7cf41c5000-7f7cf42c3000 rwxp 00000000 00:00 0                          [stack:22828]
+7f7cf42c3000-7f7cf42c6000 ---p 00000000 00:00 0 
+7f7cf42c6000-7f7cf43c4000 rwxp 00000000 00:00 0                          [stack:22827]
+7f7cf43c4000-7f7cf43c7000 ---p 00000000 00:00 0 
+7f7cf43c7000-7f7cf44c5000 rwxp 00000000 00:00 0                          [stack:22826]
+7f7cf44c5000-7f7cf44c8000 ---p 00000000 00:00 0 
+7f7cf44c8000-7f7cf45c6000 rwxp 00000000 00:00 0                          [stack:22825]
+7f7cf45c6000-7f7cf45c9000 ---p 00000000 00:00 0 
+7f7cf45c9000-7f7cf46c7000 rwxp 00000000 00:00 0                          [stack:22824]
+7f7cf46c7000-7f7cf46ca000 ---p 00000000 00:00 0 
+7f7cf46ca000-7f7cf47c8000 rwxp 00000000 00:00 0                          [stack:22823]
+7f7cf47c8000-7f7cf47cb000 ---p 00000000 00:00 0 
+7f7cf47cb000-7f7cf48c9000 rwxp 00000000 00:00 0                          [stack:22822]
+7f7cf48c9000-7f7cf48cc000 ---p 00000000 00:00 0 
+7f7cf48cc000-7f7cf49ca000 rwxp 00000000 00:00 0                          [stack:22821]
+7f7cf49ca000-7f7cf49cd000 ---p 00000000 00:00 0 
+7f7cf49cd000-7f7cf4acb000 rwxp 00000000 00:00 0                          [stack:22820]
+7f7cf4acb000-7f7cf4ace000 ---p 00000000 00:00 0 
+7f7cf4ace000-7f7cf4bcc000 rwxp 00000000 00:00 0                          [stack:22819]
+7f7cf4bcc000-7f7cf4bcf000 ---p 00000000 00:00 0 
+7f7cf4bcf000-7f7cf4ccd000 rwxp 00000000 00:00 0                          [stack:22818]
+7f7cf4ccd000-7f7cf4cd0000 ---p 00000000 00:00 0 
+7f7cf4cd0000-7f7cf4dce000 rwxp 00000000 00:00 0                          [stack:22817]
+7f7cf4dce000-7f7cf4dd1000 ---p 00000000 00:00 0 
+7f7cf4dd1000-7f7cf4ecf000 rwxp 00000000 00:00 0                          [stack:22816]
+7f7cf4ecf000-7f7cf4ed2000 ---p 00000000 00:00 0 
+7f7cf4ed2000-7f7cf4fd0000 rwxp 00000000 00:00 0                          [stack:22814]
+7f7cf4fd0000-7f7cf4fd3000 ---p 00000000 00:00 0 
+7f7cf4fd3000-7f7cf50d1000 rwxp 00000000 00:00 0                          [stack:22813]
+7f7cf50d1000-7f7cf50d4000 ---p 00000000 00:00 0 
+7f7cf50d4000-7f7cf51d2000 rwxp 00000000 00:00 0                          [stack:22812]
+7f7cf51d2000-7f7cf51d5000 ---p 00000000 00:00 0 
+7f7cf51d5000-7f7cf52d3000 rwxp 00000000 00:00 0                          [stack:22811]
+7f7cf52d3000-7f7cf52d6000 ---p 00000000 00:00 0 
+7f7cf52d6000-7f7cf53d4000 rwxp 00000000 00:00 0                          [stack:22810]
+7f7cf53d4000-7f7cf53d7000 ---p 00000000 00:00 0 
+7f7cf53d7000-7f7cf54d5000 rwxp 00000000 00:00 0                          [stack:22809]
+7f7cf54d5000-7f7cf54d8000 ---p 00000000 00:00 0 
+7f7cf54d8000-7f7cf55d6000 rwxp 00000000 00:00 0                          [stack:22808]
+7f7cf55d6000-7f7cf55d9000 ---p 00000000 00:00 0 
+7f7cf55d9000-7f7cf56d7000 rwxp 00000000 00:00 0                          [stack:22807]
+7f7cf56d7000-7f7cf56da000 ---p 00000000 00:00 0 
+7f7cf56da000-7f7cf57d8000 rwxp 00000000 00:00 0                          [stack:22806]
+7f7cf57d8000-7f7cf57db000 ---p 00000000 00:00 0 
+7f7cf57db000-7f7cf58d9000 rwxp 00000000 00:00 0                          [stack:22805]
+7f7cf58d9000-7f7cf58dc000 ---p 00000000 00:00 0 
+7f7cf58dc000-7f7cf59da000 rwxp 00000000 00:00 0                          [stack:22804]
+7f7cf59da000-7f7cf59dd000 ---p 00000000 00:00 0 
+7f7cf59dd000-7f7cf5adb000 rwxp 00000000 00:00 0                          [stack:22803]
+7f7cf5adb000-7f7cf5ade000 ---p 00000000 00:00 0 
+7f7cf5ade000-7f7cf5bdc000 rwxp 00000000 00:00 0                          [stack:22802]
+7f7cf5bdc000-7f7cf5bdf000 ---p 00000000 00:00 0 
+7f7cf5bdf000-7f7cf5cdd000 rwxp 00000000 00:00 0                          [stack:22801]
+7f7cf5cdd000-7f7cf5ce0000 ---p 00000000 00:00 0 
+7f7cf5ce0000-7f7cf5dde000 rwxp 00000000 00:00 0                          [stack:22800]
+7f7cf5dde000-7f7cf5de1000 ---p 00000000 00:00 0 
+7f7cf5de1000-7f7cf5edf000 rwxp 00000000 00:00 0                          [stack:22799]
+7f7cf5edf000-7f7cf5ee2000 ---p 00000000 00:00 0 
+7f7cf5ee2000-7f7cf5fe0000 rwxp 00000000 00:00 0                          [stack:22798]
+7f7cf5fe0000-7f7cf5fe3000 ---p 00000000 00:00 0 
+7f7cf5fe3000-7f7cf60e1000 rwxp 00000000 00:00 0                          [stack:22797]
+7f7cf60e1000-7f7cf60e4000 ---p 00000000 00:00 0 
+7f7cf60e4000-7f7cf61e2000 rwxp 00000000 00:00 0                          [stack:22796]
+7f7cf61e2000-7f7cf61e5000 ---p 00000000 00:00 0 
+7f7cf61e5000-7f7cf62e3000 rwxp 00000000 00:00 0                          [stack:22795]
+7f7cf62e3000-7f7cf62e6000 ---p 00000000 00:00 0 
+7f7cf62e6000-7f7cf63e4000 rwxp 00000000 00:00 0                          [stack:22794]
+7f7cf63e4000-7f7cf63e7000 ---p 00000000 00:00 0 
+7f7cf63e7000-7f7cf64e5000 rwxp 00000000 00:00 0                          [stack:22793]
+7f7cf64e5000-7f7cf64e8000 ---p 00000000 00:00 0 
+7f7cf64e8000-7f7cf65e6000 rwxp 00000000 00:00 0                          [stack:22792]
+7f7cf65e6000-7f7cf65e9000 ---p 00000000 00:00 0 
+7f7cf65e9000-7f7cf66e7000 rwxp 00000000 00:00 0                          [stack:22791]
+7f7cf66e7000-7f7cf66ea000 ---p 00000000 00:00 0 
+7f7cf66ea000-7f7cf67e8000 rwxp 00000000 00:00 0                          [stack:22790]
+7f7cf67e8000-7f7cf67eb000 ---p 00000000 00:00 0 
+7f7cf67eb000-7f7cf68e9000 rwxp 00000000 00:00 0                          [stack:22789]
+7f7cf68e9000-7f7cf68ec000 ---p 00000000 00:00 0 
+7f7cf68ec000-7f7cf69ea000 rwxp 00000000 00:00 0                          [stack:22788]
+7f7cf69ea000-7f7cf69ed000 ---p 00000000 00:00 0 
+7f7cf69ed000-7f7cf6aeb000 rwxp 00000000 00:00 0                          [stack:22787]
+7f7cf6aeb000-7f7cf6aee000 ---p 00000000 00:00 0 
+7f7cf6aee000-7f7cf6bec000 rwxp 00000000 00:00 0                          [stack:22786]
+7f7cf6bec000-7f7cf6bef000 ---p 00000000 00:00 0 
+7f7cf6bef000-7f7cf6ced000 rwxp 00000000 00:00 0                          [stack:22785]
+7f7cf6ced000-7f7cf6cf0000 ---p 00000000 00:00 0 
+7f7cf6cf0000-7f7cf6dee000 rwxp 00000000 00:00 0                          [stack:22784]
+7f7cf6dee000-7f7cf6df1000 ---p 00000000 00:00 0 
+7f7cf6df1000-7f7cf6eef000 rwxp 00000000 00:00 0                          [stack:22783]
+7f7cf6eef000-7f7cf6ef2000 ---p 00000000 00:00 0 
+7f7cf6ef2000-7f7cf6ff0000 rwxp 00000000 00:00 0                          [stack:22782]
+7f7cf6ff0000-7f7cf6ff3000 ---p 00000000 00:00 0 
+7f7cf6ff3000-7f7cf70f1000 rwxp 00000000 00:00 0                          [stack:22781]
+7f7cf70f1000-7f7cf70f4000 ---p 00000000 00:00 0 
+7f7cf70f4000-7f7cf71f2000 rwxp 00000000 00:00 0                          [stack:22780]
+7f7cf71f2000-7f7cf71f5000 ---p 00000000 00:00 0 
+7f7cf71f5000-7f7cf72f3000 rwxp 00000000 00:00 0                          [stack:22779]
+7f7cf72f3000-7f7cf72f6000 ---p 00000000 00:00 0 
+7f7cf72f6000-7f7cf73f4000 rwxp 00000000 00:00 0                          [stack:22777]
+7f7cf73f4000-7f7cf73f7000 ---p 00000000 00:00 0 
+7f7cf73f7000-7f7cf74f5000 rwxp 00000000 00:00 0                          [stack:22776]
+7f7cf74f5000-7f7cf74f8000 ---p 00000000 00:00 0 
+7f7cf74f8000-7f7cf75f6000 rwxp 00000000 00:00 0                          [stack:22775]
+7f7cf75f6000-7f7cf75f9000 ---p 00000000 00:00 0 
+7f7cf75f9000-7f7cf76f7000 rwxp 00000000 00:00 0                          [stack:22774]
+7f7cf76f7000-7f7cf76fa000 ---p 00000000 00:00 0 
+7f7cf76fa000-7f7cf77f8000 rwxp 00000000 00:00 0                          [stack:22773]
+7f7cf77f8000-7f7cf77fb000 ---p 00000000 00:00 0 
+7f7cf77fb000-7f7cf78f9000 rwxp 00000000 00:00 0                          [stack:22772]
+7f7cf78f9000-7f7cf78fc000 ---p 00000000 00:00 0 
+7f7cf78fc000-7f7cf79fa000 rwxp 00000000 00:00 0                          [stack:22771]
+7f7cf79fa000-7f7cf79fd000 ---p 00000000 00:00 0 
+7f7cf79fd000-7f7cf7afb000 rwxp 00000000 00:00 0                          [stack:22770]
+7f7cf7afb000-7f7cf7afe000 ---p 00000000 00:00 0 
+7f7cf7afe000-7f7cf7bfc000 rwxp 00000000 00:00 0                          [stack:22769]
+7f7cf7bfc000-7f7cf7bff000 ---p 00000000 00:00 0 
+7f7cf7bff000-7f7cf7cfd000 rwxp 00000000 00:00 0                          [stack:22768]
+7f7cf7cfd000-7f7cf7d00000 ---p 00000000 00:00 0 
+7f7cf7d00000-7f7cf7dfe000 rwxp 00000000 00:00 0                          [stack:22767]
+7f7cf7dfe000-7f7cf7e01000 ---p 00000000 00:00 0 
+7f7cf7e01000-7f7cf7eff000 rwxp 00000000 00:00 0                          [stack:22766]
+7f7cf7eff000-7f7cf7f02000 ---p 00000000 00:00 0 
+7f7cf7f02000-7f7cf8000000 rwxp 00000000 00:00 0                          [stack:22765]
+7f7cf8000000-7f7cf8930000 rwxp 00000000 00:00 0 
+7f7cf8930000-7f7cfc000000 ---p 00000000 00:00 0 
+7f7cfc00c000-7f7cfc086000 r-xs 00000000 08:04 2133419                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/struts.jar
+7f7cfc086000-7f7cfc089000 ---p 00000000 00:00 0 
+7f7cfc089000-7f7cfc187000 rwxp 00000000 00:00 0                          [stack:22764]
+7f7cfc187000-7f7cfc18a000 ---p 00000000 00:00 0 
+7f7cfc18a000-7f7cfc288000 rwxp 00000000 00:00 0                          [stack:22763]
+7f7cfc288000-7f7cfc28b000 ---p 00000000 00:00 0 
+7f7cfc28b000-7f7cfc389000 rwxp 00000000 00:00 0                          [stack:22762]
+7f7cfc389000-7f7cfc38c000 ---p 00000000 00:00 0 
+7f7cfc38c000-7f7cfc48a000 rwxp 00000000 00:00 0                          [stack:22761]
+7f7cfc48a000-7f7cfc48d000 ---p 00000000 00:00 0 
+7f7cfc48d000-7f7cfc58b000 rwxp 00000000 00:00 0                          [stack:22760]
+7f7cfc58b000-7f7cfc58e000 ---p 00000000 00:00 0 
+7f7cfc58e000-7f7cfc68c000 rwxp 00000000 00:00 0                          [stack:22759]
+7f7cfc68c000-7f7cfc68f000 ---p 00000000 00:00 0 
+7f7cfc68f000-7f7cfc78d000 rwxp 00000000 00:00 0                          [stack:22758]
+7f7cfc78d000-7f7cfc790000 ---p 00000000 00:00 0 
+7f7cfc790000-7f7cfc88e000 rwxp 00000000 00:00 0                          [stack:22757]
+7f7cfc88e000-7f7cfc891000 ---p 00000000 00:00 0 
+7f7cfc891000-7f7cfc98f000 rwxp 00000000 00:00 0                          [stack:22756]
+7f7cfc98f000-7f7cfc992000 ---p 00000000 00:00 0 
+7f7cfc992000-7f7cfca90000 rwxp 00000000 00:00 0                          [stack:22755]
+7f7cfca90000-7f7cfca93000 ---p 00000000 00:00 0 
+7f7cfca93000-7f7cfcb91000 rwxp 00000000 00:00 0                          [stack:22754]
+7f7cfcb91000-7f7cfcb94000 ---p 00000000 00:00 0 
+7f7cfcb94000-7f7cfcc92000 rwxp 00000000 00:00 0                          [stack:22753]
+7f7cfcc92000-7f7cfcc95000 ---p 00000000 00:00 0 
+7f7cfcc95000-7f7cfcd93000 rwxp 00000000 00:00 0                          [stack:22752]
+7f7cfcd93000-7f7cfcd96000 ---p 00000000 00:00 0 
+7f7cfcd96000-7f7cfce94000 rwxp 00000000 00:00 0                          [stack:22751]
+7f7cfce94000-7f7cfce97000 ---p 00000000 00:00 0 
+7f7cfce97000-7f7cfcf95000 rwxp 00000000 00:00 0                          [stack:22750]
+7f7cfcf95000-7f7cfcf98000 ---p 00000000 00:00 0 
+7f7cfcf98000-7f7cfd096000 rwxp 00000000 00:00 0                          [stack:22749]
+7f7cfd096000-7f7cfd099000 ---p 00000000 00:00 0 
+7f7cfd099000-7f7cfd197000 rwxp 00000000 00:00 0                          [stack:22748]
+7f7cfd197000-7f7cfd19a000 ---p 00000000 00:00 0 
+7f7cfd19a000-7f7cfd298000 rwxp 00000000 00:00 0                          [stack:22747]
+7f7cfd298000-7f7cfd29b000 ---p 00000000 00:00 0 
+7f7cfd29b000-7f7cfd399000 rwxp 00000000 00:00 0                          [stack:22746]
+7f7cfd399000-7f7cfd39c000 ---p 00000000 00:00 0 
+7f7cfd39c000-7f7cfd49a000 rwxp 00000000 00:00 0                          [stack:22745]
+7f7cfd49a000-7f7cfd49d000 ---p 00000000 00:00 0 
+7f7cfd49d000-7f7cfd59b000 rwxp 00000000 00:00 0                          [stack:22744]
+7f7cfd59b000-7f7cfd59e000 ---p 00000000 00:00 0 
+7f7cfd59e000-7f7cfd69c000 rwxp 00000000 00:00 0                          [stack:22743]
+7f7cfd69c000-7f7cfd69f000 ---p 00000000 00:00 0 
+7f7cfd69f000-7f7cfd79d000 rwxp 00000000 00:00 0                          [stack:22742]
+7f7cfd79d000-7f7cfd7a0000 ---p 00000000 00:00 0 
+7f7cfd7a0000-7f7cfd89e000 rwxp 00000000 00:00 0                          [stack:22741]
+7f7cfd89e000-7f7cfd8a1000 ---p 00000000 00:00 0 
+7f7cfd8a1000-7f7cfd99f000 rwxp 00000000 00:00 0                          [stack:22740]
+7f7cfd99f000-7f7cfd9a2000 ---p 00000000 00:00 0 
+7f7cfd9a2000-7f7cfdaa0000 rwxp 00000000 00:00 0                          [stack:22739]
+7f7cfdaa0000-7f7cfdaa3000 ---p 00000000 00:00 0 
+7f7cfdaa3000-7f7cfdba1000 rwxp 00000000 00:00 0                          [stack:22738]
+7f7cfdba1000-7f7cfdba4000 ---p 00000000 00:00 0 
+7f7cfdba4000-7f7cfdca2000 rwxp 00000000 00:00 0                          [stack:22737]
+7f7cfdca2000-7f7cfdca5000 ---p 00000000 00:00 0 
+7f7cfdca5000-7f7cfdda3000 rwxp 00000000 00:00 0                          [stack:22736]
+7f7cfdda3000-7f7cfdda6000 ---p 00000000 00:00 0 
+7f7cfdda6000-7f7cfdea4000 rwxp 00000000 00:00 0                          [stack:22735]
+7f7cfdea4000-7f7cfdea7000 ---p 00000000 00:00 0 
+7f7cfdea7000-7f7cfdfa5000 rwxp 00000000 00:00 0                          [stack:22734]
+7f7cfdfa5000-7f7cfdfa8000 ---p 00000000 00:00 0 
+7f7cfdfa8000-7f7cfe0a6000 rwxp 00000000 00:00 0                          [stack:22733]
+7f7cfe0a6000-7f7cfe0a9000 ---p 00000000 00:00 0 
+7f7cfe0a9000-7f7cfe1a7000 rwxp 00000000 00:00 0                          [stack:22732]
+7f7cfe1a7000-7f7cfe1aa000 ---p 00000000 00:00 0 
+7f7cfe1aa000-7f7cfe2a8000 rwxp 00000000 00:00 0                          [stack:22731]
+7f7cfe2a8000-7f7cfe2ab000 ---p 00000000 00:00 0 
+7f7cfe2ab000-7f7cfe3a9000 rwxp 00000000 00:00 0                          [stack:22730]
+7f7cfe3a9000-7f7cfe3ac000 ---p 00000000 00:00 0 
+7f7cfe3ac000-7f7cfe4aa000 rwxp 00000000 00:00 0                          [stack:22729]
+7f7cfe4aa000-7f7cfe4ad000 ---p 00000000 00:00 0 
+7f7cfe4ad000-7f7cfe5ab000 rwxp 00000000 00:00 0                          [stack:22728]
+7f7cfe5ab000-7f7cfe5ae000 ---p 00000000 00:00 0 
+7f7cfe5ae000-7f7cfe6ac000 rwxp 00000000 00:00 0                          [stack:22727]
+7f7cfe6ac000-7f7cfe6af000 ---p 00000000 00:00 0 
+7f7cfe6af000-7f7cfe7ad000 rwxp 00000000 00:00 0                          [stack:22726]
+7f7cfe7ad000-7f7cfe7b0000 ---p 00000000 00:00 0 
+7f7cfe7b0000-7f7cfe8ae000 rwxp 00000000 00:00 0                          [stack:22725]
+7f7cfe8ae000-7f7cfe8b1000 ---p 00000000 00:00 0 
+7f7cfe8b1000-7f7cfe9af000 rwxp 00000000 00:00 0                          [stack:22723]
+7f7cfe9af000-7f7cfe9b2000 ---p 00000000 00:00 0 
+7f7cfe9b2000-7f7cfeab0000 rwxp 00000000 00:00 0                          [stack:22722]
+7f7cfeab0000-7f7cfeab3000 ---p 00000000 00:00 0 
+7f7cfeab3000-7f7cfebb1000 rwxp 00000000 00:00 0                          [stack:22720]
+7f7cfebb1000-7f7cfebb4000 ---p 00000000 00:00 0 
+7f7cfebb4000-7f7cfecb2000 rwxp 00000000 00:00 0                          [stack:22719]
+7f7cfecb2000-7f7cfecb5000 ---p 00000000 00:00 0 
+7f7cfecb5000-7f7cfedb3000 rwxp 00000000 00:00 0                          [stack:22718]
+7f7cfedb3000-7f7cfedb6000 ---p 00000000 00:00 0 
+7f7cfedb6000-7f7cfeeb4000 rwxp 00000000 00:00 0                          [stack:22717]
+7f7cfeeb4000-7f7cfeeb7000 ---p 00000000 00:00 0 
+7f7cfeeb7000-7f7cfefb5000 rwxp 00000000 00:00 0                          [stack:22716]
+7f7cfefb5000-7f7cfefb8000 ---p 00000000 00:00 0 
+7f7cfefb8000-7f7cff0b6000 rwxp 00000000 00:00 0                          [stack:22715]
+7f7cff0b6000-7f7cff0b9000 ---p 00000000 00:00 0 
+7f7cff0b9000-7f7cff1b7000 rwxp 00000000 00:00 0                          [stack:22714]
+7f7cff1b7000-7f7cff1ba000 ---p 00000000 00:00 0 
+7f7cff1ba000-7f7cff2b8000 rwxp 00000000 00:00 0                          [stack:22713]
+7f7cff2b8000-7f7cff2bb000 ---p 00000000 00:00 0 
+7f7cff2bb000-7f7cff3b9000 rwxp 00000000 00:00 0                          [stack:22712]
+7f7cff3b9000-7f7cff3bc000 ---p 00000000 00:00 0 
+7f7cff3bc000-7f7cff4ba000 rwxp 00000000 00:00 0                          [stack:22711]
+7f7cff4ba000-7f7cff4bd000 ---p 00000000 00:00 0 
+7f7cff4bd000-7f7cff5bb000 rwxp 00000000 00:00 0                          [stack:22710]
+7f7cff5bb000-7f7cff5be000 ---p 00000000 00:00 0 
+7f7cff5be000-7f7cff6bc000 rwxp 00000000 00:00 0                          [stack:22709]
+7f7cff6bc000-7f7cff6bf000 ---p 00000000 00:00 0 
+7f7cff6bf000-7f7cff7bd000 rwxp 00000000 00:00 0                          [stack:22708]
+7f7cff7bd000-7f7cff821000 r-xs 00000000 08:04 2133669                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/lib/quartz-all-1.5.2.jar
+7f7cff821000-7f7d00e9f000 r-xs 00000000 08:04 2137425                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6864617586528403015gcom.jar
+7f7d00f03000-7f7d00f2b000 r-xs 00000000 08:04 2137422                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5731643047615093485ControladorUtilGCOM.jar
+7f7d00f8f000-7f7d00fb9000 r-xs 00000000 08:04 2137419                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6354546268510671055ControladorUsuarioGCOM.jar
+7f7d0101d000-7f7d01045000 r-xs 00000000 08:04 2137416                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3649820061620087168ControladorUnidadeGCOM.jar
+7f7d010a9000-7f7d010d4000 r-xs 00000000 08:04 2137413                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4096076607409096992ControladorTransacaoGCOM.jar
+7f7d01138000-7f7d01166000 r-xs 00000000 08:04 2137410                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4451648861083008913ControladorTarifaSocialGCOM.jar
+7f7d011ca000-7f7d011f1000 r-xs 00000000 08:04 2137407                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6054837228507944850ControladorTabelaAuxiliarGCOM.jar
+7f7d01255000-7f7d01291000 r-xs 00000000 08:04 2137404                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5552135782902894170ControladorSpcSerasaGCOM.jar
+7f7d012f5000-7f7d0132f000 r-xs 00000000 08:04 2137401                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6781150508068113456ControladorRelatorioFaturamentoGCOM.jar
+7f7d01393000-7f7d013d3000 r-xs 00000000 08:04 2137398                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7495828297393706396ControladorRegistroAtendimentoGCOM.jar
+7f7d01437000-7f7d0145e000 r-xs 00000000 08:04 2137395                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7580085682670711463ControladorPermissaoEspecialGCOM.jar
+7f7d014c2000-7f7d0150d000 r-xs 00000000 08:04 2137392                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4468587713062889648ControladorOrdemServicoGCOM.jar
+7f7d01571000-7f7d01599000 r-xs 00000000 08:04 2137389                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp677621157712514418ControladorOperacionalGCOM.jar
+7f7d015fd000-7f7d01625000 r-xs 00000000 08:04 2137386                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3294110074187160721ControladorMicromedicaoJUAZEIRO.jar
+7f7d01689000-7f7d016b2000 r-xs 00000000 08:04 2137383                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4996723357411539156ControladorMicromedicaoCOSANPA.jar
+7f7d01716000-7f7d0173e000 r-xs 00000000 08:04 2137380                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5735205190609482134ControladorMicromedicaoCOSAMA.jar
+7f7d017a2000-7f7d017cb000 r-xs 00000000 08:04 2137377                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp175621496996920797ControladorMicromedicaoCOMPESA.jar
+7f7d0182f000-7f7d01857000 r-xs 00000000 08:04 2137374                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1869745392213859389ControladorMicromedicaoCAERN.jar
+7f7d018bb000-7f7d018e6000 r-xs 00000000 08:04 2137371                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1683310634902304113ControladorMicromedicaoCAER.jar
+7f7d0194a000-7f7d01973000 r-xs 00000000 08:04 2137368                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5781223767053609776ControladorMicromedicaoCAEMA.jar
+7f7d019d7000-7f7d01a01000 r-xs 00000000 08:04 2137363                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3505529824636609702ControladorLocalidadeGCOM.jar
+7f7d01a65000-7f7d01a8d000 r-xs 00000000 08:04 2137359                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2318262061619708756ControladorLigacaoEsgotoGCOM.jar
+7f7d01af1000-7f7d01b19000 r-xs 00000000 08:04 2137351                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp957975286340317133ControladorLigacaoAguaGCOM.jar
+7f7d01b7d000-7f7d01ba5000 r-xs 00000000 08:04 2137348                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3598443896605590621ControladorIntegracaoGCOM.jar
+7f7d01c09000-7f7d01c49000 r-xs 00000000 08:04 2137343                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3866867983506014012ControladorImovelGCOM.jar
+7f7d01cad000-7f7d01cda000 r-xs 00000000 08:04 2137340                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5162763823832402627ControladorGerencialMicromedicaoGCOM.jar
+7f7d01d3e000-7f7d01d64000 r-xs 00000000 08:04 2137337                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1428920174751560337ControladorGerencialImovelGCOM.jar
+7f7d01dc8000-7f7d01df5000 r-xs 00000000 08:04 2137334                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7154044895286778860ControladorGerencialGCOM.jar
+7f7d01e59000-7f7d01e90000 r-xs 00000000 08:04 2137331                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5468819763413548807ControladorGerencialFaturamentoGCOM.jar
+7f7d01ef4000-7f7d01f21000 r-xs 00000000 08:04 2137328                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7340246872912791895ControladorGerencialCobrancaGCOM.jar
+7f7d01f85000-7f7d01fb9000 r-xs 00000000 08:04 2137325                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7496150704583564180ControladorGerencialCadastroGCOM.jar
+7f7d0201d000-7f7d02049000 r-xs 00000000 08:04 2137322                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3873872611698207699ControladorGerencialArrecadacaoGCOM.jar
+7f7d020ad000-7f7d020d5000 r-xs 00000000 08:04 2137319                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp956815694145226917ControladorGeograficoGCOM.jar
+7f7d02139000-7f7d0215f000 r-xs 00000000 08:04 2137316                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1853893101830073827ControladorFinanceiroJUAZEIRO.jar
+7f7d021c3000-7f7d021ea000 r-xs 00000000 08:04 2137283                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8595905795756762628ControladorFinanceiroCOSANPA.jar
+7f7d0224e000-7f7d02275000 r-xs 00000000 08:04 2137280                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6533188660468754380ControladorFinanceiroCOSAMA.jar
+7f7d022d9000-7f7d022ff000 r-xs 00000000 08:04 2137277                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3064686147575781983ControladorFinanceiroCOMPESA.jar
+7f7d02363000-7f7d0238a000 r-xs 00000000 08:04 2137274                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4188338806408436781ControladorFinanceiroCAERN.jar
+7f7d023ee000-7f7d02414000 r-xs 00000000 08:04 2137271                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3333014429663163925ControladorFinanceiroCAER.jar
+7f7d02478000-7f7d0249f000 r-xs 00000000 08:04 2137268                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp322556641191587488ControladorFinanceiroCAEMA.jar
+7f7d02503000-7f7d0252b000 r-xs 00000000 08:04 2137265                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6298437448300945772ControladorFaturamentoJUAZEIRO.jar
+7f7d0258f000-7f7d025be000 r-xs 00000000 08:04 2137262                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3787244941135762432ControladorFaturamentoCOSANPA.jar
+7f7d02622000-7f7d0264a000 r-xs 00000000 08:04 2137259                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7361479821999605167ControladorFaturamentoCOSAMA.jar
+7f7d026ae000-7f7d026d7000 r-xs 00000000 08:04 2137256                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6803346359572279478ControladorFaturamentoCOMPESA.jar
+7f7d0273b000-7f7d02770000 r-xs 00000000 08:04 2137253                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7368979756042146545ControladorFaturamentoCAERN.jar
+7f7d027d4000-7f7d02802000 r-xs 00000000 08:04 2137250                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8605643942348686506ControladorFaturamentoCAER.jar
+7f7d02866000-7f7d02894000 r-xs 00000000 08:04 2137247                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3133299422711651948ControladorFaturamentoCAEMA.jar
+7f7d028f8000-7f7d02926000 r-xs 00000000 08:04 2137244                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6755533183292444995ControladorEnderecoGCOM.jar
+7f7d0298a000-7f7d029ba000 r-xs 00000000 08:04 2137241                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4399845718942928721ControladorContratoParcelamentoGCOM.jar
+7f7d02a1e000-7f7d02a44000 r-xs 00000000 08:04 2137238                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5694327895281852559ControladorCobrancaJUAZEIRO.jar
+7f7d02aa8000-7f7d02ad0000 r-xs 00000000 08:04 2137235                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5246780876141980527ControladorCobrancaCOSANPA.jar
+7f7d02b34000-7f7d02b5a000 r-xs 00000000 08:04 2137232                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1538517409135660077ControladorCobrancaCOSAMA.jar
+7f7d02bbe000-7f7d02be7000 r-xs 00000000 08:04 2137229                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4016600893175935900ControladorCobrancaCOMPESA.jar
+7f7d02c4b000-7f7d02c76000 r-xs 00000000 08:04 2137226                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6345500136811025165ControladorCobrancaCAERN.jar
+7f7d02cda000-7f7d02d00000 r-xs 00000000 08:04 2137223                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1672990502261508804ControladorCobrancaCAER.jar
+7f7d02d64000-7f7d02d8d000 r-xs 00000000 08:04 2137220                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5977383650968628231ControladorCobrancaCAEMA.jar
+7f7d02df1000-7f7d02e1c000 r-xs 00000000 08:04 2137217                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2143784768425976012ControladorClienteGCOM.jar
+7f7d02e80000-7f7d02ea6000 r-xs 00000000 08:04 2137213                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6346763691719071995ControladorCadastroJUAZEIRO.jar
+7f7d02f0a000-7f7d02f30000 r-xs 00000000 08:04 2137210                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp423883409272731414ControladorCadastroCOSANPA.jar
+7f7d02f94000-7f7d02fba000 r-xs 00000000 08:04 2137200                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4716663123250029850ControladorCadastroCOSAMA.jar
+7f7d0301e000-7f7d03044000 r-xs 00000000 08:04 2137197                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp315011729986631606ControladorCadastroCOMPESA.jar
+7f7d030a8000-7f7d030cf000 r-xs 00000000 08:04 2137194                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6049967876596357347ControladorCadastroCAERN.jar
+7f7d03133000-7f7d03159000 r-xs 00000000 08:04 2137191                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2643537515722240700ControladorCadastroCAER.jar
+7f7d031bd000-7f7d031e3000 r-xs 00000000 08:04 2137188                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp9156856232789609171ControladorCadastroCAEMA.jar
+7f7d03247000-7f7d0326d000 r-xs 00000000 08:04 2137185                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp841961784858166961ControladorBatchMicromedicaoGCOM.jar
+7f7d032d1000-7f7d03307000 r-xs 00000000 08:04 2137182                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7720083431692906249ControladorBatchGCOM.jar
+7f7d0336b000-7f7d03392000 r-xs 00000000 08:04 2137179                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8092161208504853161ControladorBatchFaturamentoGCOM.jar
+7f7d033f6000-7f7d0341c000 r-xs 00000000 08:04 2137176                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4101939094072012898ControladorBatchArrecadacaoGCOM.jar
+7f7d03480000-7f7d034a6000 r-xs 00000000 08:04 2136976                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4350454781964783904BatchGerarResumoHistogramaAguaEsgotoSemQuadraMDB.jar
+7f7d0350c000-7f7d03532000 r-xs 00000000 08:04 2136973                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2810335314124933280BatchGerarResumoHistogramaAguaEsgotoMDB.jar
+7f7d03533000-7f7d0355c000 r-xs 00000000 08:04 2137173                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5656482999130790568ControladorAtualizacaoCadastralGCOM.jar
+7f7d0355c000-7f7d03598000 r-xs 00000000 08:04 2137170                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3975954435797095160ControladorAtendimentoPublicoGCOM.jar
+7f7d03598000-7f7d035be000 r-xs 00000000 08:04 2136968                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4637556608888393280BatchGerarResumoHidrometroMDB.jar
+7f7d03624000-7f7d0364a000 r-xs 00000000 08:04 2136965                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8912248947018642408BatchGerarResumoFaturamentoPorAnoMDB.jar
+7f7d036b0000-7f7d036d6000 r-xs 00000000 08:04 2136961                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8848839238500335429BatchGerarResumoFaturamentoMDB.jar
+7f7d036eb000-7f7d03712000 r-xs 00000000 08:04 2137167                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5984706547942211298ControladorArrecadacaoJUAZEIRO.jar
+7f7d03712000-7f7d0373c000 r-xs 00000000 08:04 2137164                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1498303359060372558ControladorArrecadacaoCOSANPA.jar
+7f7d0373c000-7f7d03762000 r-xs 00000000 08:04 2136958                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5800794673399662468BatchGerarResumoFaturamentoAguaEsgotoMDB.jar
+7f7d037c8000-7f7d037ee000 r-xs 00000000 08:04 2136955                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp659139390314545705BatchGerarResumoDocumentosAReceberMDB.jar
+7f7d03854000-7f7d0387a000 r-xs 00000000 08:04 2136951                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7104631050688723779BatchGerarResumoDiarioNegativacaoMDB.jar
+7f7d03892000-7f7d038ba000 r-xs 00000000 08:04 2137161                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3554347625331941953ControladorArrecadacaoCOSAMA.jar
+7f7d038ba000-7f7d038e0000 r-xs 00000000 08:04 2137158                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8991162520390672175ControladorArrecadacaoCOMPESA.jar
+7f7d038e0000-7f7d03906000 r-xs 00000000 08:04 2136948                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp705328250647992715BatchGerarResumoDevedoresDuvidososMDB.jar
+7f7d0396c000-7f7d03992000 r-xs 00000000 08:04 2136945                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6766299073842358291BatchGerarResumoConsumoAguaMDB.jar
+7f7d039f8000-7f7d03a1e000 r-xs 00000000 08:04 2136942                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6347922367291182350BatchGerarResumoColetaEsgotoPorAnoMDB.jar
+7f7d03a2e000-7f7d03a56000 r-xs 00000000 08:04 2137155                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7262002500758878784ControladorArrecadacaoCAERN.jar
+7f7d03a56000-7f7d03a84000 r-xs 00000000 08:04 2137151                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5494871683602455116ControladorArrecadacaoCAER.jar
+7f7d03a84000-7f7d03aaa000 r-xs 00000000 08:04 2136939                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1738041962329887694BatchGerarResumoColetaEsgotoMDB.jar
+7f7d03b10000-7f7d03b36000 r-xs 00000000 08:04 2136936                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1416340033681823966BatchGerarResumoArrecadacaoPorAnoMDB.jar
+7f7d03b9c000-7f7d03bc2000 r-xs 00000000 08:04 2136927                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp915451862168817170BatchGerarResumoArrecadacaoMDB.jar
+7f7d03bd1000-7f7d03bfa000 r-xs 00000000 08:04 2137147                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7219435173035662541ControladorArrecadacaoCAEMA.jar
+7f7d03bfa000-7f7d03c28000 r-xs 00000000 08:04 2137144                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6885729025215890352ControladorAcessoGCOM.jar
+7f7d03c28000-7f7d03c4e000 r-xs 00000000 08:04 2136913                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6253184745728678376BatchGerarResumoAnormalidadesMDB.jar
+7f7d03cb4000-7f7d03cda000 r-xs 00000000 08:04 2136910                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7000117819010990464BatchGerarResumoAcoesCobrancaEventualMDB.jar
+7f7d03d40000-7f7d03d66000 r-xs 00000000 08:04 2136906                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2096647955918964566BatchGerarResumoAcoesCobrancaCronogramaMDB.jar
+7f7d03d80000-7f7d03da6000 r-xs 00000000 08:04 2137141                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1734911890925806110BatchVerificarFaturamentoImoveisCortadosMDB.jar
+7f7d03da6000-7f7d03dcc000 r-xs 00000000 08:04 2137138                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1239309480388696389BatchSuspenderLeituraParaImovelComHidrometroRetiradoMDB.jar
+7f7d03dcc000-7f7d03df2000 r-xs 00000000 08:04 2136902                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp395532415595689998BatchGerarResumoAcoesCobrancaCronogramaEncerrarOSMDB.jar
+7f7d03e58000-7f7d03e7e000 r-xs 00000000 08:04 2136894                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1582129515325846735BatchGerarRAOSAnormalidadeConsumoMDB.jar
+7f7d03ee4000-7f7d03f0a000 r-xs 00000000 08:04 2136889                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7022720781345956331BatchGerarPrescreverDebitosDeImoveisMDB.jar
+7f7d03f24000-7f7d03f4a000 r-xs 00000000 08:04 2137134                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2554232680000280823BatchSuspenderLeituraParaImovelComConsumoRealNaoSuperiorA10MDB.jar
+7f7d03f4a000-7f7d03f70000 r-xs 00000000 08:04 2137131                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1524139035983020131BatchSuspenderImovelEmProgramaEspecialMDB.jar
+7f7d03f70000-7f7d03f96000 r-xs 00000000 08:04 2136885                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5244968912183928535BatchGerarMovimentoRetornoNegativacaoMDB.jar
+7f7d03ffc000-7f7d04022000 r-xs 00000000 08:04 2136875                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3996111994337405513BatchGerarMovimentoHidrometroMDB.jar
+7f7d04088000-7f7d040ae000 r-xs 00000000 08:04 2136866                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5792340322136427220BatchGerarMovimentoExtensaoContasCobrancaPorEmpresaMDB.jar
+7f7d040c8000-7f7d040ee000 r-xs 00000000 08:04 2137124                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8861545417115088467BatchRetirarImovelTarifaSocialMDB.jar
+7f7d040ee000-7f7d04114000 r-xs 00000000 08:04 2137121                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5150967976387195962BatchRetificarConjuntoContaConsumosMDB.jar
+7f7d04114000-7f7d0413a000 r-xs 00000000 08:04 2136863                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4877885106815182235BatchGerarMovimentoExclusaoNegativacaoMDB.jar
+7f7d041a0000-7f7d041c6000 r-xs 00000000 08:04 2136860                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2994802812690035975BatchGerarMovimentoContasCobrancaPorEmpresaMDB.jar
+7f7d0422c000-7f7d04252000 r-xs 00000000 08:04 2136856                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4068113147427311759BatchGerarLancamentosContabeisFaturamentoMDB.jar
+7f7d0426c000-7f7d04292000 r-xs 00000000 08:04 2137117                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3661270499510559824BatchReligarImoveisCortadosComConsumoRealMDB.jar
+7f7d04292000-7f7d042b8000 r-xs 00000000 08:04 2137114                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1194718028540630139BatchRelatorioContasBaixadasContabilmenteMDB.jar
+7f7d042b8000-7f7d042de000 r-xs 00000000 08:04 2136853                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2626064648570396929BatchGerarLancamentosContabeisDevedoresDuvidososMDB.jar
+7f7d04344000-7f7d0436a000 r-xs 00000000 08:04 2136850                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7361081455977800566BatchGerarLancamentosContabeisAvisosBancariosMDB.jar
+7f7d043d0000-7f7d043f6000 r-xs 00000000 08:04 2136847                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6457900940628393318BatchGerarLancamentosContabeisArrecadacaoMDB.jar
+7f7d04410000-7f7d04436000 r-xs 00000000 08:04 2137111                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3467391808949008409BatchProgramacaoAutoRoteiroAcompServicoMDB.jar
+7f7d04436000-7f7d0445c000 r-xs 00000000 08:04 2137108                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp207340579649134241BatchProcessarPagamentosDiferencaDoisReaisMDB.jar
+7f7d0445c000-7f7d04482000 r-xs 00000000 08:04 2136844                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7136463775445534157BatchGerarHistoricoParaEncerrarFaturamentoMesMDB.jar
+7f7d044e8000-7f7d0450e000 r-xs 00000000 08:04 2136841                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6164768861292880730BatchGerarHistoricoParaEncerrarArrecadacaoMesMDB.jar
+7f7d04574000-7f7d0459a000 r-xs 00000000 08:04 2136838                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4491792209351939606BatchGerarHistoricoContaMDB.jar
+7f7d045b4000-7f7d045da000 r-xs 00000000 08:04 2137105                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3361991952758174935BatchProcessarEncerramentoOSFiscalizacaoDecursoPrazoMDB.jar
+7f7d045da000-7f7d04600000 r-xs 00000000 08:04 2137102                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6611385989860057470BatchProcessarEncerramentoOSAcaoCobrancaMDB.jar
+7f7d04600000-7f7d04626000 r-xs 00000000 08:04 2136835                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7514861873609292063BatchGerarGuiaPagamentoPorClienteResumoPendenciaMDB.jar
+7f7d0468c000-7f7d046b2000 r-xs 00000000 08:04 2136832                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4893789668568463358BatchGerarFaturaClienteResponsavelMDB.jar
+7f7d04718000-7f7d0473e000 r-xs 00000000 08:04 2136829                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4385397519262846384BatchGerarDebitoACobrarDoacaoMDB.jar
+7f7d04758000-7f7d0477e000 r-xs 00000000 08:04 2137099                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8140973678369331816BatchProcessarComandoGeradoMDB.jar
+7f7d0477e000-7f7d047a4000 r-xs 00000000 08:04 2137096                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1374055913127174508BatchProcessarArquivoTxtEncerramentoOSCobrancaMDB.jar
+7f7d047a4000-7f7d047ca000 r-xs 00000000 08:04 2136826                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2525912864569007551BatchGerarDebitoACobrarDeAcrescimoPorImpontualidadeMDB.jar
+7f7d04830000-7f7d04856000 r-xs 00000000 08:04 2136823                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp463989737259683729BatchGerarDadosRelatorioBIGMDB.jar
+7f7d048bc000-7f7d048e2000 r-xs 00000000 08:04 2136820                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2438856872769495197BatchGerarDadosParaLeituraMDB.jar
+7f7d048fc000-7f7d04922000 r-xs 00000000 08:04 2137093                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2049554189095817782BatchPrescreverDebitosImoveisPublicosManualMDB.jar
+7f7d04922000-7f7d04948000 r-xs 00000000 08:04 2137090                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5116986510190002776BatchPrescreverDebitosImoveisPublicosAutomaticoMDB.jar
+7f7d04948000-7f7d0496e000 r-xs 00000000 08:04 2136817                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2142493999644291575BatchGerarDadosDiariosArrecadacaoMDB.jar
+7f7d049d4000-7f7d049fa000 r-xs 00000000 08:04 2136814                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1442177643712902285BatchGerarDadosDeclaracaoQuitacaoAnualDebitosMDB.jar
+7f7d04a60000-7f7d04a86000 r-xs 00000000 08:04 2136811                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp710085506703884965BatchGerarDadosArquivoAcompanhamentoServicoMDB.jar
+7f7d04aa0000-7f7d04ac6000 r-xs 00000000 08:04 2137087                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2031014238022696829BatchInserirResumoAcoesCobrancaEventualMDB.jar
+7f7d04ac6000-7f7d04aec000 r-xs 00000000 08:04 2137084                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7155590825315902361BatchInserirResumoAcoesCobrancaCronogramaMDB.jar
+7f7d04aec000-7f7d04b12000 r-xs 00000000 08:04 2136808                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4405487122392681158BatchGerarCreditoSituacaoEspecialFaturamentoMDB.jar
+7f7d04b78000-7f7d04b9e000 r-xs 00000000 08:04 2136805                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5387322154843787904BatchGerarContasAReceberContabilMDB.jar
+7f7d04c04000-7f7d04c2a000 r-xs 00000000 08:04 2136802                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1728468607532219209BatchGerarCartasDeFinalDeAnoMDB.jar
+7f7d04c44000-7f7d04c6a000 r-xs 00000000 08:04 2137081                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2609669565676085701BatchInserirPagamentosFaturasEspeciaisMDB.jar
+7f7d04c6a000-7f7d04c90000 r-xs 00000000 08:04 2137078                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4212917267452980517BatchIncluirDebitoACobrarEntradaParcelamentoNaoPagaMDB.jar
+7f7d04c90000-7f7d04cb6000 r-xs 00000000 08:04 2136799                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1001936410209729253BatchGerarCartasCampanhaSolidariedadeCriancaParaNegociacaoAVistaMDB.jar
+7f7d04d1c000-7f7d04d42000 r-xs 00000000 08:04 2136796                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp653598722969447927BatchGerarCartaTarifaSocialMDB.jar
+7f7d04da8000-7f7d04dce000 r-xs 00000000 08:04 2136793                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7294095256194856099BatchGerarBonusTarifaSocialMDB.jar
+7f7d04de8000-7f7d04e0e000 r-xs 00000000 08:04 2137075                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7418484471883006778BatchGerarValorVolumesConsumidosNaoFaturadosMDB.jar
+7f7d04e0e000-7f7d04e34000 r-xs 00000000 08:04 2137072                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp291546105543645051BatchGerarTxtOsInspecaoAnormalidadeMDB.jar
+7f7d04e34000-7f7d04e5a000 r-xs 00000000 08:04 2136790                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1895146296392367369BatchGerarAtividadeAcaoCobrancaMDB.jar
+7f7d04ec0000-7f7d04ee7000 r-xs 00000000 08:04 2136787                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4891818023327079031BatchGerarArquivoTextoParaLeituristaMDB.jar
+7f7d04f4d000-7f7d04f73000 r-xs 00000000 08:04 2136784                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3318269632873430718BatchGerarArquivoTextoPagamentosContasCobrancaEmpresaMDB.jar
+7f7d04f8d000-7f7d04fb3000 r-xs 00000000 08:04 2137069                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3752534444824279218BatchGerarTxtImpressaoContasBrailleMDB.jar
+7f7d04fb3000-7f7d04fd9000 r-xs 00000000 08:04 2137066                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7399917115263747073BatchGerarTaxaPercentualTarifaMinimaCortadoMDB.jar
+7f7d04fd9000-7f7d04fff000 r-xs 00000000 08:04 2136781                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1212507560489720156BatchGerarArquivoTextoOSContasPagasParceladasMDB.jar
+7f7d05065000-7f7d0508b000 r-xs 00000000 08:04 2136778                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5488384149469054127BatchGerarArquivoTextoDeclaracaoQuitacaoAnualDebitosMDB.jar
+7f7d050f1000-7f7d05117000 r-xs 00000000 08:04 2136775                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp902947191912361864BatchGerarArquivoTextoContasProjetosEspeciaisMDB.jar
+7f7d05131000-7f7d05157000 r-xs 00000000 08:04 2137063                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5663324399613077032BatchGerarTaxaEntregaOutroEnderecoMDB.jar
+7f7d05157000-7f7d0517d000 r-xs 00000000 08:04 2137060                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3578271687193195032BatchGerarTabelasTemporariasAtualizacaoCadastralMDB.jar
+7f7d0517d000-7f7d051a3000 r-xs 00000000 08:04 2136772                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2426518856607037383BatchGerarArquivoTextoContasCobrancaEmpresaMDB.jar
+7f7d05209000-7f7d0522f000 r-xs 00000000 08:04 2136769                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6911236481164952432BatchGerarArquivoTextoAtualizacaoCadastralMDB.jar
+7f7d05295000-7f7d052bb000 r-xs 00000000 08:04 2136766                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7497414615004082469BatchGerarArquivoOrdemDeFiscalizacaoMDB.jar
+7f7d052d5000-7f7d052fb000 r-xs 00000000 08:04 2137057                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1247020660470685003BatchGerarResumoSituacaoEspecialFaturamentoMDB.jar
+7f7d052fb000-7f7d05321000 r-xs 00000000 08:04 2137054                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2553558831963760702BatchGerarResumoSituacaoEspecialCobrancaMDB.jar
+7f7d05321000-7f7d05347000 r-xs 00000000 08:04 2136763                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1681035258743939510BatchFaturarGrupoFaturamentoMDB.jar
+7f7d053ad000-7f7d053d3000 r-xs 00000000 08:04 2136760                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4871212617981902944BatchExecutarComandoNegativacaoMDB.jar
+7f7d05439000-7f7d0545f000 r-xs 00000000 08:04 2136757                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8857643069735686217BatchExecutarComandoEncerramentoRAMDB.jar
+7f7d05479000-7f7d0549f000 r-xs 00000000 08:04 2137051                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3112664266838901305BatchGerarResumoSimulacaoFaturamentoMDB.jar
+7f7d0549f000-7f7d054c5000 r-xs 00000000 08:04 2137048                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp588688781272328098BatchGerarResumoRegistroAtendimentoPorAnoMDB.jar
+7f7d054c5000-7f7d054eb000 r-xs 00000000 08:04 2136754                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp665168348044457707BatchExcluirImoveisDaTarifaSocialMDB.jar
+7f7d05551000-7f7d05577000 r-xs 00000000 08:04 2136751                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7797969748274322391BatchEnvioEmailContaParaClienteMDB.jar
+7f7d055dd000-7f7d05603000 r-xs 00000000 08:04 2136748                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3655249803563449211BatchEncerrarFaturamentoMesMDB.jar
+7f7d0561d000-7f7d05643000 r-xs 00000000 08:04 2137045                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1841117927707112483BatchGerarResumoRegistroAtendimentoMDB.jar
+7f7d05643000-7f7d05669000 r-xs 00000000 08:04 2137042                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8168702291401857526BatchGerarResumoReceitaMDB.jar
+7f7d05669000-7f7d0568f000 r-xs 00000000 08:04 2136745                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1169843580812762166BatchEncerrarComandosDeCobrancaPorEmpresaMDB.jar
+7f7d056f5000-7f7d0571b000 r-xs 00000000 08:04 2136742                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1952930818265135616BatchEncerrarComandoOSSeletivaInspecaoAnormalidadeMDB.jar
+7f7d05781000-7f7d057a7000 r-xs 00000000 08:04 2136739                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5136614113329430384BatchEncerrarArrecadacaoMesMDB.jar
+7f7d057c1000-7f7d057e7000 r-xs 00000000 08:04 2137039                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4565125230870929337BatchGerarResumoReFaturamentoOlapMDB.jar
+7f7d057e7000-7f7d0580d000 r-xs 00000000 08:04 2137036                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8745189042475812662BatchGerarResumoReFaturamentoNovoMDB.jar
+7f7d0580d000-7f7d05833000 r-xs 00000000 08:04 2136736                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8734407416831691407BatchEmitirOrdemDeFiscalizacaoMDB.jar
+7f7d05899000-7f7d058bf000 r-xs 00000000 08:04 2136733                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3201359860872897228BatchEmitirExtratoConsumoImovelCondominioMDB.jar
+7f7d05925000-7f7d0594b000 r-xs 00000000 08:04 2136730                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1485755340307349479BatchEmitirDocumentoCobrancaMDB.jar
+7f7d05951000-7f7d05953000 r-xs 00000000 08:04 2133665                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/lib/CodigoBarra.jar
+7f7d05965000-7f7d0598b000 r-xs 00000000 08:04 2137033                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6445972510337146298BatchGerarResumoReFaturamentoMDB.jar
+7f7d0598b000-7f7d059b1000 r-xs 00000000 08:04 2137030                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7588026552770336891BatchGerarResumoPendenciaPorAnoMDB.jar
+7f7d059b1000-7f7d059d7000 r-xs 00000000 08:04 2136727                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7878445820884327203BatchEmitirContasOrgaoPublicoMDB.jar
+7f7d05a3d000-7f7d05a63000 r-xs 00000000 08:04 2136724                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4244652660271452757BatchEmitirContasMDB.jar
+7f7d05ac9000-7f7d05aef000 r-xs 00000000 08:04 2136721                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2521469577779573538BatchEmitirCartasDeFinalDeAnoMDB.jar
+7f7d05b09000-7f7d05b2f000 r-xs 00000000 08:04 2137027                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4804481971743110922BatchGerarResumoPendenciaMDB.jar
+7f7d05b2f000-7f7d05b55000 r-xs 00000000 08:04 2137022                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1841435217836609676BatchGerarResumoParcelamentoPorAnoMDB.jar
+7f7d05b55000-7f7d05b7b000 r-xs 00000000 08:04 2136718                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6294568918486819896BatchEmitirCartasCampanhaSolidariedadeCriancaParaNegociacaoAVistaMDB.jar
+7f7d05be1000-7f7d05c07000 r-xs 00000000 08:04 2136713                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4635436573721724642BatchEmitirBoletosMDB.jar
+7f7d05c6d000-7f7d05c93000 r-xs 00000000 08:04 2136710                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4786159167653434101BatchEmitirBoletimCadastroMDB.jar
+7f7d05cad000-7f7d05cd3000 r-xs 00000000 08:04 2137019                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1384561762907661080BatchGerarResumoParcelamentoMDB.jar
+7f7d05cd3000-7f7d05cf9000 r-xs 00000000 08:04 2137016                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4432541233466205974BatchGerarResumoNegativacaoMDB.jar
+7f7d05cf9000-7f7d05d1f000 r-xs 00000000 08:04 2136707                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1633158181194585939BatchEfetuarRateioConsumoMDB.jar
+7f7d05d85000-7f7d05dab000 r-xs 00000000 08:04 2136704                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8357501577660476575BatchDeterminarConfirmacaoDaNegativacaoMDB.jar
+7f7d05e11000-7f7d05e37000 r-xs 00000000 08:04 2136701                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6330734291964429348BatchDesfazerParcelamentoPorEntradaNaoPagaMDB.jar
+7f7d05e51000-7f7d05e77000 r-xs 00000000 08:04 2137013                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1196103739537005002BatchGerarResumoMetasMDB.jar
+7f7d05e77000-7f7d05e9d000 r-xs 00000000 08:04 2137010                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1174724593337818618BatchGerarResumoMetasAcumuladoMDB.jar
+7f7d05e9d000-7f7d05ec3000 r-xs 00000000 08:04 2136698                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3486465367400644255BatchConsistirLeiturasCalcularConsumosMDB.jar
+7f7d05f29000-7f7d05f4f000 r-xs 00000000 08:04 2136695                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1833326940650437032BatchClassificarPagamentosDevolucoesMDB.jar
+7f7d05fb5000-7f7d05fdb000 r-xs 00000000 08:04 2136692                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp796338195236041829BatchCancelarGuiasPagamentoNaoPagas.jar
+7f7d05ff5000-7f7d0601b000 r-xs 00000000 08:04 2137007                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3178653230086240149BatchGerarResumoLigacoesEconomiasPorAnoMDB.jar
+7f7d0601b000-7f7d06041000 r-xs 00000000 08:04 2137004                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2595482530442748890BatchGerarResumoLigacoesEconomiasMDB.jar
+7f7d06041000-7f7d06067000 r-xs 00000000 08:04 2136689                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7024511759366562903BatchAutomatizarPerfisDeGrandesConsumidoresMDB.jar
+7f7d060cd000-7f7d060f3000 r-xs 00000000 08:04 2136686                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8986033660778999507BatchAtualizarResumoDevedoresDuvidososMDB.jar
+7f7d06159000-7f7d0617f000 r-xs 00000000 08:04 2136683                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5714309961498980165BatchAtualizarPagamentosContasCobrancaMDB.jar
+7f7d06199000-7f7d061bf000 r-xs 00000000 08:04 2137000                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4983086456896545414BatchGerarResumoLeituraAnormalidadeMDB.jar
+7f7d061bf000-7f7d061e5000 r-xs 00000000 08:04 2136997                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4144453298927733563BatchGerarResumoInstalacoesHidrometrosPorAnoMDB.jar
+7f7d061e5000-7f7d0620b000 r-xs 00000000 08:04 2136680                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1674673243471236635BatchAtualizarNumeroExecucaoResumoNegativacaoMDB.jar
+7f7d06210000-7f7d06271000 r-xs 00000000 08:04 2133408                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/standard.jar
+7f7d06271000-7f7d06297000 r-xs 00000000 08:04 2136677                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6361127240905394001BatchAtualizarLigacaoAguaLigadoAnaliseParaLigadoMDB.jar
+7f7d062cd000-7f7d062fd000 r-xs 00000000 08:04 2133406                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/xml-apis.jar
+7f7d062fd000-7f7d06323000 r-xs 00000000 08:04 2136674                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3870166578640453799BatchAtualizarConjuntoHidrometroMDB.jar
+7f7d0633d000-7f7d06363000 r-xs 00000000 08:04 2136994                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2540821551496670176BatchGerarResumoInstalacoesHidrometrosMDB.jar
+7f7d06363000-7f7d06389000 r-xs 00000000 08:04 2136991                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3968935513207366496BatchGerarResumoIndicadoresMicromedicaoPorAnoMDB.jar
+7f7d06389000-7f7d063af000 r-xs 00000000 08:04 2136671                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7488259256321068889BatchAtualizarComandoAtividadeAcaoCobrancaMDB.jar
+7f7d063cd000-7f7d06415000 r-xs 00000000 08:04 2133398                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/jcommon-1.0.0.jar
+7f7d06415000-7f7d0643b000 r-xs 00000000 08:04 2136668                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5751893597242117317BatchAtualizarCodigoDebitoAutomaticoMDB.jar
+7f7d0643c000-7f7d06451000 r-xs 00000000 08:04 2133388                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/barbecue-1.1.jar
+7f7d06451000-7f7d064a1000 r-xs 00000000 08:04 2133421                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/mail.jar
+7f7d064a1000-7f7d064c7000 r-xs 00000000 08:04 2136665                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7975892423734446618BatchAtualizarAutosInfracaoPrazoRecursoVencidoMDB.jar
+7f7d064c9000-7f7d064e1000 r-xs 00000000 08:04 2133392                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/commons-javaflow-20060411.jar
+7f7d064e1000-7f7d06504000 r-xs 00000000 08:04 2133391                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/commons-digester-1.7.jar
+7f7d06504000-7f7d0652d000 r-xs 00000000 08:04 2133390                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/commons-collections-2.1.jar
+7f7d0652d000-7f7d06553000 r-xs 00000000 08:04 2136662                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3222967985674911856BatchAtualizacaoCadastralMDB.jar
+7f7d0655b000-7f7d06569000 r-xs 00000000 08:04 2133409                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/activation.jar
+7f7d06569000-7f7d0658f000 r-xs 00000000 08:04 2136988                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7451761661868181469BatchGerarResumoIndicadoresMicromedicaoMDB.jar
+7f7d0658f000-7f7d065b5000 r-xs 00000000 08:04 2136985                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1113175508635490136BatchGerarResumoIndicadoresFaturamentoMDB.jar
+7f7d065b9000-7f7d065df000 r-xs 00000000 08:04 2136659                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7756708313567132326BatchAtualizaQuantidadeParcelaPagaConsecutivaParcelaBonusMDB.jar
+7f7d065e9000-7f7d065ec000 r-xs 00000000 08:04 2133402                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/png-encoder-1.5.jar
+7f7d065ec000-7f7d065f3000 r-xs 00000000 08:04 2133393                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/commons-logging-1.0.2.jar
+7f7d065f3000-7f7d065ff000 r-xs 00000000 08:04 2133420                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/pager-taglib.jar
+7f7d065ff000-7f7d06628000 r-xs 00000000 08:04 2133411                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/commons-collections.jar
+7f7d06628000-7f7d06645000 r-xs 00000000 08:04 2133410                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/commons-beanutils.jar
+7f7d06645000-7f7d0666b000 r-xs 00000000 08:04 2136656                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp440685682968317180BatchApagarResumoDevedoresDuvidososMDB.jar
+7f7d0666c000-7f7d06671000 r-xs 00000000 08:04 2133394                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/commons-logging-api-1.0.2.jar
+7f7d06671000-7f7d0667d000 r-xs 00000000 08:04 2133416                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/commons-validator.jar
+7f7d0667d000-7f7d06685000 r-xs 00000000 08:04 2133415                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/commons-logging.jar
+7f7d06685000-7f7d066ab000 r-xs 00000000 08:04 2136982                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7352915814532121068BatchGerarResumoIndicadoresComercializacaoMDB.jar
+7f7d066ab000-7f7d066d1000 r-xs 00000000 08:04 2136979                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7488449284334991969BatchGerarResumoIndicadoresCobrancaMDB.jar
+7f7d066d1000-7f7d066f7000 r-xs 00000000 08:04 2136653                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2028845119616928457BatchAlterarInscricaoImovelMDB.jar
+7f7d066f7000-7f7d06707000 r-xs 00000000 08:04 2133417                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/jakarta-oro.jar
+7f7d06707000-7f7d0670d000 r-xs 00000000 08:04 2133407                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/jstl.jar
+7f7d0670d000-7f7d06729000 r-xs 00000000 08:04 2133389                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/commons-beanutils-1.5.jar
+7f7d06729000-7f7d0672c000 r-xs 00000000 08:04 2133418                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/struts-legacy.jar
+7f7d0672c000-7f7d06732000 r-xs 00000000 08:04 2133413                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/commons-fileupload.jar
+7f7d06732000-7f7d06742000 r-xs 00000000 08:04 2133414                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/commons-lang.jar
+7f7d06742000-7f7d0675d000 r-xs 00000000 08:04 2133412                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/gcom.ear/gcom.war/WEB-INF/lib/commons-digester.jar
+7f7d0675d000-7f7d06783000 r-xs 00000000 08:04 2136648                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3898763146941865954BatchAcompanharPagamentoDoParcelamentoMDB.jar
+7f7d06783000-7f7d06787000 r-xs 00000000 08:04 657566                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/saaj-api.jar
+7f7d06787000-7f7d067fe000 r-xs 00000000 08:04 657549                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/dom4j.jar
+7f7d067fe000-7f7d0687b000 r-xs 00000000 08:04 657569                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/standard.jar
+7f7d0687b000-7f7d06883000 r-xs 00000000 08:04 657556                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/jakarta-regexp-1.2.jar
+7f7d06883000-7f7d06889000 r-xs 00000000 08:04 657568                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/saxpath.jar
+7f7d06889000-7f7d068fd000 r-xs 00000000 08:04 657571                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/wcf.jar
+7f7d068fd000-7f7d069a5000 r-xs 00000000 08:04 657536                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/jpivot.jar
+7f7d069a5000-7f7d069b2000 r-xs 00000000 08:04 657551                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/eigenbase-resgen.jar
+7f7d069b2000-7f7d069be000 r-xs 00000000 08:04 657538                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/activation.jar
+7f7d069be000-7f7d06b3f000 r-xs 00000000 08:04 657555                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/jai_core.jar
+7f7d06b3f000-7f7d06b5a000 r-xs 00000000 08:04 657543                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/commons-dbcp-1.2.1.jar
+7f7d06b5a000-7f7d06b8f000 r-xs 00000000 08:04 657554                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/jai_codec.jar
+7f7d06b8f000-7f7d06be8000 r-xs 00000000 08:04 657560                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/jsf-api.jar
+7f7d06be8000-7f7d06c03000 r-xs 00000000 08:04 657567                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/saaj-ri.jar
+7f7d06c03000-7f7d06c4b000 r-xs 00000000 08:04 657558                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/jcommon-1.0.0.jar
+7f7d06c4b000-7f7d06c7a000 r-xs 00000000 08:04 657541                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/commons-beanutils-1.6.jar
+7f7d06c7a000-7f7d06c80000 r-xs 00000000 08:04 657545                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/commons-fileupload-1.0.jar
+7f7d06c80000-7f7d06cc5000 r-xs 00000000 08:04 657564                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/mail.jar
+7f7d06cc5000-7f7d06ec9000 r-xs 00000000 08:04 657540                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/batik.jar
+7f7d06ec9000-7f7d0703d000 r-xs 00000000 08:04 657553                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/fop.jar
+7f7d0703d000-7f7d070c6000 r-xs 00000000 08:04 657542                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/commons-collections-3.1.jar
+7f7d070c6000-7f7d0711d000 r-xs 00000000 08:04 657563                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/log4j-1.2.8.jar
+7f7d0711d000-7f7d07143000 r-xs 00000000 08:04 657547                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/commons-math-1.0.jar
+7f7d07143000-7f7d07153000 r-xs 00000000 08:04 657539                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/avalon-framework-cvs-20020806.jar
+7f7d07153000-7f7d0735d000 r-xs 00000000 08:04 657565                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/mondrian.jar
+7f7d0735d000-7f7d07398000 r-xs 00000000 08:04 657537                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/javacup.jar
+7f7d07398000-7f7d073a3000 r-xs 00000000 08:04 657548                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/commons-pool-1.2.jar
+7f7d073a3000-7f7d073aa000 r-xs 00000000 08:04 657570                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/tbutils-wcf.jar
+7f7d073aa000-7f7d073c8000 r-xs 00000000 08:04 657562                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/junit.jar
+7f7d073c8000-7f7d073ce000 r-xs 00000000 08:04 657561                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/jstl.jar
+7f7d073ce000-7f7d073d8000 r-xs 00000000 08:04 657546                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/commons-logging-1.0.4.jar
+7f7d073d8000-7f7d07407000 r-xs 00000000 08:04 657557                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/jaxen-full.jar
+7f7d07407000-7f7d0750d000 r-xs 00000000 08:04 657559                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/jfreechart-1.0.0.jar
+7f7d0750d000-7f7d07510000 ---p 00000000 00:00 0 
+7f7d07510000-7f7d0760e000 rwxp 00000000 00:00 0                          [stack:22698]
+7f7d0760e000-7f7d07611000 ---p 00000000 00:00 0 
+7f7d07611000-7f7d0770f000 rwxp 00000000 00:00 0                          [stack:22688]
+7f7d0770f000-7f7d07712000 ---p 00000000 00:00 0 
+7f7d07712000-7f7d07810000 rwxp 00000000 00:00 0                          [stack:22687]
+7f7d07810000-7f7d07813000 ---p 00000000 00:00 0 
+7f7d07813000-7f7d07911000 rwxp 00000000 00:00 0                          [stack:22686]
+7f7d07911000-7f7d07914000 ---p 00000000 00:00 0 
+7f7d07914000-7f7d07a12000 rwxp 00000000 00:00 0                          [stack:22685]
+7f7d07a12000-7f7d07b12000 rwxs 00000000 08:04 2242921                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/data/hypersonic/localDB.data
+7f7d07b12000-7f7d07b15000 ---p 00000000 00:00 0 
+7f7d07b15000-7f7d07c13000 rwxp 00000000 00:00 0                          [stack:22684]
+7f7d07c13000-7f7d07c1a000 r-xp 00000000 08:04 1452236                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libnio.so
+7f7d07c1a000-7f7d07d19000 ---p 00007000 08:04 1452236                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libnio.so
+7f7d07d19000-7f7d07d1b000 rwxp 00006000 08:04 1452236                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libnio.so
+7f7d07d1b000-7f7d07d1e000 ---p 00000000 00:00 0 
+7f7d07d1e000-7f7d07e1c000 rwxp 00000000 00:00 0                          [stack:22680]
+7f7d07e1c000-7f7d07e1f000 ---p 00000000 00:00 0 
+7f7d07e1f000-7f7d07f1d000 rwxp 00000000 00:00 0                          [stack:22679]
+7f7d07f1d000-7f7d08000000 r-xs 00000000 08:04 2134190                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp9025908936471203002jfreechart.jar
+7f7d08000000-7f7d0879e000 rwxp 00000000 00:00 0 
+7f7d0879e000-7f7d0c000000 ---p 00000000 00:00 0 
+7f7d0c000000-7f7d10000000 rwxp 00000000 00:00 0 
+7f7d10000000-7f7d125dc000 rwxp 00000000 00:00 0 
+7f7d125dc000-7f7d14000000 ---p 00000000 00:00 0 
+7f7d14000000-7f7d14067000 rwxp 00000000 00:00 0 
+7f7d14067000-7f7d18000000 ---p 00000000 00:00 0 
+7f7d18000000-7f7d18056000 rwxp 00000000 00:00 0 
+7f7d18056000-7f7d1c000000 ---p 00000000 00:00 0 
+7f7d1c000000-7f7d1e7b0000 rwxp 00000000 00:00 0 
+7f7d1e7b0000-7f7d20000000 ---p 00000000 00:00 0 
+7f7d20000000-7f7d20021000 rwxp 00000000 00:00 0 
+7f7d20021000-7f7d24000000 ---p 00000000 00:00 0 
+7f7d24000000-7f7d24021000 rwxp 00000000 00:00 0 
+7f7d24021000-7f7d28000000 ---p 00000000 00:00 0 
+7f7d28000000-7f7d281e0000 rwxp 00000000 00:00 0 
+7f7d281e0000-7f7d2c000000 ---p 00000000 00:00 0 
+7f7d2c000000-7f7d2c021000 rwxp 00000000 00:00 0 
+7f7d2c021000-7f7d30000000 ---p 00000000 00:00 0 
+7f7d30000000-7f7d30021000 rwxp 00000000 00:00 0 
+7f7d30021000-7f7d34000000 ---p 00000000 00:00 0 
+7f7d34000000-7f7d3431c000 rwxp 00000000 00:00 0 
+7f7d3431c000-7f7d38000000 ---p 00000000 00:00 0 
+7f7d38001000-7f7d38014000 r-xs 00000000 08:04 657552                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/eigenbase-xom.jar
+7f7d38014000-7f7d3802f000 r-xs 00000000 08:04 657544                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/commons-digester-1.5.jar
+7f7d3802f000-7f7d38032000 r-xs 00000000 08:04 2242920                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1011539713156741889mail-ra.rar-contents/mail-ra.jar
+7f7d38032000-7f7d38035000 r-xs 00000000 08:04 2136645                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1011539713156741889mail-ra.rar
+7f7d38035000-7f7d38046000 r-xs 00000000 08:04 2242918                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3774118797040692866jms-ra.rar-contents/jms-ra.jar
+7f7d38046000-7f7d38056000 r-xs 00000000 08:04 2136644                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3774118797040692866jms-ra.rar
+7f7d38056000-7f7d38058000 r-xs 00000000 08:04 2242915                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6252081170073920383jboss-xa-jdbc.rar-contents/jboss-xa-jdbc.jar
+7f7d38058000-7f7d3805b000 r-xs 00000000 08:04 2136643                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6252081170073920383jboss-xa-jdbc.rar
+7f7d3805b000-7f7d3805d000 r-xs 00000000 08:04 2242910                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp174396845448409959jboss-local-jdbc.rar-contents/jboss-local-jdbc.jar
+7f7d3805d000-7f7d3805f000 r-xs 00000000 08:04 2136641                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp174396845448409959jboss-local-jdbc.rar
+7f7d3805f000-7f7d38063000 r-xs 00000000 08:04 2134191                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4598308825350105701uuid-key-generator.sar
+7f7d38063000-7f7d380b4000 r-xs 00000000 08:04 2134189                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp370716160213280544jcommon.jar
+7f7d380b4000-7f7d380d7000 r-xs 00000000 08:04 2134188                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6475559868267420433console-mgr-classes.jar
+7f7d380d7000-7f7d380da000 ---p 00000000 00:00 0 
+7f7d380da000-7f7d381d8000 rwxp 00000000 00:00 0                          [stack:22677]
+7f7d381d8000-7f7d382cf000 r-xs 00000000 08:04 2133966                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7266654275626304162xercesImpl.jar
+7f7d382cf000-7f7d382f6000 r-xs 00000000 08:04 2133965                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1431451842111497544tomcat50-service.jar
+7f7d382f6000-7f7d38322000 r-xs 00000000 08:04 2133964                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6020900364997102290tomcat-util.jar
+7f7d38322000-7f7d38340000 r-xs 00000000 08:04 2133920                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2611972899854497097tomcat-jk2.jar
+7f7d38340000-7f7d3834d000 r-xs 00000000 08:04 2133919                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3869097658908252444tomcat-http11.jar
+7f7d3834d000-7f7d38352000 r-xs 00000000 08:04 2133918                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8317101158862331199tomcat-coyote.jar
+7f7d38352000-7f7d38358000 r-xs 00000000 08:04 2133917                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6360097149991662317servlets-webdav.jar
+7f7d38358000-7f7d3835a000 r-xs 00000000 08:04 2133915                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1935575393654770569servlets-invoker.jar
+7f7d3835a000-7f7d38360000 r-xs 00000000 08:04 2133914                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4978169932781350602servlets-default.jar
+7f7d38360000-7f7d38379000 r-xs 00000000 08:04 2133911                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1906608392255959237servlet-api.jar
+7f7d38379000-7f7d38384000 r-xs 00000000 08:04 2133910                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2601223460833640506naming-resources.jar
+7f7d38384000-7f7d3838c000 r-xs 00000000 08:04 2133909                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5530065498045536245naming-common.jar
+7f7d3838c000-7f7d38399000 r-xs 00000000 08:04 2133908                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7201077477935376934jsp-api.jar
+7f7d38399000-7f7d383b4000 r-xs 00000000 08:04 2133907                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3724179816686380747jasper-runtime.jar
+7f7d383b4000-7f7d3840b000 r-xs 00000000 08:04 2133900                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3460985642419192997jasper-compiler.jar
+7f7d3840b000-7f7d38412000 r-xs 00000000 08:04 2133899                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2901544547797751616jakarta-regexp-1.3.jar
+7f7d38412000-7f7d3842d000 r-xs 00000000 08:04 2133897                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1590213994135116993commons-modeler.jar
+7f7d3842d000-7f7d38435000 r-xs 00000000 08:04 2133896                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3165496362544607258commons-logging.jar
+7f7d38435000-7f7d38451000 r-xs 00000000 08:04 2133779                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7511468023500566640commons-el.jar
+7f7d38451000-7f7d3846c000 r-xs 00000000 08:04 2133778                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp90463042222527402commons-digester.jar
+7f7d3846c000-7f7d38495000 r-xs 00000000 08:04 2133726                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3622415969726777237commons-collections.jar
+7f7d38495000-7f7d384b3000 r-xs 00000000 08:04 2133725                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6704152584124876405commons-beanutils.jar
+7f7d384b3000-7f7d38562000 r-xs 00000000 08:04 2133724                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8287387150737206013catalina.jar
+7f7d38562000-7f7d3857d000 r-xs 00000000 08:04 2133723                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8986184985468124147catalina-optional.jar
+7f7d3857d000-7f7d38589000 r-xs 00000000 08:04 2133722                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp7631467967967161374catalina-manager.jar
+7f7d38589000-7f7d38680000 r-xs 00000000 08:04 2133720                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3128707928285658466ant.jar
+7f7d38680000-7f7d38683000 r-xs 00000000 08:04 657550                     /home/felipe/Dev/jboss-4.0.1sp1/server/default/deploy/mondrian.war/WEB-INF/lib/eigenbase-properties.jar
+7f7d38683000-7f7d3869f000 r-xs 00000000 08:04 2133718                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5992839554300356226wsdl4j.jar
+7f7d3869f000-7f7d386d7000 r-xs 00000000 08:04 2133717                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1873138202866335703jboss-ws4ee.jar
+7f7d386d7000-7f7d386df000 r-xs 00000000 08:04 2133716                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2285332208821208367commons-logging.jar
+7f7d386df000-7f7d386f1000 r-xs 00000000 08:04 2133714                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6938997204336669487commons-discovery.jar
+7f7d386f1000-7f7d3882d000 r-xs 00000000 08:04 2133713                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp3290355105739276356axis-ws4ee.jar
+7f7d3882d000-7f7d38831000 r-xs 00000000 08:04 2133707                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp186685103135522500odmg-3.0.jar
+7f7d38831000-7f7d38836000 r-xs 00000000 08:04 2133703                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp5269611870914841208jboss-hibernate.jar
+7f7d38836000-7f7d38a01000 r-xs 00000000 08:04 2133702                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp4047271552753565137hibernate3.jar
+7f7d38a01000-7f7d38a0e000 r-xs 00000000 08:04 2133700                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6038891385555441138hibernate-entitymanager.jar
+7f7d38a0e000-7f7d38a54000 r-xs 00000000 08:04 2133697                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2121306269336434482cglib-2.1.1.jar
+7f7d38a54000-7f7d38abf000 r-xs 00000000 08:04 2133694                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8233689079018849803antlr-2.7.5H3.jar
+7f7d38abf000-7f7d38b18000 r-xs 00000000 08:04 2133689                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1405048445508712945trove.jar
+7f7d38b18000-7f7d38b48000 r-xs 00000000 08:04 2133685                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp2758860565532783057jboss-aspect-library.jar
+7f7d38b48000-7f7d38bc8000 r-xs 00000000 08:04 2133681                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8112004926439398052jboss-aop.jar
+7f7d38bc8000-7f7d38c2b000 r-xs 00000000 08:04 2133679                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp1666142353602679672javassist.jar
+7f7d38c2b000-7f7d38c2e000 ---p 00000000 00:00 0 
+7f7d38c2e000-7f7d38d2c000 rwxp 00000000 00:00 0                          [stack:22675]
+7f7d38d2c000-7f7d38d2f000 ---p 00000000 00:00 0 
+7f7d38d2f000-7f7d38e2d000 rwxp 00000000 00:00 0                          [stack:22674]
+7f7d38e2d000-7f7d38e30000 ---p 00000000 00:00 0 
+7f7d38e30000-7f7d38f2e000 rwxp 00000000 00:00 0                          [stack:22673]
+7f7d38f2e000-7f7d38f31000 ---p 00000000 00:00 0 
+7f7d38f31000-7f7d3902f000 rwxp 00000000 00:00 0                          [stack:22672]
+7f7d3902f000-7f7d39032000 ---p 00000000 00:00 0 
+7f7d39032000-7f7d39130000 rwxp 00000000 00:00 0                          [stack:22671]
+7f7d39130000-7f7d39133000 ---p 00000000 00:00 0 
+7f7d39133000-7f7d39231000 rwxp 00000000 00:00 0                          [stack:22670]
+7f7d39231000-7f7d39234000 ---p 00000000 00:00 0 
+7f7d39234000-7f7d39332000 rwxp 00000000 00:00 0                          [stack:22669]
+7f7d39332000-7f7d39335000 ---p 00000000 00:00 0 
+7f7d39335000-7f7d39433000 rwxp 00000000 00:00 0                          [stack:22668]
+7f7d39433000-7f7d39436000 ---p 00000000 00:00 0 
+7f7d39436000-7f7d39534000 rwxp 00000000 00:00 0                          [stack:22667]
+7f7d39534000-7f7d39536000 r-xp 00000000 08:04 1962276                    /lib/libnss_mdns4.so.2
+7f7d39536000-7f7d39736000 ---p 00002000 08:04 1962276                    /lib/libnss_mdns4.so.2
+7f7d39736000-7f7d39737000 r-xp 00002000 08:04 1962276                    /lib/libnss_mdns4.so.2
+7f7d39737000-7f7d39738000 rwxp 00003000 08:04 1962276                    /lib/libnss_mdns4.so.2
+7f7d39738000-7f7d3974e000 r-xp 00000000 08:04 1964256                    /lib/x86_64-linux-gnu/libresolv-2.17.so
+7f7d3974e000-7f7d3994e000 ---p 00016000 08:04 1964256                    /lib/x86_64-linux-gnu/libresolv-2.17.so
+7f7d3994e000-7f7d3994f000 r-xp 00016000 08:04 1964256                    /lib/x86_64-linux-gnu/libresolv-2.17.so
+7f7d3994f000-7f7d39950000 rwxp 00017000 08:04 1964256                    /lib/x86_64-linux-gnu/libresolv-2.17.so
+7f7d39950000-7f7d39952000 rwxp 00000000 00:00 0 
+7f7d39952000-7f7d39958000 r-xp 00000000 08:04 1964265                    /lib/x86_64-linux-gnu/libnss_dns-2.17.so
+7f7d39958000-7f7d39b57000 ---p 00006000 08:04 1964265                    /lib/x86_64-linux-gnu/libnss_dns-2.17.so
+7f7d39b57000-7f7d39b58000 r-xp 00005000 08:04 1964265                    /lib/x86_64-linux-gnu/libnss_dns-2.17.so
+7f7d39b58000-7f7d39b59000 rwxp 00006000 08:04 1964265                    /lib/x86_64-linux-gnu/libnss_dns-2.17.so
+7f7d39b59000-7f7d39b5b000 r-xp 00000000 08:04 1962277                    /lib/libnss_mdns4_minimal.so.2
+7f7d39b5b000-7f7d39d5a000 ---p 00002000 08:04 1962277                    /lib/libnss_mdns4_minimal.so.2
+7f7d39d5a000-7f7d39d5b000 r-xp 00001000 08:04 1962277                    /lib/libnss_mdns4_minimal.so.2
+7f7d39d5b000-7f7d39d5c000 rwxp 00002000 08:04 1962277                    /lib/libnss_mdns4_minimal.so.2
+7f7d39d5c000-7f7d39d5e000 r-xs 00000000 08:04 2133912                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6366039143101471041servlets-common.jar
+7f7d39d5e000-7f7d39d69000 r-xs 00000000 08:04 2133698                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6088182073185047408ejb3-persistence.jar
+7f7d39d69000-7f7d39d70000 r-xs 00000000 08:04 2133696                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp6271051607806045002asm.jar
+7f7d39d70000-7f7d39d75000 r-xs 00000000 08:04 2133695                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/tmp/deploy/tmp8478539757474733080asm-attrs.jar
+7f7d39d75000-7f7d39d78000 ---p 00000000 00:00 0 
+7f7d39d78000-7f7d39e76000 rwxp 00000000 00:00 0                          [stack:22663]
+7f7d39e76000-7f7d39e7a000 r-xs 00000000 08:04 2111123                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/jboss-jsr77.jar
+7f7d39e7a000-7f7d39ed1000 r-xs 00000000 08:04 2111135                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/log4j.jar
+7f7d39ed1000-7f7d39eea000 r-xs 00000000 08:04 2111115                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/javax.servlet.jar
+7f7d39eea000-7f7d39eef000 r-xs 00000000 08:04 2111126                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/jboss-saaj.jar
+7f7d39eef000-7f7d39efb000 r-xs 00000000 08:04 2111141                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/scheduler-plugin.jar
+7f7d39efb000-7f7d39f14000 r-xs 00000000 08:04 2111143                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/snmp-support.jar
+7f7d39f14000-7f7d39f17000 r-xs 00000000 08:04 2111139                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/properties-plugin.jar
+7f7d39f17000-7f7d39f96000 r-xs 00000000 08:04 2111110                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/bcel.jar
+7f7d39f96000-7f7d39ffd000 r-xs 00000000 08:04 2111119                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/jboss-j2ee.jar
+7f7d39ffd000-7f7d3a004000 r-xs 00000000 08:04 2111121                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/jboss-jaxrpc.jar
+7f7d3a004000-7f7d3a083000 r-xs 00000000 08:04 2111128                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/jbossmq.jar
+7f7d3a083000-7f7d3a112000 r-xs 00000000 08:04 2111116                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/hsqldb.jar
+7f7d3a112000-7f7d3a11c000 r-xs 00000000 08:04 2111131                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/jnpserver.jar
+7f7d3a11c000-7f7d3a123000 r-xs 00000000 08:04 2111130                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/jmx-adaptor-plugin.jar
+7f7d3a123000-7f7d3a131000 r-xs 00000000 08:04 2111108                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/activation.jar
+7f7d3a131000-7f7d3a158000 r-xs 00000000 08:04 2111124                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/jboss-management.jar
+7f7d3a158000-7f7d3a15c000 r-xs 00000000 08:04 2111113                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/bsh-deployer.jar
+7f7d3a15c000-7f7d3a1bf000 r-xs 00000000 08:04 2111138                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/postgresql-8.1-405.jdbc3.jar
+7f7d3a1bf000-7f7d3a210000 r-xs 00000000 08:04 2111137                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/mail.jar
+7f7d3a210000-7f7d3a8c5000 r-xs 00000000 08:04 2111144                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/tools.jar
+7f7d3a8c5000-7f7d3aaa6000 r-xs 00000000 08:04 2111120                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/jboss.jar
+7f7d3aaa6000-7f7d3aab3000 r-xs 00000000 08:04 2111142                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/snmp-adaptor.jar
+7f7d3aab3000-7f7d3aabe000 r-xs 00000000 08:04 2111127                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/jboss-transaction.jar
+7f7d3aabe000-7f7d3aac9000 r-xs 00000000 08:04 2111125                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/jboss-monitoring.jar
+7f7d3aac9000-7f7d3ab05000 r-xs 00000000 08:04 2111112                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/bsh-1.3.0.jar
+7f7d3ab05000-7f7d3ab12000 r-xs 00000000 08:04 2111117                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/javax.servlet.jsp.jar
+7f7d3ab12000-7f7d3ab5b000 r-xs 00000000 08:04 2111129                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/jbosssx.jar
+7f7d3ab5b000-7f7d3ab6c000 r-xs 00000000 08:04 2111118                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/jboss-common-jdbc-wrapper.jar
+7f7d3ab6c000-7f7d3ab96000 r-xs 00000000 08:04 2111122                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/jboss-jca.jar
+7f7d3ab96000-7f7d3aba8000 r-xp 00000000 08:04 1452235                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libnet.so
+7f7d3aba8000-7f7d3aca7000 ---p 00012000 08:04 1452235                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libnet.so
+7f7d3aca7000-7f7d3acaa000 rwxp 00011000 08:04 1452235                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libnet.so
+7f7d3acaa000-7f7d3ace0000 r-xs 00000000 08:04 1713697                    /home/felipe/Dev/jboss-4.0.1sp1/lib/jboss-system.jar
+7f7d3ace0000-7f7d3ad4e000 r-xs 00000000 08:04 1713695                    /home/felipe/Dev/jboss-4.0.1sp1/lib/jboss-common.jar
+7f7d3ad4e000-7f7d3ad6c000 r-xs 00000000 08:04 1713698                    /home/felipe/Dev/jboss-4.0.1sp1/lib/log4j-boot.jar
+7f7d3ad6c000-7f7d3ada7000 r-xs 00000000 08:04 1713694                    /home/felipe/Dev/jboss-4.0.1sp1/lib/jaxen.jar
+7f7d3ada7000-7f7d3ae0d000 r-xs 00000000 08:04 1713691                    /home/felipe/Dev/jboss-4.0.1sp1/lib/dom4j.jar
+7f7d3ae0d000-7f7d3ae9f000 r-xs 00000000 08:04 1713696                    /home/felipe/Dev/jboss-4.0.1sp1/lib/jboss-jmx.jar
+7f7d3ae9f000-7f7d3aea2000 rwxp 00000000 00:00 0 
+7f7d3aea2000-7f7d3afa0000 rwxp 00000000 00:00 0 
+7f7d3afa0000-7f7d3b066000 r-xs 00000000 08:04 1452308                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/ext/localedata.jar
+7f7d3b066000-7f7d3b115000 r-xs 00000000 08:04 1441988                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/ext/mybatis-3.2.4.jar
+7f7d3b115000-7f7d3b116000 ---p 00000000 00:00 0 
+7f7d3b116000-7f7d3b216000 rwxp 00000000 00:00 0                          [stack:22661]
+7f7d3b216000-7f7d3b219000 ---p 00000000 00:00 0 
+7f7d3b219000-7f7d3b317000 rwxp 00000000 00:00 0                          [stack:22660]
+7f7d3b317000-7f7d3b31a000 ---p 00000000 00:00 0 
+7f7d3b31a000-7f7d3b418000 rwxp 00000000 00:00 0                          [stack:22659]
+7f7d3b418000-7f7d3b41b000 ---p 00000000 00:00 0 
+7f7d3b41b000-7f7d3b519000 rwxp 00000000 00:00 0                          [stack:22658]
+7f7d3b519000-7f7d3b51c000 ---p 00000000 00:00 0 
+7f7d3b51c000-7f7d3b61a000 rwxp 00000000 00:00 0                          [stack:22657]
+7f7d3b61a000-7f7d3b61d000 ---p 00000000 00:00 0 
+7f7d3b61d000-7f7d3b71b000 rwxp 00000000 00:00 0                          [stack:22655]
+7f7d3b71b000-7f7d3b71e000 ---p 00000000 00:00 0 
+7f7d3b71e000-7f7d3b81c000 rwxp 00000000 00:00 0                          [stack:22651]
+7f7d3b81c000-7f7d3b81f000 ---p 00000000 00:00 0 
+7f7d3b81f000-7f7d3b91d000 rwxp 00000000 00:00 0                          [stack:22650]
+7f7d3b91d000-7f7d3c000000 r-xp 00000000 08:04 1445923                    /usr/lib/locale/locale-archive
+7f7d3c000000-7f7d3c10d000 rwxp 00000000 00:00 0 
+7f7d3c10d000-7f7d40000000 ---p 00000000 00:00 0 
+7f7d40000000-7f7d4024f000 rwxp 00000000 00:00 0 
+7f7d4024f000-7f7d44000000 ---p 00000000 00:00 0 
+7f7d44000000-7f7d440cb000 rwxp 00000000 00:00 0 
+7f7d440cb000-7f7d48000000 ---p 00000000 00:00 0 
+7f7d48000000-7f7d48005000 r-xs 00000000 08:04 2111133                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/jpl-util.jar
+7f7d48005000-7f7d4800b000 r-xs 00000000 08:04 2111111                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/bindingservice-plugin.jar
+7f7d4800b000-7f7d48036000 r-xs 00000000 08:04 1713690                    /home/felipe/Dev/jboss-4.0.1sp1/lib/concurrent.jar
+7f7d48036000-7f7d48061000 r-xs 00000000 08:04 1452221                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/ext/sunpkcs11.jar
+7f7d48061000-7f7d48088000 r-xs 00000000 08:04 1452222                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/ext/sunjce_provider.jar
+7f7d48088000-7f7d4809b000 r-xs 00000000 08:04 1454308                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/ext/mybatis-migrations-3.2.0.jar
+7f7d4809b000-7f7d4809e000 ---p 00000000 00:00 0 
+7f7d4809e000-7f7d4819c000 rwxp 00000000 00:00 0                          [stack:22647]
+7f7d4819c000-7f7d481a0000 r-xp 00000000 08:04 1452265                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libdt_socket.so
+7f7d481a0000-7f7d482a0000 ---p 00004000 08:04 1452265                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libdt_socket.so
+7f7d482a0000-7f7d482a1000 rwxp 00004000 08:04 1452265                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libdt_socket.so
+7f7d482a1000-7f7d482a4000 ---p 00000000 00:00 0 
+7f7d482a4000-7f7d483a2000 rwxp 00000000 00:00 0                          [stack:22644]
+7f7d483a2000-7f7d483a5000 ---p 00000000 00:00 0 
+7f7d483a5000-7f7d484a3000 rwxp 00000000 00:00 0                          [stack:22641]
+7f7d484a3000-7f7d484a4000 ---p 00000000 00:00 0 
+7f7d484a4000-7f7d48607000 rwxp 00000000 00:00 0                          [stack:22638]
+7f7d48607000-7f7d48608000 ---p 00000000 00:00 0 
+7f7d48608000-7f7d48708000 rwxp 00000000 00:00 0                          [stack:22636]
+7f7d48708000-7f7d48709000 ---p 00000000 00:00 0 
+7f7d48709000-7f7d4884f000 rwxp 00000000 00:00 0                          [stack:22635]
+7f7d4884f000-7f7d48909000 rwxp 00000000 00:00 0 
+7f7d48909000-7f7d48a5f000 rwxp 00000000 00:00 0 
+7f7d48a5f000-7f7d48aa5000 rwxp 00000000 00:00 0 
+7f7d48aa5000-7f7d48b5f000 rwxp 00000000 00:00 0 
+7f7d48b5f000-7f7d48cb5000 rwxp 00000000 00:00 0 
+7f7d48cb5000-7f7d48d3e000 rwxp 00000000 00:00 0 
+7f7d48d3e000-7f7d48d5f000 rwxp 00000000 00:00 0 
+7f7d48d5f000-7f7d518b0000 rwxp 00000000 00:00 0 
+7f7d518b0000-7f7d68d60000 rwxp 00000000 00:00 0 
+7f7d68d60000-7f7d93810000 rwxp 00000000 00:00 0 
+7f7d93810000-7f7da4ad0000 rwxp 00000000 00:00 0 
+7f7da4ad0000-7f7da8d60000 rwxp 00000000 00:00 0 
+7f7da8d60000-7f7da8d62000 r-xs 00000000 08:04 2111114                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/hsqldb-plugin.jar
+7f7da8d62000-7f7da8d63000 r-xs 00000000 08:04 2111132                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/jpl-pattern.jar
+7f7da8d63000-7f7da8d65000 r-xs 00000000 08:04 2111109                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/autonumber-plugin.jar
+7f7da8d65000-7f7da8d67000 r-xs 00000000 08:04 2111136                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/mail-plugin.jar
+7f7da8d67000-7f7da8d6f000 r-xs 00000000 08:04 1713693                    /home/felipe/Dev/jboss-4.0.1sp1/lib/gnu-regexp.jar
+7f7da8d6f000-7f7da8da3000 rwxp 00000000 00:00 0 
+7f7da8da3000-7f7da8e2f000 rwxp 00000000 00:00 0 
+7f7da8e2f000-7f7da9aff000 rwxp 00000000 00:00 0 
+7f7da9aff000-7f7dabe2f000 rwxp 00000000 00:00 0 
+7f7dabe2f000-7f7dac6ac000 r-xs 00000000 08:04 1452301                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/charsets.jar
+7f7dac6ac000-7f7dac731000 r-xs 00000000 08:04 1452295                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/jsse.jar
+7f7dac731000-7f7daed90000 r-xs 00000000 08:04 1452353                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/rt.jar
+7f7daed90000-7f7daef44000 r-xs 00000000 08:04 1713703                    /home/felipe/Dev/jboss-4.0.1sp1/lib/endorsed/xalan.jar
+7f7daef44000-7f7daf03b000 r-xs 00000000 08:04 1713704                    /home/felipe/Dev/jboss-4.0.1sp1/lib/endorsed/xercesImpl.jar
+7f7daf03b000-7f7daf049000 r-xp 00000000 08:04 1452245                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libzip.so
+7f7daf049000-7f7daf14b000 ---p 0000e000 08:04 1452245                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libzip.so
+7f7daf14b000-7f7daf14f000 rwxp 00010000 08:04 1452245                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libzip.so
+7f7daf14f000-7f7daf173000 r-xp 00000000 08:04 1452256                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libjava.so
+7f7daf173000-7f7daf273000 ---p 00024000 08:04 1452256                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libjava.so
+7f7daf273000-7f7daf279000 rwxp 00024000 08:04 1452256                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libjava.so
+7f7daf279000-7f7daf286000 r-xp 00000000 08:04 1452239                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libverify.so
+7f7daf286000-7f7daf385000 ---p 0000d000 08:04 1452239                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libverify.so
+7f7daf385000-7f7daf388000 rwxp 0000c000 08:04 1452239                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libverify.so
+7f7daf388000-7f7daf394000 r-xp 00000000 08:04 1964264                    /lib/x86_64-linux-gnu/libnss_files-2.17.so
+7f7daf394000-7f7daf593000 ---p 0000c000 08:04 1964264                    /lib/x86_64-linux-gnu/libnss_files-2.17.so
+7f7daf593000-7f7daf594000 r-xp 0000b000 08:04 1964264                    /lib/x86_64-linux-gnu/libnss_files-2.17.so
+7f7daf594000-7f7daf595000 rwxp 0000c000 08:04 1964264                    /lib/x86_64-linux-gnu/libnss_files-2.17.so
+7f7daf595000-7f7daf5a0000 r-xp 00000000 08:04 1964271                    /lib/x86_64-linux-gnu/libnss_nis-2.17.so
+7f7daf5a0000-7f7daf79f000 ---p 0000b000 08:04 1964271                    /lib/x86_64-linux-gnu/libnss_nis-2.17.so
+7f7daf79f000-7f7daf7a0000 r-xp 0000a000 08:04 1964271                    /lib/x86_64-linux-gnu/libnss_nis-2.17.so
+7f7daf7a0000-7f7daf7a1000 rwxp 0000b000 08:04 1964271                    /lib/x86_64-linux-gnu/libnss_nis-2.17.so
+7f7daf7a1000-7f7daf7a9000 r-xp 00000000 08:04 1964273                    /lib/x86_64-linux-gnu/libnss_compat-2.17.so
+7f7daf7a9000-7f7daf9a8000 ---p 00008000 08:04 1964273                    /lib/x86_64-linux-gnu/libnss_compat-2.17.so
+7f7daf9a8000-7f7daf9a9000 r-xp 00007000 08:04 1964273                    /lib/x86_64-linux-gnu/libnss_compat-2.17.so
+7f7daf9a9000-7f7daf9aa000 rwxp 00008000 08:04 1964273                    /lib/x86_64-linux-gnu/libnss_compat-2.17.so
+7f7daf9aa000-7f7daf9da000 r-xp 00000000 08:04 1452259                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libjdwp.so
+7f7daf9da000-7f7dafada000 ---p 00030000 08:04 1452259                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libjdwp.so
+7f7dafada000-7f7dafae3000 rwxp 00030000 08:04 1452259                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/libjdwp.so
+7f7dafae3000-7f7dafaea000 rwxp 00000000 00:00 0 
+7f7dafaea000-7f7dafb01000 r-xp 00000000 08:04 1964260                    /lib/x86_64-linux-gnu/libnsl-2.17.so
+7f7dafb01000-7f7dafd00000 ---p 00017000 08:04 1964260                    /lib/x86_64-linux-gnu/libnsl-2.17.so
+7f7dafd00000-7f7dafd01000 r-xp 00016000 08:04 1964260                    /lib/x86_64-linux-gnu/libnsl-2.17.so
+7f7dafd01000-7f7dafd02000 rwxp 00017000 08:04 1964260                    /lib/x86_64-linux-gnu/libnsl-2.17.so
+7f7dafd02000-7f7dafd04000 rwxp 00000000 00:00 0 
+7f7dafd04000-7f7dafe07000 r-xp 00000000 08:04 1964272                    /lib/x86_64-linux-gnu/libm-2.17.so
+7f7dafe07000-7f7db0007000 ---p 00103000 08:04 1964272                    /lib/x86_64-linux-gnu/libm-2.17.so
+7f7db0007000-7f7db0008000 r-xp 00103000 08:04 1964272                    /lib/x86_64-linux-gnu/libm-2.17.so
+7f7db0008000-7f7db0009000 rwxp 00104000 08:04 1964272                    /lib/x86_64-linux-gnu/libm-2.17.so
+7f7db0009000-7f7db06e6000 r-xp 00000000 08:04 1452261                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/server/libjvm.so
+7f7db06e6000-7f7db07e5000 ---p 006dd000 08:04 1452261                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/server/libjvm.so
+7f7db07e5000-7f7db0962000 rwxp 006dc000 08:04 1452261                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/server/libjvm.so
+7f7db0962000-7f7db0991000 rwxp 00000000 00:00 0 
+7f7db0991000-7f7db0b50000 r-xp 00000000 08:04 1964275                    /lib/x86_64-linux-gnu/libc-2.17.so
+7f7db0b50000-7f7db0d4f000 ---p 001bf000 08:04 1964275                    /lib/x86_64-linux-gnu/libc-2.17.so
+7f7db0d4f000-7f7db0d53000 r-xp 001be000 08:04 1964275                    /lib/x86_64-linux-gnu/libc-2.17.so
+7f7db0d53000-7f7db0d55000 rwxp 001c2000 08:04 1964275                    /lib/x86_64-linux-gnu/libc-2.17.so
+7f7db0d55000-7f7db0d5a000 rwxp 00000000 00:00 0 
+7f7db0d5a000-7f7db0d5d000 r-xp 00000000 08:04 1964263                    /lib/x86_64-linux-gnu/libdl-2.17.so
+7f7db0d5d000-7f7db0f5c000 ---p 00003000 08:04 1964263                    /lib/x86_64-linux-gnu/libdl-2.17.so
+7f7db0f5c000-7f7db0f5d000 r-xp 00002000 08:04 1964263                    /lib/x86_64-linux-gnu/libdl-2.17.so
+7f7db0f5d000-7f7db0f5e000 rwxp 00003000 08:04 1964263                    /lib/x86_64-linux-gnu/libdl-2.17.so
+7f7db0f5e000-7f7db0f76000 r-xp 00000000 08:04 1964261                    /lib/x86_64-linux-gnu/libpthread-2.17.so
+7f7db0f76000-7f7db1175000 ---p 00018000 08:04 1964261                    /lib/x86_64-linux-gnu/libpthread-2.17.so
+7f7db1175000-7f7db1176000 r-xp 00017000 08:04 1964261                    /lib/x86_64-linux-gnu/libpthread-2.17.so
+7f7db1176000-7f7db1177000 rwxp 00018000 08:04 1964261                    /lib/x86_64-linux-gnu/libpthread-2.17.so
+7f7db1177000-7f7db117b000 rwxp 00000000 00:00 0 
+7f7db117b000-7f7db119e000 r-xp 00000000 08:04 1964254                    /lib/x86_64-linux-gnu/ld-2.17.so
+7f7db119e000-7f7db119f000 r-xs 00000000 08:04 2111140                    /home/felipe/Dev/jboss-4.0.1sp1/server/default/lib/scheduler-plugin-example.jar
+7f7db119f000-7f7db11a0000 r-xs 00000000 08:04 1713699                    /home/felipe/Dev/jboss-4.0.1sp1/lib/namespace.jar
+7f7db11a0000-7f7db11a3000 r-xs 00000000 08:04 1713144                    /home/felipe/Dev/jboss-4.0.1sp1/client/getopt.jar
+7f7db11a3000-7f7db11ab000 r-xs 00000000 08:04 1713124                    /home/felipe/Dev/jboss-4.0.1sp1/bin/run.jar
+7f7db11ab000-7f7db11ae000 r-xs 00000000 08:04 1452219                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/ext/dnsns.jar
+7f7db11ae000-7f7db11d6000 rwxp 00000000 00:00 0 
+7f7db11d6000-7f7db11eb000 r-xs 00000000 08:04 1452342                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/jce.jar
+7f7db11eb000-7f7db1255000 rwxp 00000000 00:00 0 
+7f7db1255000-7f7db1274000 r-xs 00000000 08:04 1713705                    /home/felipe/Dev/jboss-4.0.1sp1/lib/endorsed/xml-apis.jar
+7f7db1274000-7f7db127b000 r-xp 00000000 08:04 1452247                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/native_threads/libhpi.so
+7f7db127b000-7f7db137c000 ---p 00007000 08:04 1452247                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/native_threads/libhpi.so
+7f7db137c000-7f7db137f000 rwxp 00008000 08:04 1452247                    /usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/native_threads/libhpi.so
+7f7db137f000-7f7db1382000 rwxp 00000000 00:00 0 
+7f7db1382000-7f7db1391000 r-xs 00000000 08:04 1713702                    /home/felipe/Dev/jboss-4.0.1sp1/lib/endorsed/resolver.jar
+7f7db1391000-7f7db1399000 rwxs 00000000 08:04 1193989                    /tmp/hsperfdata_felipe/22633
+7f7db1399000-7f7db139a000 rwxp 00000000 00:00 0 
+7f7db139a000-7f7db139b000 ---p 00000000 00:00 0 
+7f7db139b000-7f7db139d000 rwxp 00000000 00:00 0 
+7f7db139d000-7f7db139e000 r-xp 00022000 08:04 1964254                    /lib/x86_64-linux-gnu/ld-2.17.so
+7f7db139e000-7f7db13a0000 rwxp 00023000 08:04 1964254                    /lib/x86_64-linux-gnu/ld-2.17.so
+7fff40fa4000-7fff40fa7000 ---p 00000000 00:00 0 
+7fff40fa8000-7fff411a4000 rwxp 00000000 00:00 0                          [stack]
+7fff411de000-7fff411e0000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:48962 -Dprogram.name=run.bat -Djava.endorsed.dirs=/home/felipe/Dev/jboss-4.0.1sp1/bin/../lib/endorsed -Xms128m -Xmx512m -Xms512m -Xmx1024m -XX:MaxPermSize=512m -Dfile.encoding=ISO-8859-1
+java_command: org.jboss.Main -c default
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/felipe/.rvm/bin
+LD_LIBRARY_PATH=/usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64/server:/usr/lib/jvm/jdk1.5.0_22/jre/lib/amd64:/usr/lib/jvm/jdk1.5.0_22/jre/../lib/amd64
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x668110], sa_mask[0]=0x7ffbfeff, sa_flags=0x14000004
+SIGBUS: [libjvm.so+0x668110], sa_mask[0]=0x7ffbfeff, sa_flags=0x14000004
+SIGFPE: [libjvm.so+0x56e860], sa_mask[0]=0x7ffbfeff, sa_flags=0x14000004
+SIGPIPE: [libjvm.so+0x56e860], sa_mask[0]=0x7ffbfeff, sa_flags=0x14000004
+SIGILL: [libjvm.so+0x56e860], sa_mask[0]=0x7ffbfeff, sa_flags=0x14000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x570710], sa_mask[0]=0x00000004, sa_flags=0x14000004
+SIGHUP: [libjvm.so+0x5701e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x14000004
+SIGINT: [libjvm.so+0x5701e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x14000004
+SIGQUIT: [libjvm.so+0x5701e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x14000004
+SIGTERM: [libjvm.so+0x5701e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x14000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:wheezy/sid
+
+uname:Linux 3.8.0-35-generic #50-Ubuntu SMP Tue Dec 3 01:24:59 UTC 2013 x86_64
+libc:glibc 2.17 NPTL 2.17 
+rlimit: STACK 8192k, CORE 0k, NPROC 30953, NOFILE 4096, AS infinity
+load average:1.49 1.83 1.93
+
+CPU:total 2 em64t ht
+
+Memory: 4k page, physical 3981104k(652012k free), swap 4193276k(3917952k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (1.5.0_22-b03) for linux-amd64, built on Oct  9 2009 01:32:14 by java_re with gcc 3.2.2 (SuSE Linux)
+
+time: Fri May  9 18:32:47 2014
+elapsed time: 1697 seconds
+

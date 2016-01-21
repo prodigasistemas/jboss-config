@@ -1,0 +1,1537 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_ISO3166.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest 
+	xmlns = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0" 
+	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0 http://www.oasis-open.org/committees/regrep/documents/2.0/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.0 http://www.oasis-open.org/committees/regrep/documents/2.0/schema/rs.xsd" 
+	xmlns:rim = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0" 
+	xmlns:rs = "urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.0">  
+
+	<LeafRegistryObjectList>
+<!-- alex@jboss.org 
+<ClassificationScheme id="urn:uuid:fa278afc-d0fc-4c4a-abf0-9f27292ca387"
+    isInternal="true" nodeType="UniqueCode" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0">
+-->
+<ClassificationScheme id="uuid:4E49A8D6-D5A2-4FC2-93A0-0411D8D19E88"
+    isInternal="true" nodeType="UniqueCode" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0">
+    <Name>
+        <LocalizedString charset="UTF-8" value="uddi-org:iso-ch:3166:1999"/>
+    </Name>
+    <Description>
+        <LocalizedString charset="UTF-8" value="This is the classification scheme for ISO3166"/>
+    </Description>
+    <ClassificationNode
+        id="urn:uuid:83ed2c76-449c-4c36-9a72-ded036149af3" code="Asia">
+        <Name>
+            <LocalizedString charset="UTF-8" value="Asia"/>
+        </Name>
+        <ClassificationNode
+            id="urn:uuid:0a1324f7-6d4a-4d73-a088-9ab1d00c9a91" code="AF">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Afghanistan"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:23a5feac-26b9-4525-82fc-997885a0e6a2" code="AZ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Azerbaijan"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:1acf6ed2-cd6e-4797-aad8-8937a3cff88b" code="BD">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Bangladesh"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:152d6f28-cb56-4e5d-9f55-96b132def0e4" code="BT">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Bhutan"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:e0214494-de7f-431a-b2de-d59bfd3a94de" code="BN">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Brunei Darussalam"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:d1dd0cbf-11ea-4741-805d-fe77dfdbf665" code="KH">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Cambodia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:67706ddf-73f6-4737-96e4-c5c5c056b6d0" code="CN">
+            <Name>
+                <LocalizedString charset="UTF-8" value="China"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:b373190a-c873-42c6-bdf6-ffa953f7ee50" code="CY">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Cyprus"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:796c5e2d-d73b-4d35-8177-d135279588ff" code="TP">
+            <Name>
+                <LocalizedString charset="UTF-8" value="East Timor"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:518fdc27-a13d-4728-b47a-d6307955cbfc" code="HK">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Hong Kong"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:1107d7ed-63ef-4522-bbbf-a2650fbd7c71" code="IN">
+            <Name>
+                <LocalizedString charset="UTF-8" value="India"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:780f0455-2925-4713-a69f-b6e3d2ddf865" code="ID">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Indonesia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:afee8318-a8bc-452f-b170-9abbd6900172" code="IR">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Iran"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:fe3338c1-206c-49c1-b4e8-b7fbdd59048f" code="IQ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Iraq"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:0b8ad3de-5b2b-48a3-9d48-faa5b76dc7ec" code="IL">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Israel"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:ed029684-66c8-4cdc-bf36-9c46a52200f8" code="JP">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Japan"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:c71193b8-4988-4bef-894a-927ca9e40268" code="JO">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Jordan"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:da11115f-6478-497e-af00-a603915fdaa5" code="KZ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Kazakhstan"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:5f606ae5-96a2-472d-bfda-f48660f89072" code="KP">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Korea(North)"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:5863d251-d87e-43e8-b8e6-e3b7e56d2007" code="KR">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Korea(South)"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:a2d65824-0908-4546-9327-bf93a08e8ab3" code="KW">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Kuwait"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:369cd005-b1e9-4c94-bfb0-c8d3967f4628" code="KG">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Kyrgyz Republic"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:9092fbfd-1e0c-44b1-8669-84de7359cfb1" code="LA">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Laos"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:99a6c2bd-889b-4d1a-82ed-ee70fb2323d8" code="MY">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Malaysia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:4e31136a-26ac-4990-b16b-b22220c9f1d9" code="MN">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Mongolia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:a2ec92f5-cba9-4005-aed5-febac296a721" code="MM">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Myanmar"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:b4f3e7f8-5557-4dd4-818c-85eaf9558cba" code="NP">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Nepal"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:8acd1baa-8678-4912-b7e0-a237b8abdf1e" code="PK">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Pakistan"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:54238716-f6f4-41bc-beef-a717aa9bc087" code="PG">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Papua New Guinea"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:d74d92a4-6279-4579-a852-ee02c7457ff9" code="PH">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Philippines"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:cfae648d-0d06-4881-ae46-b0eb8a90d72d" code="SG">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Singapore"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:5921c572-092a-4bdc-9335-ab5ddcf7a829" code="LK">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Sri Lanka"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:4e6e06a8-3d36-4a2b-a633-d51114d995f2" code="TJ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Tadjikistan"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:5814c36b-a898-4404-8a27-c83e0fe50cd1" code="TW">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Taiwan"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:ff5f7e67-4b31-4075-9777-fcbd2d555c94" code="TH">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Thailand"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:d35209d3-7cce-4c52-934e-8f1cb68bf087" code="TR">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Turkey"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:d19d1e0b-9184-4138-bb29-fd7f1e0af371" code="TM">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Turkmenistan"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:a772dc8b-6640-4ae2-9f5a-d36fe9269659" code="UZ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Uzbekistan"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:d90bf3d6-f41a-4a99-a9dc-c8bee653ff14" code="VN">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Vietnam"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:e57aa703-f497-44a2-a5f3-8d252f95ada0" code="Middle East">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Middle East"/>
+            </Name>
+            <ClassificationNode
+                id="urn:uuid:b1b7b08f-10ed-4813-bbd6-fb518dd98be3" code="BH">
+                <Name>
+                    <LocalizedString charset="UTF-8" value="Bahrain"/>
+                </Name>
+            </ClassificationNode>
+            <ClassificationNode
+                id="urn:uuid:2539548a-d96a-4887-9f88-f2e74940de5b" code="LB">
+                <Name>
+                    <LocalizedString charset="UTF-8" value="Lebanon"/>
+                </Name>
+            </ClassificationNode>
+            <ClassificationNode
+                id="urn:uuid:c6d17789-6675-4c46-a0da-a400b7c75652" code="OM">
+                <Name>
+                    <LocalizedString charset="UTF-8" value="Oman"/>
+                </Name>
+            </ClassificationNode>
+            <ClassificationNode
+                id="urn:uuid:6629136b-1f1b-4e5d-94ca-f2767ea840a7" code="QA">
+                <Name>
+                    <LocalizedString charset="UTF-8" value="Qatar"/>
+                </Name>
+            </ClassificationNode>
+            <ClassificationNode
+                id="urn:uuid:fa577feb-0918-485e-bc4a-f65637c2301d" code="SA">
+                <Name>
+                    <LocalizedString charset="UTF-8" value="Saudi Arabia"/>
+                </Name>
+            </ClassificationNode>
+            <ClassificationNode
+                id="urn:uuid:aa2705b8-ea9e-4a95-8d8e-ed550cab7d52" code="SY">
+                <Name>
+                    <LocalizedString charset="UTF-8" value="Syria"/>
+                </Name>
+            </ClassificationNode>
+            <ClassificationNode
+                id="urn:uuid:877eb4e8-8c63-4e6e-946f-b524e0799da0" code="AE">
+                <Name>
+                    <LocalizedString charset="UTF-8" value="United Arab Emirates"/>
+                </Name>
+            </ClassificationNode>
+            <ClassificationNode
+                id="urn:uuid:eef8a222-3030-4a26-9ca7-8cab343c8fc9" code="YE">
+                <Name>
+                    <LocalizedString charset="UTF-8" value="Yemen"/>
+                </Name>
+            </ClassificationNode>
+        </ClassificationNode>
+    </ClassificationNode>
+    <ClassificationNode
+        id="urn:uuid:19482b3b-83ed-499e-a99d-e5b7a86ce38f" code="Europe">
+        <Name>
+            <LocalizedString charset="UTF-8" value="Europe"/>
+        </Name>
+        <ClassificationNode
+            id="urn:uuid:60f74701-91b2-41b8-a576-ec3540c4c77d" code="AL">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Albania"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:c7f7ddf6-fc9b-4c4b-bd33-d8fba3bf0565" code="AD">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Andorra"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:1b61448d-f75d-43ad-a95c-b1f618a7ca3c" code="AM">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Armenia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:fdef5c2f-22d7-459a-bd53-dcc40027aaf1" code="AT">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Austria"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:8f9fd81c-3691-4131-a829-b369abd3be65" code="BY">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Belarus"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:32e53823-40ae-4543-b122-b2210a9e6f8c" code="BE">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Belgium"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:59603d8b-3643-4fc9-8d0c-c2043db3afed" code="BA">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Bosnia-Herzegovina"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:cadb8ae4-a5fc-47a1-8e5a-fcb7c59f25f9" code="BG">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Bulgaria"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:7e7c37a5-698f-4f7e-b3be-accc249cd688" code="HR">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Croatia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:afbef81c-bce2-488b-a477-e9e64285ea3a" code="CZ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Czech Republic"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:4feeb041-7b2b-49c7-9975-99b60503e16e" code="CS">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Czechoslovakia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:e5b2a9ea-e970-4c50-a660-920ab969179b" code="DK">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Denmark"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:39c78438-ed8b-4ca8-848f-92a469f295cd" code="EE">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Estonia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:cef9b319-505d-4e99-b17a-e6ee6b863033" code="FI">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Finland"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:d1fe9e27-fdb9-41cf-86c9-ced38800b641" code="FR">
+            <Name>
+                <LocalizedString charset="UTF-8" value="France"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:473c1c11-ffbe-42c8-9d6c-bad340ad9fba" code="FX">
+            <Name>
+                <LocalizedString charset="UTF-8" value="France(European Territories)"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:dad1b9a6-cfee-4929-bb0c-d97a23ed69d8" code="TF">
+            <Name>
+                <LocalizedString charset="UTF-8" value="French(Southern Territories)"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:20b88159-2c3f-4c57-97db-cc024c75fd09" code="GE">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Georgia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:56ce22b8-2452-493d-a0f7-df7b8dcf6ff9" code="DE">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Germany"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:21595263-7604-4bc7-b6f2-fc5dd278360c" code="GI">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Gibraltar"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:5d75429e-84de-4ad8-b64b-9f30858138b8" code="GB">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Great Britain(UK)"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:eee26edc-22a1-4832-b916-866232330ccd" code="GR">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Greece"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:4209574b-5bda-4356-bb3e-e806b9ff35a2" code="GL">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Greenland"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:8b3445e6-98cb-427f-94ee-cc6db1523212" code="HU">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Hungary"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:598f7a3e-389c-4197-8b30-bfb4ef58cdd3" code="IS">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Iceland"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:b8e50162-43d6-4bcc-a570-a41333c495ec" code="IE">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Ireland"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:07ca7942-f2dd-41a7-9506-ad9d88c5d194" code="IT">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Italy"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:78a3e09b-b91e-4eff-a3cc-ca70bfc38e84" code="LV">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Latvia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:ba27407a-b681-4ea9-858c-8d2a4b565695" code="LI">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Liechtenstein"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:4a2e528d-0ef1-4a28-932e-f96981ec78b4" code="LT">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Lithuania"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:19a181a4-94ab-4bf6-af2e-de593be18fcc" code="LU">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Luxembourg"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:9120c958-1584-4f0c-bcc0-d2cf5355950d" code="MK">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Macedonia(formerly Yuguslavia)"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:266dbd7a-ec3c-4f45-b840-d435e65ff6d2" code="MD">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Moldova"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:100f6a73-3936-457f-af9d-82a00de0ada0" code="MC">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Monaco"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:40aede37-90bf-40b8-b5cd-a052a9942626" code="AN">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Netherland Antilles"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:8079b0ef-0148-42ca-801f-f98c02978d7f" code="NL">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Netherlands"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:65e43f8c-0866-4878-b065-99514562c055" code="NC">
+            <Name>
+                <LocalizedString charset="UTF-8" value="New Caledonia(Fr.)"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:d1a83b67-fbb7-4907-95e8-f54eafecfcc9" code="NO">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Norway"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:77158fca-766d-4d91-82a8-c7fb8874ceaa" code="PL">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Poland"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:5a19478a-2b58-4584-b771-9cee2cb3297b" code="PT">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Portugal"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:661f3b7b-943d-4e9d-beee-e5077523a1dd" code="RO">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Romania"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:2e4c987c-71c5-42bc-abaa-db76df073ab2" code="RU">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Russian Federation"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:4ad3d736-1724-4d99-bdc0-ba7d21daffbb" code="SK">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Slovakia(SlovakRep)"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:44f30da6-561e-4995-97c9-c3058c8a66ee" code="SI">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Slovenia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:cc91483f-eb63-4d32-b39f-80eb1dddfa46" code="ES">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Spain"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:67d3ee3b-ea10-412e-8769-b224cc235467" code="SE">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Sweden"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:9a600b75-8d22-4cdf-bbf9-a526618d9ea3" code="CH">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Switzerland"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:803f2644-949d-4b3f-a94e-b303e27c6d53" code="UA">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Ukraine"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:c02643bf-2473-4a7b-8e17-f508991c5c84" code="UK">
+            <Name>
+                <LocalizedString charset="UTF-8" value="United Kingdom"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:26f098e0-9acb-49c8-91a7-fce62d906492" code="VA">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Vatican City State"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:d0c01b39-49f2-4d53-a01b-b2fd735eabe1" code="YU">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Yugoslavia"/>
+            </Name>
+        </ClassificationNode>
+    </ClassificationNode>
+    <ClassificationNode
+        id="urn:uuid:adb25a71-2639-4dee-a030-e509d5a35b72" code="Africa">
+        <Name>
+            <LocalizedString charset="UTF-8" value="Africa"/>
+        </Name>
+        <ClassificationNode
+            id="urn:uuid:7fcb7c57-d2db-4a25-8830-b65d97f430d1" code="DZ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Algeria"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:fec4e962-5e61-4426-a24b-b5d32b1e1162" code="AO">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Angola"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:204e11e8-0bd3-4453-aefe-a51905dfcc8e" code="BJ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Benin"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:a374f67a-42e2-4e87-ac15-dd29ee9ab7af" code="BW">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Botswana"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:a30cef10-6b46-4639-b75e-c18bf28a074d" code="BI">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Burundi"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:222dc784-fa09-4b13-a100-807cebe7a07d" code="CM">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Cameroon"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:4a7e4e7d-c147-40dd-95f6-fa58ceee7338" code="CV">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Cape Verde"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:0896780f-2581-431f-a2e3-a668af94475e" code="CF">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Central African Republic"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:f62a1613-8642-4c3f-a13e-8d5575d16abb" code="TD">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Chad"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:b8014acc-1651-4560-b467-d41bfc4c1e23" code="CG">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Congo"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:9faa1d93-cc23-4272-bae2-f9bc0f359e73" code="DJ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Djibouti"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:f0ff740f-562a-4773-add7-a5cea753a164" code="EG">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Egypt"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:1aaef881-c9f3-4bce-87b4-9571222aeb1c" code="GQ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Equatorial Guinea"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:1b5d8be9-402d-43df-8079-8fdc03875343" code="ER">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Eritrea"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:5c4d511a-96fa-4faf-9e1c-c5fdc0267ff6" code="ET">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Ethiopia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:2dfa8fe5-bbde-401e-88cc-9e065e54e92e" code="GA">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Gabon"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:cc3083b5-c28b-4702-baea-934fcc366aa7" code="GM">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Gambia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:7e021079-5d89-452d-b343-b3c92e11a067" code="GH">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Ghana"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:8ac37d37-4e4c-44eb-a280-a27b7d457137" code="CI">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Ivory Coast"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:9ef5282c-26e4-43c4-bd0d-84773459b44c" code="KE">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Kenya"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:15d62954-74ee-4079-b597-eeaea3169692" code="LS">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Lesotho"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:62389782-0360-433c-bd83-cd1cec1d5d14" code="LR">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Liberia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:ab2244b8-5c1a-4b32-b403-d8db4d8fbec5" code="LY">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Libya"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:c83fa826-8141-4cf8-b94f-a9d22fa15212" code="MG">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Madagascar"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:5f654b52-eb04-4f79-a94d-962d886223e4" code="MW">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Malawi"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:8b1fc2f5-bfbf-4b36-b626-ff1b7c77f3c5" code="MV">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Maldives"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:3902d65c-5b00-453f-8e1b-e08c5b5ecc38" code="ML">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Mali"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:3563f295-31b0-438e-bcf4-893b58899114" code="MR">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Mauritania"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:ef393f37-14cb-4e24-b2d7-ddd9adf433c3" code="MU">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Mauritius"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:41f694be-65dd-4ca1-8aab-b4997700ca55" code="MA">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Morocco"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:d46f0eda-da47-4d11-876a-f6fb5cb696de" code="MZ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Mozambique"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:f8e6c1a2-fb5b-4368-954e-ee35d3f5cfbc" code="NA">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Namibia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:dc752796-cf80-4011-ae1f-a2135fa3983c" code="NE">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Niger"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:49f26cb7-62f5-40b1-8a3c-acd8f0cc01b4" code="NG">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Nigeria"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:d48a606d-17d4-4b83-baf5-a665de2e89b1" code="RW">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Rwanda"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:2f9f4489-2320-4536-ac4b-952b04dd9f70" code="SN">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Senegal"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:98bc0e07-78cc-431e-a47e-9001986448c4" code="SC">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Seychelles"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:3f6b29a1-6a52-40b0-a1ea-e747f9a74fc5" code="SL">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Sierra Leone"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:0d456ba0-fbf9-49d9-9cde-f30cb2ea4ea0" code="SO">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Somalia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:faf792c3-d1dd-4fce-a0db-d5146735c1a7" code="ZA">
+            <Name>
+                <LocalizedString charset="UTF-8" value="South Africa"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:7e27a994-579b-49ff-b922-8562bda6ddca" code="SD">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Sudan"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:4befb2f1-4ccf-47ba-90bd-d72423685c6d" code="SZ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Swaziland"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:e49a013a-9557-484d-a797-d0a6595d9812" code="TZ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Tanzania"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:4fc45303-50bc-40b9-a148-dc4e8a00e5cf" code="TG">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Togo"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:d8f8b1bb-0a46-4927-8ad7-890dfee01096" code="TN">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Tunisia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:f56d3b29-b35b-4d25-a023-b68a778fdaee" code="UG">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Uganda"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:fb197a5d-c3ee-45b2-b99e-db3502ac847c" code="EH">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Western Sahara"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:8e6d0643-dcc4-4208-80a9-8ad4e4c18d61" code="ZR">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Zaire"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:5b71b47e-101c-4458-b20d-f09e88d345b5" code="ZM">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Zambia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:88f23a6e-cf32-4921-8d62-b4a0a80b2c1c" code="ZW">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Zimbabwe"/>
+            </Name>
+        </ClassificationNode>
+    </ClassificationNode>
+    <ClassificationNode
+        id="urn:uuid:4ba47434-030e-4ba4-9aed-93cbaa8e689c" code="Pacific">
+        <Name>
+            <LocalizedString charset="UTF-8" value="Pacific"/>
+        </Name>
+        <ClassificationNode
+            id="urn:uuid:1cdf4564-7687-4422-9135-921e71720887" code="AS">
+            <Name>
+                <LocalizedString charset="UTF-8" value="American Samoa"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:97b6709c-9af3-4475-b31f-8ca9eb7795d6" code="CK">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Cook Islands"/>
+            </Name>
+        </ClassificationNode>
+    </ClassificationNode>
+    <ClassificationNode
+        id="urn:uuid:04a585f5-8178-4c1f-a598-a125950e7564" code="Other">
+        <Name>
+            <LocalizedString charset="UTF-8" value="Other"/>
+        </Name>
+        <ClassificationNode
+            id="urn:uuid:1a046c39-4d9e-4439-8b5f-80c1d2681f70" code="AI">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Anguilla"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:8af90081-7274-4656-9b94-f549fc0171d1" code="AQ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Antarctica"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:e505fa38-7a17-4989-8e8a-9641cc99c61f" code="AG">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Antigua and Barbuda"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:0b02d1f6-648d-40b3-a9dd-b98695dabab8" code="BB">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Barbados"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:1a25f7df-86a2-42f4-b3be-9a1e0563bab4" code="BV">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Bouvet Island"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:014c36f0-e977-4f17-9089-f402562b68d6" code="IO">
+            <Name>
+                <LocalizedString charset="UTF-8" value="British Indian Ocean Territories"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:9a9930ec-3709-479a-be69-d8defe7dfc5f" code="BF">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Burkina Faso"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:b0e6d267-16cf-4a0e-b2d6-9810ee145714" code="KY">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Cayman Islands"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:f334f5bb-d9eb-4069-b9be-bf5ea7387276" code="CX">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Christmas Island"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:c95163ef-618f-4716-a98a-f64b5a3cc81d" code="CC">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Cocos (Keeling) Islands"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:250a1d89-e13a-401c-98aa-e1666a976414" code="KM">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Comoros"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:6c166609-62c2-4015-811a-fe25760057d9" code="DM">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Dominica"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:aea28f66-8eb9-419e-b579-cdcef3d6ec17" code="FO">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Faroe Islands"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:4b981e14-bc8a-4417-b5bd-c495333854c7" code="FJ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Fiji"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:9e6b5247-202b-43ac-b76d-dd9c52c3fd78" code="GD">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Grenada"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:b197464b-dc30-4b8a-b734-d1235b32b5c2" code="GP">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Guadeloupe(Fr.)"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:0350b73e-0f9e-423c-afd8-dc3cad76cc6e" code="GU">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Guam(US)"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:f63bffd5-2109-4ffe-8014-a75ba5aa9d03" code="GN">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Guinea"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:fc3ac31f-9f3f-4abe-8ef2-e819955fbab4" code="GW">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Guinea Bissau"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:a9216940-342c-4922-9ac7-f7b4e1941ee7" code="GY">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Guyana"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:25a31497-bcb7-4cd4-985e-d7862489f713" code="HT">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Haiti"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:d801f10f-e80d-4255-99c0-9b2b9a91e441" code="HM">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Heard &amp; McDonald Islands"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:2484b06c-4213-40b2-af76-92333475e306" code="KI">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Kiribati"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:ae5bc308-2ab0-4b26-a397-f7347521fdd7" code="MO">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Macau"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:f4a07f29-fdf1-4a87-a204-a9c66e32753d" code="MT">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Malta"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:8e35c05b-a667-4f75-86c7-dcf7043fbef2" code="MH">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Marshall Islands"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:cfda37b4-c955-4da6-8097-d551cdcdc904" code="MQ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Martinique(Fr.)"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:cd521647-d257-47dd-a9c9-ee7ca3e17397" code="YT">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Mayotte"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:e388d20a-4b1e-4b03-a0f7-d79f7e98b762" code="FM">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Micronesia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:78c34335-fa66-4155-ad30-b4e8561dbfd9" code="MS">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Montserrat"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:8aeadbd1-b72e-4308-900f-dd5574a9ca97" code="NR">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Nauru"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:ad7af734-ebff-4ced-ac75-a39cb1ca5694" code="NU">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Niue"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:95ceb29b-c24a-49de-9a73-dbac92eb3540" code="NF">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Norfolk Island"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:5f327e99-182c-48fe-bcf5-e11faf6daa71" code="MP">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Northern Mariana Islands"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:25ed870a-35d9-485f-8469-ce7e3e25f23e" code="PW">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Palau"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:c2ed97d3-09ee-4d01-ac4f-e780a5a4e2a8" code="PN">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Pitcairn"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:f28634d8-d0f2-4db8-a558-e6ebb4ec0ec5" code="PF">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Polynesia(Fr.)"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:fabae156-0ff6-4580-a2b3-fa79dacbe53e" code="RE">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Reunion(Fr.)"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:62c3bb4a-1c48-448c-9394-ba4ccd37b686" code="LC">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Saint Lucia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:f415ad14-1c22-431c-ad3e-d22237f86d22" code="WS">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Samoa"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:1c45c03e-9ffb-401f-8415-a2ad1738644f" code="SM">
+            <Name>
+                <LocalizedString charset="UTF-8" value="San Marino"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:ca08ecf5-9566-4615-871c-d21499e8bd4b" code="SB">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Solomon Islands"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:4135002c-d0fd-4886-8f06-e84d64c574fb" code="GS">
+            <Name>
+                <LocalizedString charset="UTF-8" value="South Georgia and South Sandwich Islands"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:1cc5a34d-98a3-435e-ab5d-8d70c50a5c38" code="SU">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Soviet Union"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:eb2652d1-9bf2-4c6d-bd64-b4355f5036bd" code="SH">
+            <Name>
+                <LocalizedString charset="UTF-8" value="St.Helena"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:daf38406-87ff-4601-9307-a7afcc39c4b2" code="PM">
+            <Name>
+                <LocalizedString charset="UTF-8" value="St.Pierre &amp; Miquelon"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:ce19a182-09d6-46b8-a59f-a84fd78a289d" code="ST">
+            <Name>
+                <LocalizedString charset="UTF-8" value="St.Tome and Principe"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:e5844725-5f37-47cf-912f-d3f4fa5ff381" code="KN">
+            <Name>
+                <LocalizedString charset="UTF-8" value="St.Kitts Nevis Anguilla"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:4128dac3-1d05-4501-a8b1-83689c30dee8" code="VC">
+            <Name>
+                <LocalizedString charset="UTF-8" value="St.Vincent &amp; Grenadines"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:d25d3f5b-3eaa-4b71-9c06-9a2d7f0dbafc" code="SJ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Svalbard &amp; Jan Mayen Islands"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:219fe9dd-b20f-4b38-96f3-b224f602ced8" code="TK">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Tokelau"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:9a611924-66e8-47d7-9a0f-fb52e4d82435" code="TO">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Tonga"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:72cfdb65-b506-44a9-85e7-a8e0581e3793" code="TC">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Turks &amp; Caicos Islands"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:07909968-a10e-4a2c-b261-f20efdc90bd1" code="TV">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Tuvalu"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:a7b1e7b5-1fa1-4f5b-a879-b5f630cf983b" code="UM">
+            <Name>
+                <LocalizedString charset="UTF-8" value="US Minoroutlying Islands"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:705404b7-b4e2-4b51-9b8e-c9826b2098a8" code="VU">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Vanuatu"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:0eac8f94-ac44-4aaf-b0f0-c5fe4550b9a6" code="VG">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Virgin Islands(British)"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:6933d886-ac3a-4316-aced-a09d4714b42e" code="VI">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Virgin Islands(US)"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:525e98b0-c4c4-4155-960a-9042bf2e8d7a" code="WF">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Wallis &amp; Futuna Islands"/>
+            </Name>
+        </ClassificationNode>
+    </ClassificationNode>
+    <ClassificationNode
+        id="urn:uuid:49cd930e-2da2-4d7c-9154-c5b34970bb1d" code="South America">
+        <Name>
+            <LocalizedString charset="UTF-8" value="South America"/>
+        </Name>
+        <ClassificationNode
+            id="urn:uuid:7bf38773-afc5-4c76-9508-cc5f5213b6be" code="AR">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Argentina"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:90f2a4d8-9634-4054-b2f4-b320f3a88c58" code="BZ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Belize"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:cb2af6ee-5063-4677-9eeb-ba9131f2a71f" code="BO">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Bolivia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:dc9a83e2-b355-449a-ab0b-c912fd6f5879" code="BR">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Brazil"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:f2f84e0c-b233-47a1-9f9a-93e5835f220c" code="CL">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Chile"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:f5cd2bc8-e2ba-43a0-8517-c7bbee009209" code="CO">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Colombia"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:7ee68452-d671-41d1-937a-882c2dec0903" code="CR">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Costa Rica"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:321c4335-80ca-4a82-920d-eaa28b495517" code="EC">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Ecuador"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:6bd76d95-d10f-4fa0-880b-88dd7b0b91d3" code="SV">
+            <Name>
+                <LocalizedString charset="UTF-8" value="El Salvador"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:3ee50a69-a8f6-46c6-9149-b0b507616077" code="FK">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Falkland Islands(Malvinas)"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:c8408ecf-82c0-4958-b219-d276402b8a32" code="GT">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Guatemala"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:9d0c0577-397c-4834-ade7-9f63cbe23896" code="GF">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Guiana(Fr.)"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:e1ab4546-ea43-4380-9d6c-b1f91cc7e985" code="PY">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Paraguay"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:459ecb75-fd02-4abd-ac0c-abfbf95a3112" code="PE">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Peru"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:8abe4ebe-956f-45e7-ae53-eac272fdd4a6" code="SR">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Suriname"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:47073e03-37bc-4579-8da3-ea8aebce0870" code="TT">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Trinidad &amp; Tobago"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:8a26240c-7267-44e1-bf86-dd70bd8988bb" code="UY">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Uruguay"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:c75ed094-44a4-43d0-bd81-83556673b3b8" code="VE">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Venezuela&apos;"/>
+            </Name>
+        </ClassificationNode>
+    </ClassificationNode>
+    <ClassificationNode
+        id="urn:uuid:5d461c4b-270e-4c46-9563-dfb2b073493c" code="Carribean">
+        <Name>
+            <LocalizedString charset="UTF-8" value="Carribean"/>
+        </Name>
+        <ClassificationNode
+            id="urn:uuid:51309d41-8389-4dec-a25a-84cfc4dcc25c" code="AW">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Aruba"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:421cb2aa-1759-4e49-bb13-b79e452cd662" code="CU">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Cuba"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:54e87c53-0703-47d3-8929-84f17e6291e9" code="DO">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Dominican Republic"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:64ac12e1-a10b-4176-a129-e90e77620a12" code="JM">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Jamaica"/>
+            </Name>
+        </ClassificationNode>
+    </ClassificationNode>
+    <ClassificationNode
+        id="urn:uuid:651277ea-f900-4311-bc63-d43707be9a70" code="North America">
+        <Name>
+            <LocalizedString charset="UTF-8" value="North America"/>
+        </Name>
+        <ClassificationNode
+            id="urn:uuid:a08e35dc-a386-4f17-8283-bb37975e82ab" code="BS">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Bahamas"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:6b904d63-199d-4bad-a839-bc4bac391def" code="BM">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Bermuda"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:84630ed2-d6e1-45fa-a6b4-d9490610a887" code="CA">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Canada"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:c5e8aa95-586a-4d94-b4a6-cb2f9f5dce2d" code="HN">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Honduras"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:6502a61a-cdc6-4727-a95a-858a93e04a21" code="MX">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Mexico"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:0df4232b-36f6-436e-87fd-d3dfa79306ad" code="NI">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Nicaragua"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:6d6847b3-3972-4c18-ac17-cd9d6c1e38fa" code="PA">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Panama"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:bd538d37-ccb9-41d3-9f51-a40949da6715" code="PR">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Puerto Rico(US)"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:1152986f-f5fd-4e69-963b-9088678a2e73" code="US">
+            <Name>
+                <LocalizedString charset="UTF-8" value="United States"/>
+            </Name>
+        </ClassificationNode>
+    </ClassificationNode>
+    <ClassificationNode
+        id="urn:uuid:b0a8e853-bb2a-4f07-a3ff-87fb8e415eee" code="Australia">
+        <Name>
+            <LocalizedString charset="UTF-8" value="Australia"/>
+        </Name>
+        <ClassificationNode
+            id="urn:uuid:369f0865-3505-4e67-96f3-8fe0a9bb4d70" code="NZ">
+            <Name>
+                <LocalizedString charset="UTF-8" value="New Zealand"/>
+            </Name>
+        </ClassificationNode>
+        <ClassificationNode
+            id="urn:uuid:f0bc6d04-09c1-45ad-a5d9-c2489f02eaf6" code="AU">
+            <Name>
+                <LocalizedString charset="UTF-8" value="Australia"/>
+            </Name>
+        </ClassificationNode>
+    </ClassificationNode>
+</ClassificationScheme>	
+	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

@@ -1,0 +1,104 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_HKU.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest 
+	xmlns = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0" 
+	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0 http://www.oasis-open.org/committees/regrep/documents/2.0/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.0 http://www.oasis-open.org/committees/regrep/documents/2.0/schema/rs.xsd" 
+	xmlns:rim = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0" 
+	xmlns:rs = "urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.0">  
+
+	<LeafRegistryObjectList>
+
+		<Organization id="urn:uuid:0cbb0862-5f5e-443a-940d-d62ccb865649" primaryContact = "urn:uuid:bab82b84-7d63-44dd-b914-e72e0476c043">
+			<Name>
+				<LocalizedString lang="en-US" value="Centre for E-Commerce Infrastruture Development, The University of Hong Kong" />
+			</Name>
+			<Description>
+				<LocalizedString lang="en-US" value="A R and D centre of E-commerce technology" />
+			</Description>
+
+			<Slot name="Number of staff">
+				<ValueList>
+					<Value>100</Value>
+				</ValueList>
+			</Slot>
+            
+            <Classification classificationNode="urn:uuid:4333395d-05ef-48d9-b905-f1468cc4a47a" classifiedObject="urn:uuid:0cbb0862-5f5e-443a-940d-d62ccb865649">
+				<Name>
+					<LocalizedString lang="en-US" value="Software Publishers" />
+				</Name>				
+			</Classification>
+
+			<Classification classificationNode="urn:uuid:518fdc27-a13d-4728-b47a-d6307955cbfc" classifiedObject="urn:uuid:0cbb0862-5f5e-443a-940d-d62ccb865649">
+				<Name>
+					<LocalizedString lang="en-US" value="Hong Kong" />
+				</Name>				
+			</Classification>
+			
+			<ExternalIdentifier identificationScheme="urn:uuid:2ac531c8-39ce-4441-aaa0-d0e5fab84f88" value="CECID">
+				<Name>
+					<LocalizedString lang="en-US" value="Centre for E-Commerce Infrastruture Development" />
+				</Name>								
+			</ExternalIdentifier>
+         
+			<Address streetNumber="1" street="Pokfulam Rd." city="Hong Kong" stateOrProvince="" postalCode="" country="China" />
+			<TelephoneNumber countryCode="852" areaCode="0" number="2241-5673" phoneType="office"/>
+			<TelephoneNumber countryCode="852" areaCode="0" number="2241-5674" phoneType="fax"/>
+
+		</Organization>
+		  
+		<!--primaryContact: Adrian -->
+		<ObjectRef id="urn:uuid:bab82b84-7d63-44dd-b914-e72e0476c043" />
+		
+		<!-- ClassificationNode for "Software Publishers" -->
+        
+		<ObjectRef id="urn:uuid:4333395d-05ef-48d9-b905-f1468cc4a47a"/>
+
+		<!-- ClassificationNode for "Hong Kong" -->
+		<ObjectRef id="urn:uuid:518fdc27-a13d-4728-b47a-d6307955cbfc"/>
+
+		<!-- identificationScheme for ExternalIndentifier of value="CECID"-->
+        <ObjectRef id="urn:uuid:2ac531c8-39ce-4441-aaa0-d0e5fab84f88"/>
+        
+        <ExternalLink id = "extlink_id" externalURI="http://www.cecid.hku.hk">
+			<Name>
+				<LocalizedString value = "CECID"/>
+			</Name>
+			<Description>
+				<LocalizedString value = "URL of CECID"/>
+			</Description>
+		</ExternalLink>    
+
+
+		<User id="patrick_id" organization="urn:uuid:0cbb0862-5f5e-443a-940d-d62ccb865649">
+			<Address country="Hong Kong" />
+			<PersonName firstName="Patrick" middleName="Ka Chi" lastName="Yu" />
+			<TelephoneNumber countryCode="852" number="2241-5673" phoneType="office"/>
+			<EmailAddress address="kcyee@csis.hku.hk" type="work"/>
+		</User>
+        
+		<RegistryPackage id = "cecid_press_release" >
+			<Name>
+				<LocalizedString value = "Press Release and Publications"/>
+			</Name>
+			<RegistryObjectList>
+				<ExternalLink externalURI="http://www.cecid.hku.hk/Release/PR09APR2002.html">
+					<Name>
+						<LocalizedString value = "CECID Launches Test Site of OASIS ebXML V2 Registry Reference Implementation"/>
+					</Name>
+				</ExternalLink>
+                <ExternalLink externalURI="http://www.cecid.hku.hk/Publications/HiTechWeekly.pdf">
+					<Name>
+						<LocalizedString value = "Phoenix Project"/>
+					</Name>
+                    <Description>
+						<LocalizedString value = "A article about phoenix project, published in MingPao Daily, which is a newspaper in Hong Kong"/>
+					</Description>
+				</ExternalLink>    
+			</RegistryObjectList>
+		</RegistryPackage>
+        
+        <Association id = "cecid_press_release-cecid" associationType = "HasMember" sourceObject = "cecid_press_release" targetObject = "urn:uuid:0cbb0862-5f5e-443a-940d-d62ccb865649"/>
+
+	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

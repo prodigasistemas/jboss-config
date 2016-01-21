@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_InvocationModelScheme.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rs.xsd" xmlns:rim="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:rs="urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1">
+	<LeafRegistryObjectList>
+		<ClassificationScheme id="urn:uuid:b6b066c2-54ac-4ecd-ab41-d39b9649866e" objectType="ClassificationScheme" isInternal="true" nodeType="UniqueCode" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">
+			<Name>
+				<LocalizedString lang="en-US" charset="UTF-8" value="InvocationModel"/>
+			</Name>
+			<Description>
+				<LocalizedString lang="en-US" charset="UTF-8" value="Describes the invocation behavior of a content management service."/>
+			</Description>
+			<ClassificationNode id="urn:uuid:1365e3f7-9899-4647-bc0f-ea2ccf5144b7" objectType="Concept" parent="urn:uuid:b6b066c2-54ac-4ecd-ab41-d39b9649866e" code="Inline" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">
+				<Name>
+					<LocalizedString lang="en-US" charset="UTF-8" value="Inline"/>
+				</Name>
+				<Description>
+					<LocalizedString lang="en-US" charset="UTF-8" value="Specifies that a content management service is invoked inline with the client request that caused it."/>
+				</Description>
+			</ClassificationNode>
+			<ClassificationNode id="urn:uuid:6e7b1001-df34-4e8d-8065-abf3cfb445bb" objectType="Concept" parent="urn:uuid:b6b066c2-54ac-4ecd-ab41-d39b9649866e" code="Decoupled" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">
+				<Name>
+					<LocalizedString lang="en-US" charset="UTF-8" value="Decoupled"/>
+				</Name>
+				<Description>
+					<LocalizedString lang="en-US" charset="UTF-8" value="Specifies that a content management service is invoked decoupled from the client request that caused it."/>
+				</Description>
+			</ClassificationNode>
+		</ClassificationScheme>
+	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

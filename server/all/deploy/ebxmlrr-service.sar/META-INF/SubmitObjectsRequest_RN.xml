@@ -1,0 +1,57 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_RN.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest xmlns = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0 http://www.oasis-open.org/committees/regrep/documents/2.0/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.0 http://www.oasis-open.org/committees/regrep/documents/2.0/schema/rs.xsd" xmlns:rim = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0" xmlns:rs = "urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.0">
+    <LeafRegistryObjectList>            
+
+        <!--Extend AssociationType canonical scheme -->
+        <ClassificationNode id="urn:uuid:efb23c3a-9597-48fa-8bd1-f82c041efce6" code="propDef" parent="urn:uuid:6902675f-2f18-44b8-888b-c91db8b96b4d" />
+        <ClassificationNode id="urn:uuid:6bdc2e58-5dd2-4919-9407-f864fb9cd3b8" code="semantic" parent="urn:uuid:6902675f-2f18-44b8-888b-c91db8b96b4d"/>
+
+        <!--Extend ObjectType canonical scheme -->
+        <ClassificationNode id="urn:uuid:ff384ade-fc16-403a-b37d-fde3ef644b31"
+            objectType="ClassificationNode"
+            parent="urn:uuid:4a13dacb-a9e8-4819-bd1a-faf50976e5d4"
+            code="RosettaNet" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">
+            <Name>
+                <LocalizedString lang="en-us" charset="UTF-8" value="RosettaNet"/>
+            </Name>
+
+            <ClassificationNode id="urn:uuid:a2e4e8d7-4b71-4a2b-970a-d47cf34b0651"
+                objectType="Concept"
+                parent="urn:uuid:ff384ade-fc16-403a-b37d-fde3ef644b31" code="Class" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">
+                <Name>
+                    <LocalizedString lang="en-us" charset="UTF-8" value="Class"/>
+                </Name>
+            </ClassificationNode>
+            <ClassificationNode
+                id="urn:uuid:e6697316-ebf7-45f6-9741-83dc96d99d2d"
+                objectType="ClassificationNode"
+                parent="urn:uuid:ff384ade-fc16-403a-b37d-fde3ef644b31" code="CharacteristicDefinition">
+                <Name>
+                    <LocalizedString lang="en-us" charset="UTF-8" value="CharacteristicDefinition"/>
+                </Name>
+            </ClassificationNode>
+            <ClassificationNode
+                id="urn:uuid:27d89081-b726-451f-85b2-fc7ef1a32c7e"
+                objectType="ClassificationNode"
+                parent="urn:uuid:ff384ade-fc16-403a-b37d-fde3ef644b31" code="PropertyDefinitionSet">
+                <Name>
+                    <LocalizedString lang="en-us" charset="UTF-8" value="PropertyDefinitionSet"/>
+                </Name>
+            </ClassificationNode>
+            <ClassificationNode
+                id="urn:uuid:d03cb43a-cc87-447a-b1a1-d0dc830cdff0"
+                objectType="ClassificationNode"
+                parent="urn:uuid:ff384ade-fc16-403a-b37d-fde3ef644b31" code="TermDefinition">
+                <Name>
+                    <LocalizedString lang="en-us" charset="UTF-8" value="TermDefinition"/>
+                </Name>
+            </ClassificationNode>
+        </ClassificationNode>
+        
+        <ObjectRef id="urn:uuid:6902675f-2f18-44b8-888b-c91db8b96b4d"/>       
+        <ObjectRef id="urn:uuid:4a13dacb-a9e8-4819-bd1a-faf50976e5d4"/>             
+                
+    </LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

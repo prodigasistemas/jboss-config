@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_AssociationTypeScheme.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rs.xsd" xmlns:rim="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:rs="urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1">
+	<LeafRegistryObjectList>
+		<ClassificationScheme id="urn:uuid:6902675f-2f18-44b8-888b-c91db8b96b4d" isInternal="true" nodeType="UniqueCode" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">
+			<Name>
+				<LocalizedString charset="UTF-8" value="AssociationType"/>
+			</Name>
+			<Description>
+				<LocalizedString charset="UTF-8" value="This is the canonical ClassificationScheme for pre-defined association types"/>
+			</Description>
+<!--
+			<ClassificationNode id="urn:uuid:44bc7776-a7d1-4fb5-88d5-c636c4c4dc09" code="AffiliatedWith"> 
+
+        <ClassificationNode id="urn:uuid:dec2c00e-0114-436d-a836-fab45afddc3f" code="EmployeeOf"/>
+        <ClassificationNode id="urn:uuid:2c0f187f-9f87-489c-a936-ac59643845e7" code="MemberOf"/>
+      </ClassificationNode>
+			<ClassificationNode id="urn:uuid:7aad31a7-501e-4cbc-ac37-ddc44fdf3e1a" code="RelatedTo"/>
+			<ClassificationNode id="urn:uuid:13ee5ce0-0843-4153-8199-8a7e0b2ecef3" code="HasFederationMember"/>
+			<ClassificationNode id="urn:uuid:2d03bffb-f426-4830-8413-bab8537a995b" code="HasMember"/>
+			<ClassificationNode id="urn:uuid:92d03292-84a0-4b86-8139-dd244173ddbb" code="ExternallyLinks"/>
+			<ClassificationNode id="urn:uuid:fc158238-96bd-41f4-8ac0-b8953c071b41" code="Contains"/>
+			<ClassificationNode id="urn:uuid:9e662e80-8b5c-48c3-b39b-995fd00c48e4" code="EquivalentTo"/>
+			<ClassificationNode id="urn:uuid:7ca2c718-3bf6-4f6f-9570-c619e52c6443" code="Extends"/>
+			<ClassificationNode id="urn:uuid:6e12e663-e525-4518-8700-884ca6c5c6aa" code="Implements"/>
+			<ClassificationNode id="urn:uuid:4dbd5404-f720-44fe-8298-e1ba462c5f2d" code="InstanceOf"/>
+			<ClassificationNode id="urn:uuid:d6babbf7-7911-417e-8e6c-c8a7e6f6ada1" code="Supersedes"/>
+			<ClassificationNode id="urn:uuid:fa0282a3-1b6c-41a3-aa2c-bbd1c432e1ec" code="Uses"/>
+			<ClassificationNode id="urn:uuid:55d6b32c8-292d-43d3-b563-c4740cdf63c8" code="Replaces"/>
+			<ClassificationNode id="urn:uuid:ed22135f-fab8-4492-8c85-b84a914f1038" code="SubmitterOf"/>
+			<ClassificationNode id="urn:uuid:124b974f-503e-4f40-9223-91e161631eb8" code="ResponsibleFor"/>
+			<ClassificationNode id="urn:uuid:d994c4d7-6be6-44fd-8046-d4ad1ebf127c" code="OwnerOf"/>
+			<ClassificationNode id="urn:uuid:6d07b299-10e7-408f-843d-bb2bc913bfbb" code="OffersService"/>
+			<ClassificationNode id="urn:uuid:7931e965-ac48-442a-93db-b5ca0c49929d" code="ContentManagementServiceFor"/>
+			<ClassificationNode id="urn:uuid:261ab741-57f4-4fd5-86ee-a15311ec3213" code="InvocationControlFileFor"/>
+			<ClassificationNode id="urn:uuid:375c8977-d54e-4e81-bebf-d87e509c9c78" code="AccessControlPolicyFor"/>
+-->
+			<ClassificationNode id="urn:uuid:44bc7776-a7d1-4fb5-88d5-c636c4c4dc09" code="AffiliatedWith">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="AffiliatedWith"/>
+                           </Name>
+                           <ClassificationNode id="urn:uuid:dec2c00e-0114-436d-a836-fab45afddc3f" code="EmployeeOf">
+                              <Name>
+                                 <LocalizedString lang="en-US" charset="UTF-8" value="EmployeeOf"/>
+                              </Name>
+                           </ClassificationNode>
+                           <ClassificationNode id="urn:uuid:2c0f187f-9f87-489c-a936-ac59643845e7" code="MemberOf">
+                              <Name>
+                                 <LocalizedString lang="en-US" charset="UTF-8" value="MemberOf"/>
+                              </Name>
+                           </ClassificationNode>
+                        </ClassificationNode>
+			<ClassificationNode id="urn:uuid:7aad31a7-501e-4cbc-ac37-ddc44fdf3e1a" code="RelatedTo">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="RelatedTo"/>
+                           </Name>
+                        </ClassificationNode>
+			<ClassificationNode id="urn:uuid:13ee5ce0-0843-4153-8199-8a7e0b2ecef3" code="HasFederationMember">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="HasFederationMember"/>
+                           </Name>
+                        </ClassificationNode>
+			<ClassificationNode id="urn:uuid:2d03bffb-f426-4830-8413-bab8537a995b" code="HasMember">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="HasMember"/>
+                           </Name>
+                        </ClassificationNode>
+			<ClassificationNode id="urn:uuid:92d03292-84a0-4b86-8139-dd244173ddbb" code="ExternallyLinks">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="ExternallyLinks"/>
+                           </Name>
+                        </ClassificationNode>
+			<ClassificationNode id="urn:uuid:fc158238-96bd-41f4-8ac0-b8953c071b41" code="Contains">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="Contains"/>
+                           </Name>
+                        </ClassificationNode>
+			<ClassificationNode id="urn:uuid:9e662e80-8b5c-48c3-b39b-995fd00c48e4" code="EquivalentTo">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="EquivalentTo"/>
+                           </Name>
+                        </ClassificationNode>
+			<ClassificationNode id="urn:uuid:7ca2c718-3bf6-4f6f-9570-c619e52c6443" code="Extends">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="Extends"/>
+                           </Name>
+                        </ClassificationNode>
+			<ClassificationNode id="urn:uuid:6e12e663-e525-4518-8700-884ca6c5c6aa" code="Implements">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="Implements"/>
+                           </Name>
+                        </ClassificationNode>
+			<ClassificationNode id="urn:uuid:4dbd5404-f720-44fe-8298-e1ba462c5f2d" code="InstanceOf">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="InstanceOf"/>
+                           </Name>
+                        </ClassificationNode>
+			<ClassificationNode id="urn:uuid:d6babbf7-7911-417e-8e6c-c8a7e6f6ada1" code="Supersedes">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="Supersedes"/>
+                           </Name>
+                        </ClassificationNode>
+			<ClassificationNode id="urn:uuid:fa0282a3-1b6c-41a3-aa2c-bbd1c432e1ec" code="Uses">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="Uses"/>
+                           </Name>
+                        </ClassificationNode>
+			<ClassificationNode id="urn:uuid:55d6b32c8-292d-43d3-b563-c4740cdf63c8" code="Replaces">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="Replaces"/>
+                           </Name>
+                        </ClassificationNode>
+			<ClassificationNode id="urn:uuid:ed22135f-fab8-4492-8c85-b84a914f1038" code="SubmitterOf">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="SubmitterOf"/>
+                           </Name>
+                        </ClassificationNode>
+<!-- alex@jboss.org	<ClassificationNode id="urn:uuid:124b974f-503e-4f40-9223-91e161631eb8" code="ResponsibleFor"> -->
+                        <ClassificationNode code="ResponsibleFor">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="ResponsibleFor"/>
+                           </Name>
+                        </ClassificationNode>
+			<ClassificationNode id="urn:uuid:d994c4d7-6be6-44fd-8046-d4ad1ebf127c" code="OwnerOf">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="OwnerOf"/>
+                           </Name>
+                        </ClassificationNode>
+
+<!--			<ClassificationNode id="urn:uuid:6d07b299-10e7-408f-843d-bb2bc913bfbb" code="OffersService">-->
+			<ClassificationNode id="urn:uuid:6d07b299-10e7-408f-843d-bb2bc913bfbc" code="OffersService">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="OffersService"/>
+                           </Name>
+                        </ClassificationNode>
+			<ClassificationNode id="urn:uuid:7931e965-ac48-442a-93db-b5ca0c49929d" code="ContentManagementServiceFor">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="ContentManagementServiceFor"/>
+                           </Name>
+                        </ClassificationNode>
+			<ClassificationNode id="urn:uuid:261ab741-57f4-4fd5-86ee-a15311ec3213" code="InvocationControlFileFor">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="InvocationControlFileFor"/>
+                           </Name>
+                        </ClassificationNode>
+                        <ClassificationNode id="urn:uuid:375c8977-d54e-4e81-bebf-d87e509c9c78" code="AccessControlPolicyFor">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="AccessControlPolicyFor"/>
+                           </Name>
+                        </ClassificationNode>
+                        <ClassificationNode id="urn:uuid:375c8977-d54e-4e81-bebf-d87e509c9c80" code="HasParent">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="HasParent"/>
+                           </Name>
+                        </ClassificationNode>
+                        <ClassificationNode id="urn:uuid:375c8977-d54e-4e81-bebf-d87e509c9c79" code="HasChild">
+                           <Name>
+                              <LocalizedString lang="en-US" charset="UTF-8" value="HasChild"/>
+                           </Name>
+                        </ClassificationNode>
+		</ClassificationScheme>
+	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

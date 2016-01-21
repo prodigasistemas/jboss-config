@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_EmailTypeScheme.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest xmlns = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0 http://www.oasis-open.org/committees/regrep/documents/2.0/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.0 http://www.oasis-open.org/committees/regrep/documents/2.0/schema/rs.xsd" xmlns:rim = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0" xmlns:rs = "urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.0">
+    <LeafRegistryObjectList>            
+        <ClassificationScheme id = "urn:uuid:09ac70b4-b314-454a-a512-c16cf4430ef6" isInternal = "true" nodeType = "UniqueCode" xmlns = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0">                
+            <Name>                    
+                    <LocalizedString charset = "UTF-8" value = "EmailType"/>                
+            </Name>                
+            <Description>                    
+                    <LocalizedString charset = "UTF-8" value = "This is the canonical ClassificationScheme for pre-defined email address types"/>                
+            </Description>  
+                          
+            <ClassificationNode id = "urn:uuid:35806661-246f-4efe-b081-bce2f76e9dbe" code = "OfficeEmail"/>                    
+            <ClassificationNode id = "urn:uuid:c271bae4-83f6-45c2-a6d8-ca0ff16aef8c" code = "HomeEmail"/>                    
+        </ClassificationScheme>    
+    </LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

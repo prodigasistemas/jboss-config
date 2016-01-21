@@ -1,0 +1,60 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_Taraba.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest 
+	xmlns = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" 
+	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rs.xsd" 
+	xmlns:rim = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" 
+	xmlns:rs = "urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1">  
+
+	<LeafRegistryObjectList>
+
+		<Organization id="urn:uuid:1dfcfec4-acdf-4adc-8a68-937ecd72bf16" primaryContact = "urn:uuid:85428d8e-1bd5-473b-a8c8-b9d595f82728">
+			<Name>
+				<LocalizedString lang="en-US" value="Taraba Inc." />
+			</Name>
+			<Description>
+				<LocalizedString lang="en-US" value="Makes Spaces" />
+			</Description>
+
+			<Slot name = "Employee Count">
+				<ValueList>
+					<Value>1</Value>
+				</ValueList>
+			</Slot>
+
+			<Classification classificationNode="urn:uuid:d0c01b39-49f2-4d53-a01b-b2fd735eabe1" classifiedObject="urn:uuid:1dfcfec4-acdf-4adc-8a68-937ecd72bf16">
+				<Name>
+					<LocalizedString lang="en-US" value="Yugoslavia" />
+				</Name>				
+			</Classification>
+
+			<Classification classificationNode="urn:uuid:25ffb00b-57da-4a89-b517-bb0feb9872af" classifiedObject="urn:uuid:1dfcfec4-acdf-4adc-8a68-937ecd72bf16">
+				<Name>
+					<LocalizedString lang="en-US" value="Communications Equipment Manufacturing" />
+				</Name>				
+			</Classification>
+
+			<Address streetNumber="19" street="Terazije" city="Ithaca" stateOrProvince="NY" postalCode="01203" country="FRANCE" />
+			<TelephoneNumber countryCode="381" areaCode="11" number="222-2222" phoneType="direct"/>
+			<TelephoneNumber countryCode="411" areaCode="33" number="333-3333" phoneType="office"/>
+
+		</Organization>   
+		
+		<!-- Ref to ClassificationNode for "Yugoslavia" -->
+		<ObjectRef id="urn:uuid:d0c01b39-49f2-4d53-a01b-b2fd735eabe1"/>
+		
+		<!-- Ref to ClassificationNode for "Communications" -->
+		<ObjectRef id="urn:uuid:25ffb00b-57da-4a89-b517-bb0feb9872af"/>
+
+	    <User id="urn:uuid:85428d8e-1bd5-473b-a8c8-b9d595f82728" organization="urn:uuid:1dfcfec4-acdf-4adc-8a68-937ecd72bf16">
+		    <Address streetNumber="19" street="Terazije" city="Ithaca" stateOrProvince="NY" country="FRANCE" />
+		    <PersonName firstName="Nikola" middleName="" lastName="Stojanovic" />
+		    <TelephoneNumber countryCode="381" areaCode="11" number="222-2222" phoneType="office"/>
+		    <TelephoneNumber countryCode="381" areaCode="44" number="444-4444" phoneType="home"/>
+		    <EmailAddress address="nikola.stojanovic@taraba.com" type="work"/>
+	    </User>
+
+
+   	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

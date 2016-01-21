@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--$Header: /home/cvs/thirdparty/ebxmlrr-2.1-final1/ebxmlrr/conf/web.xml,v 1.1.1.1 2004/05/31 06:35:05 aloubyansky Exp $-->
+
+<!--
+ Copyright 2002 Sun Microsystems, Inc. All rights reserved.
+ SUN PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+-->
+
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+
+<web-app>
+
+    <servlet>
+        <servlet-name>
+            ebxmlrr-soap-receiver-servlet
+        </servlet-name>
+        <servlet-class>
+            <!--com.sun.ebxml.registry.interfaces.soap.RegistryJAXMServlet -->
+            org.jboss.jaxr.servlet.SAAJServlet
+        </servlet-class>
+	    <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>
+            ebxmlrr-rest-receiver-servlet
+        </servlet-name>
+        <servlet-class>
+            com.sun.ebxml.registry.interfaces.rest.RestServlet
+        </servlet-class>
+	    <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>
+            ebxmlrr-soap-receiver-servlet
+        </servlet-name>
+        <url-pattern>
+            /registry/soap
+        </url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>
+            ebxmlrr-rest-receiver-servlet
+        </servlet-name>
+        <url-pattern>
+            /registry/rest/*
+        </url-pattern>
+    </servlet-mapping>
+
+    <!-- Added for JAAS-->
+     <security-constraint>
+     <web-resource-collection>
+       <web-resource-name>ebxmlrr-soap-receiver-servlet</web-resource-name>
+       <description>Secure ebxmlrr with ClientCerts
+       </description>
+       <url-pattern>/registry/soap</url-pattern>
+       <http-method>GET</http-method> 
+       <http-method>POST</http-method>
+     </web-resource-collection>
+     <!--<auth-constraint>
+       <role-name>JBossAdmin</role-name>
+     </auth-constraint> -->
+   </security-constraint>
+
+<!--
+   <login-config>
+      <auth-method>CLIENT-CERT</auth-method>
+      <realm-name>JBoss JMX Console</realm-name>
+   </login-config>
+
+  <security-role>
+      <role-name>JBossAdmin</role-name>
+   </security-role>
+-->
+</web-app>

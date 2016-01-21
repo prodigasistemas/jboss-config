@@ -1,0 +1,1 @@
+Caused by: org.postgresql.util.PSQLException: ERROR: column this_.parm_iccalculoprevisaoradiasuteis does not exist

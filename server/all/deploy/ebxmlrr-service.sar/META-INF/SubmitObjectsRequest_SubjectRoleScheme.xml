@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_SubjectRoleScheme.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rs.xsd" xmlns:rim="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:rs="urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1">
+	<LeafRegistryObjectList>
+		<ClassificationScheme id="urn:uuid:41ce5ef5-2117-4304-baf5-feb35295c1c1" objectType="ClassificationScheme" isInternal="true" nodeType="UniqueCode" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">
+			<Name>
+				<LocalizedString lang="en-US" charset="UTF-8" value="SubjectRole"/>
+			</Name>
+			<Description>
+				<LocalizedString lang="en-US" charset="UTF-8" value="Defines roles that may be used as subject roles in custom access control policies."/>
+			</Description>
+			<ClassificationNode id="urn:uuid:e1b51d43-c9b5-43a2-acb3-d727e080e130" objectType="Concept" parent="urn:uuid:7c07beae-c1c6-4a52-b1db-d3cf9b501b75" code="ContentOwner" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">
+				<Name>
+					<LocalizedString lang="en-US" charset="UTF-8" value="ContentOwner"/>
+				</Name>
+				<Description>
+					<LocalizedString lang="en-US" charset="UTF-8" value="Owner of content within registry."/>
+				</Description>
+			</ClassificationNode>
+			<ClassificationNode id="urn:uuid:da76dd4e-3f00-4aef-8ccb-bb4ff6676413" objectType="Concept" parent="urn:uuid:7c07beae-c1c6-4a52-b1db-d3cf9b501b75" code="RegistryGuest" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">
+				<Name>
+					<LocalizedString lang="en-US" charset="UTF-8" value="RegistryGuest"/>
+				</Name>
+				<Description>
+					<LocalizedString lang="en-US" charset="UTF-8" value="An unregistered user of the registry. Such a user has the fewest privileges."/>
+				</Description>
+			</ClassificationNode>
+			<ClassificationNode id="urn:uuid:970eeed9-1e58-4e97-bd82-eff3651998c2" objectType="Concept" parent="urn:uuid:7c07beae-c1c6-4a52-b1db-d3cf9b501b75" code="RegistryAdministrator" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">
+				<Name>
+					<LocalizedString lang="en-US" charset="UTF-8" value="RegistryAdministrator"/>
+				</Name>
+				<Description>
+					<LocalizedString lang="en-US" charset="UTF-8" value="A privileged role that perfroms administrative actions within a registry."/>
+				</Description>
+			</ClassificationNode>
+		</ClassificationScheme>
+    
+    <!--Classify the RegistryOperator User with Role RegistryAdministrator -->
+    <Classification classificationNode="urn:uuid:970eeed9-1e58-4e97-bd82-eff3651998c2" classifiedObject="urn:uuid:921284f0-bbed-4a4c-9342-ecaf0625f9d7">
+        <Name>
+          <LocalizedString lang="en-US" value="RegistryAdministrator" />
+        </Name>				
+    </Classification>
+    
+    <ObjectRef id="urn:uuid:921284f0-bbed-4a4c-9342-ecaf0625f9d7"/> 
+    
+        
+	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

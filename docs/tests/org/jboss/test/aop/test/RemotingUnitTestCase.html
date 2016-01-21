@@ -1,0 +1,158 @@
+<html xmlns:xsltc="http://xml.apache.org/xalan/xsltc">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link title="Style" type="text/css" rel="stylesheet" href="../../../../../stylesheet.css">
+</head>
+<body>
+<h1>Unit Test Results</h1>
+<table width="100%">
+<tr>
+<td align="left"></td><td align="right">Designed for use with <a href="http://www.junit.org">JUnit</a> and <a href="http://jakarta.apache.org">Ant</a>.
+      Generated on February 15 2005.
+      </td>
+</tr>
+</table>
+<hr size="1">
+<h3>Class org.jboss.test.aop.test.RemotingUnitTestCase</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0">
+<tr valign="top" bgcolor="#A6CAF0">
+<td width="80%"><strong>Name</strong></td><td><strong>Tests</strong></td><td><strong>Errors</strong></td><td><strong>Failures</strong></td><td nowrap="nowrap"><strong>Time(s)</strong></td>
+</tr>
+<tr valign="top" bgcolor="#FF0000" class="Error">
+<td><a href="RemotingUnitTestCase.html">RemotingUnitTestCase</a></td><td>12</td><td>1</td><td>0</td><td>9.391</td>
+</tr>
+</table>
+<h2>Tests</h2>
+<p>
+<table width="95%" cellspacing="2" cellpadding="5" border="0">
+<tr valign="top" bgcolor="#A6CAF0">
+<td><strong>Name</strong></td><td><strong>Status</strong></td><td width="80%"><strong>Type</strong></td><td nowrap="nowrap"><strong>Time(s)</strong></td>
+</tr>
+<tr valign="top" bgcolor="#FFEBCD" class="ErrorDetail">
+<td>testAspect</td><td>Error</td><td>N/A<pre>RuntimeMBeanException: null Cause: java.lang.RuntimeException: java.lang.ClassCastException
+	at org.jboss.mx.interceptor.ReflectedDispatcher.handleInvocationExceptions(ReflectedDispatcher.java:165)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:152)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:80)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:72)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:249)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:642)
+	at sun.reflect.GeneratedMethodAccessor95.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at org.jboss.jmx.connector.invoker.InvokerAdaptorService.invoke(InvokerAdaptorService.java:251)
+	at sun.reflect.GeneratedMethodAccessor86.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:144)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:80)
+	at org.jboss.mx.interceptor.AbstractInterceptor.invoke(AbstractInterceptor.java:122)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:74)
+	at org.jboss.mx.interceptor.ModelMBeanOperationInterceptor.invoke(ModelMBeanOperationInterceptor.java:131)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:74)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:249)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:642)
+	at org.jboss.invocation.jrmp.server.JRMPProxyFactory.invoke(JRMPProxyFactory.java:164)
+	at sun.reflect.GeneratedMethodAccessor85.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:144)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:80)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:72)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:249)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:642)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:805)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:406)
+	at sun.reflect.GeneratedMethodAccessor84.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:261)
+	at sun.rmi.transport.Transport$1.run(Transport.java:148)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:144)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:460)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:701)
+	at java.lang.Thread.run(Thread.java:534)
+Caused by: java.lang.RuntimeException: java.lang.ClassCastException
+	at org.jboss.test.aop.bean.AOPTester.testAspect(AOPTester.java:397)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:144)
+	... 40 more
+Caused by: java.lang.ClassCastException
+	at org.jboss.test.aop.bean.Aspect.interceptConstructor(Aspect.java:25)
+	at org.jboss.aop.advice.org.jboss.test.aop.bean.Aspect0.invoke(Aspect0.java)
+	at org.jboss.test.aop.bean.POJOAspectTester0OptimizedConstructorInvocation.invokeNext(POJOAspectTester0OptimizedConstructorInvocation.java)
+	at org.jboss.aspects.tx.TxSupport.invokeInOurTx(TxSupport.java:141)
+	at org.jboss.aspects.tx.TxSupport$Required.serverInvoke(TxSupport.java:438)
+	at org.jboss.aspects.tx.TxInterceptor.internalInvoke(TxInterceptor.java:112)
+	at org.jboss.aspects.tx.TxInterceptor.invoke(TxInterceptor.java:60)
+	at org.jboss.test.aop.bean.POJOAspectTester0OptimizedConstructorInvocation.invokeNext(POJOAspectTester0OptimizedConstructorInvocation.java)
+	at org.jboss.test.aop.bean.POJOAspectTester.POJOAspectTester_new_$aop(POJOAspectTester.java)
+	at org.jboss.test.aop.bean.AOPTester.testAspect(AOPTester.java:382)
+	... 45 more
+</pre>
+</td><td>0.141</td>
+</tr>
+<tr valign="top" bgcolor="#FFEBCD" class="TableRowColor">
+<td>testBasic</td><td>Success</td><td></td><td>0.015</td>
+</tr>
+<tr valign="top" bgcolor="#FFEBCD" class="TableRowColor">
+<td>testCallerPointcut</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" bgcolor="#FFEBCD" class="TableRowColor">
+<td>testInheritance</td><td>Success</td><td></td><td>0.016</td>
+</tr>
+<tr valign="top" bgcolor="#FFEBCD" class="TableRowColor">
+<td>testMetadata</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" bgcolor="#FFEBCD" class="TableRowColor">
+<td>testDynamicInterceptors</td><td>Success</td><td></td><td>0.015</td>
+</tr>
+<tr valign="top" bgcolor="#FFEBCD" class="TableRowColor">
+<td>testFieldInterception</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" bgcolor="#FFEBCD" class="TableRowColor">
+<td>testMixin</td><td>Success</td><td></td><td>0.016</td>
+</tr>
+<tr valign="top" bgcolor="#FFEBCD" class="TableRowColor">
+<td>testMethodInterception</td><td>Success</td><td></td><td>0.016</td>
+</tr>
+<tr valign="top" bgcolor="#FFEBCD" class="TableRowColor">
+<td>testConstructorInterception</td><td>Success</td><td></td><td>0.015</td>
+</tr>
+<tr valign="top" bgcolor="#FFEBCD" class="TableRowColor">
+<td>testExceptions</td><td>Success</td><td></td><td>0.016</td>
+</tr>
+<tr valign="top" bgcolor="#FFEBCD" class="TableRowColor">
+<td>testServerFound</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+</table>
+</p>
+<p></p>
+<hr size="1">
+<p></p>
+<table class="Info">
+<tr>
+<td>Java Version</td><td>1.4.2_06</td>
+</tr>
+<tr>
+<td>Java Vendor</td><td>Sun Microsystems Inc.</td>
+</tr>
+<tr>
+<td>Java VM Name</td><td>Java HotSpot(TM) Client VM</td>
+</tr>
+<tr>
+<td>Java VM Version</td><td>1.4.2_06-b03</td>
+</tr>
+<tr>
+<td>Java VM Info</td><td>mixed mode</td>
+</tr>
+<tr>
+<td>OS Name</td><td>Windows XP</td>
+</tr>
+<tr>
+<td>OS Version</td><td>5.1</td>
+</tr>
+<tr>
+<td>OS Arch</td><td>x86</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_Picture1.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest xmlns = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rs.xsd" xmlns:rim = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:rs = "urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1">  
+	<LeafRegistryObjectList>
+        
+                <!-- Add objectType tree for image -->
+                <ClassificationNode id="urn:uuid:72c3be4c-83b5-4ac6-9244-de6ac5bd80fb" parent="urn:uuid:baa2e6c8-873e-4624-8f2d-b9c7230eb4f8" code="image">
+                        <Name>
+                                <LocalizedString codeset="UTF-8" value="image"/>
+                        </Name>
+                        <Description>
+                                <LocalizedString codeset="UTF-8" value="Base type for all images"/>
+                        </Description>
+                        
+                        <ClassificationNode id="urn:uuid:7bd22b32-7974-4a39-9feb-b7d435bec6ab" code="gif">
+                                <Name>
+                                        <LocalizedString charset="UTF-8" value="gif"/>
+                                </Name>
+                        </ClassificationNode>
+                        <ClassificationNode id="urn:uuid:c5310d60-8da8-476d-a058-e993371cdd69" code="jpeg">
+                                <Name>
+                                        <LocalizedString charset="UTF-8" value="jpeg"/>
+                                </Name>
+                        </ClassificationNode>
+                </ClassificationNode>
+                
+                <!--The canonical ExtrinsicObject ClassificationNode -->
+                <ObjectRef id="urn:uuid:baa2e6c8-873e-4624-8f2d-b9c7230eb4f8"/>
+        
+		<ExtrinsicObject id="urn:uuid:e3373a7b-4958-4e55-8820-d03a191fb76a" objectType = "urn:uuid:7bd22b32-7974-4a39-9feb-b7d435bec6ab" mimeType="image/gif">                        
+			<Name>
+				<LocalizedString lang="en-US" value = "Nikola and Zeus"/>
+				<LocalizedString lang="fi-FI" value = "Nikola ja Zeus"/>
+				<LocalizedString lang="pt-BR" value = "Nikola e Zeus"/>
+			</Name>
+			<Description>
+				<LocalizedString lang="en-US" value = "This was when Zeus was a little puppy"/>
+				<LocalizedString lang="fi-FI" value = "Tämä oli silloin kun Zeus oli pieni penttu"/>
+				<LocalizedString lang="pt-BR" value = "Isso foi quando Zeus era um filhotinho"/>
+			</Description>
+        <Slot name="urn:oasis:names:tc:ebxml-regrep:2.5:rim:RegistryObject:locator">
+          <ValueList>
+            <Value>/pictures/nikola/zeusDescription</Value>
+          </ValueList>
+        </Slot>
+                           
+        <Slot name="urn:oasis:names:tc:ebxml-regrep:2.5:rim:RegistryObject:RegistryEntry:ExtrinsicObject:contentLocator">
+          <ValueList>
+            <Value>/pictures/nikola/zeus</Value>
+          </ValueList>
+        </Slot>                   
+             
+		</ExtrinsicObject>
+    
+    <!--customACP1.xml-->
+		<ExtrinsicObject id="urn:uuid:9ffae4d8-d98e-4eba-a1b3-9658ecf88271" objectType = "urn:uuid:7c50351e-0022-4a65-950c-ac8cda6f3e0b">                        
+			<Name>
+				<LocalizedString lang="en-US" value = "customACP1.xml"/>
+				<LocalizedString lang="fi-FI" value = "customACP1.xml"/>
+				<LocalizedString lang="pt-BR" value = "customACP1.xml"/>
+			</Name>
+			<Description>
+				<LocalizedString lang="en-US" value = "A sample custom ACP"/>
+        <LocalizedString lang="fi-FI" value = "Esimerkki custom ACP"/>
+        <LocalizedString lang="pt-BR" value = "Exemplo the Custom ACP"/>
+			</Description>
+
+		</ExtrinsicObject>
+    
+    <!--Assoc between customACP1 and this picture -->
+		<Association associationType = "urn:uuid:375c8977-d54e-4e81-bebf-d87e509c9c78" sourceObject = "urn:uuid:9ffae4d8-d98e-4eba-a1b3-9658ecf88271" targetObject = "urn:uuid:e3373a7b-4958-4e55-8820-d03a191fb76a" />    
+
+    <!--assocType AccessControPolicyFor -->
+    <ObjectRef id="urn:uuid:375c8977-d54e-4e81-bebf-d87e509c9c78"/>
+               		                   		                   		    
+	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

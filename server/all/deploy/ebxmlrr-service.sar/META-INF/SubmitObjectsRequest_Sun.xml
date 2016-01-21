@@ -1,0 +1,227 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_Sun.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest 
+	xmlns = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" 
+	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rs.xsd" 
+	xmlns:rim = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" 
+	xmlns:rs = "urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1">  
+
+	<LeafRegistryObjectList>
+
+		<Organization id="urn:uuid:dafa4da3-1d92-4757-8fd8-ff2b8ce7a1bf" primaryContact = "urn:uuid:977d9380-00e2-4ce8-9cdc-d8bf6a4157be">
+			<Name>
+				<LocalizedString lang="en-US" value="Sun Microsystems Inc." />
+			</Name>
+			<Description>
+				<LocalizedString lang="en-US" value="Makes Java. Provider of free Java software." />
+			</Description>
+
+			<Slot name = "NASDAQ Symbol">
+				<ValueList>
+					<Value>SUNW</Value>
+				</ValueList>
+			</Slot>
+
+			<Slot name = "Scott McNealys home phone number">
+				<ValueList>
+					<Value>415-123-4567</Value>
+				</ValueList>
+			</Slot>
+
+			<Classification classificationNode="urn:uuid:4333395d-05ef-48d9-b905-f1468cc4a47a" classifiedObject="urn:uuid:dafa4da3-1d92-4757-8fd8-ff2b8ce7a1bf">
+				<Name>
+					<LocalizedString lang="en-US" value="Software Publishers" />
+				</Name>				
+			</Classification>
+
+			<Classification classificationNode="urn:uuid:5814e155-2b4e-464e-bcf1-fa045911ed94" classifiedObject="urn:uuid:dafa4da3-1d92-4757-8fd8-ff2b8ce7a1bf">
+				<Name>
+					<LocalizedString lang="en-US" value="Computer and Peripheral Equipment Manufacturing" />
+				</Name>				
+			</Classification>
+
+			<Classification classificationNode="urn:uuid:1152986f-f5fd-4e69-963b-9088678a2e73" classifiedObject="urn:uuid:dafa4da3-1d92-4757-8fd8-ff2b8ce7a1bf">
+				<Name>
+					<LocalizedString lang="en-US" value="United States" />
+				</Name>				
+			</Classification>
+
+			<ExternalIdentifier identificationScheme="urn:uuid:8d0b7b54-0dae-427f-9793-868407b74ea9" value="SUNW">
+				<Name>
+					<LocalizedString lang="en-US" value="Sun Microsystems" />
+				</Name>								
+			</ExternalIdentifier>
+
+			<Address streetNumber="1" street="Network Dr." city="Burlington" stateOrProvince="MA" postalCode="01867" country="USA" />
+			<TelephoneNumber countryCode="1" areaCode="781" number="442-0703" phoneType="office"/>
+			<TelephoneNumber countryCode="1" areaCode="781" number="442-0704" phoneType="fax"/>
+
+		</Organization>
+		  
+		<!--NYSE-Ticker scheme -->
+		<ObjectRef id="urn:uuid:8d0b7b54-0dae-427f-9793-868407b74ea9" />
+		
+		<!-- ClassificationNode for "Software Publishers" -->
+		<ObjectRef id="urn:uuid:4333395d-05ef-48d9-b905-f1468cc4a47a"/>
+		
+		<!-- ClassificationNode for "Computer and Peripheral Equipment Manufacturing" -->
+		<ObjectRef id="urn:uuid:5814e155-2b4e-464e-bcf1-fa045911ed94"/>
+
+		<!-- ClassificationNode for "United State" -->
+		<ObjectRef id="urn:uuid:1152986f-f5fd-4e69-963b-9088678a2e73"/>
+
+		<Service id="ebxmlRegistryService">
+			<Name>
+				<LocalizedString lang="en-US" value="ebXML Registry Service" />
+			</Name>
+			<Description>
+				<LocalizedString lang="en-US" value="Sun's OASIS ebXML Registry V2.1 service" />
+			</Description>
+
+
+			<ServiceBinding id="ebxmlRegistryServiceSOAPBinding" accessURI="http://localhost:2020/ebxmlrr/registry">
+				<Name>
+					<LocalizedString lang="en-US" value="ebXML Registry Service SOAP binding" />
+				</Name>
+				<Description>
+					<LocalizedString lang="en-US" value="SOAP binding to Sun's ebXML Registry Service" />
+				</Description>				
+				
+				<SpecificationLink id="ebxmlRegistryServiceSOAPBindingSpecLink" specificationObject="registryWSDLExternalLink">
+					<Name>
+						<LocalizedString lang="en-US" value="Link to registry WSDL spec." />
+					</Name>
+					<Description>
+						<LocalizedString lang="en-US" value="Link to registry WSDL spec." />
+					</Description>				
+				</SpecificationLink>
+			</ServiceBinding>
+
+
+		</Service>
+
+		<Association id = "Sun-ebxmlRegistryService" associationType = "ProviderOf" sourceObject = "urn:uuid:dafa4da3-1d92-4757-8fd8-ff2b8ce7a1bf" targetObject = "ebxmlRegistryService" />    
+
+		<ExternalLink id = "registryWSDLExternalLink" externalURI="http://www.oasis-open.org/committees/regrep/documents/2.1/services/RegistrySOAPBinding.wsdl">
+			<Name>
+				<LocalizedString value = "WSDL description for ebXML Registry"/>
+			</Name>
+			<Description>
+				<LocalizedString value = "WSDL description for ebXML Registry"/>
+			</Description>
+		</ExternalLink>    
+
+
+		<User id="urn:uuid:977d9380-00e2-4ce8-9cdc-d8bf6a4157be" organization="urn:uuid:dafa4da3-1d92-4757-8fd8-ff2b8ce7a1bf">
+			<Address streetNumber="1" street="Network Dr." city="Burlington" stateOrProvince="MA" country="USA" />
+			<PersonName firstName="Farrukh" middleName="Saladin" lastName="Najmi" />
+			<TelephoneNumber countryCode="1" areaCode="781" number="942-7277" phoneType="office"/>
+			<TelephoneNumber countryCode="1" areaCode="781" number="942-7278" phoneType="fax"/>
+			<EmailAddress address="Farrukh.Najmi@Sun.COM" type="work"/>
+			<EmailAddress address="farrukh_najmi@yahoo.com" type="alternate work" />
+		</User>
+
+		<Association id = "javaPackage-Sun" associationType = "HasMember" sourceObject = "javaPackage" targetObject = "urn:uuid:dafa4da3-1d92-4757-8fd8-ff2b8ce7a1bf" />    
+		<Association id = "hardwarePackage-Sun" associationType = "HasMember" sourceObject = "hardwarePackage" targetObject = "urn:uuid:dafa4da3-1d92-4757-8fd8-ff2b8ce7a1bf" />    
+
+		<RegistryPackage id = "javaPackage">
+			<Name>
+				<LocalizedString value = "Suns Java Package"/>
+			</Name>
+			<Description>
+				<LocalizedString value = "Suns package of Java related products and sevice"/>
+			</Description>
+			
+			<RegistryObjectList>
+
+				<ExternalLink id = "javaWebsite" externalURI="http://java.sun.com">
+					<Name>
+						<LocalizedString value = "The source for Java Technologies"/>
+					</Name>
+					<Description>
+						<LocalizedString value = "The source for Java Technologies"/>
+					</Description>
+				</ExternalLink>    
+
+				<ExtrinsicObject id = "jaxrSpecificationFinal">
+					<Name>
+						<LocalizedString value = "JAXR 1.0 Final"/>
+					</Name>
+					<Description>
+						<LocalizedString value = "Final version of Java API for XML Registries (JAXR) specification"/>
+					</Description>
+										
+				</ExtrinsicObject>
+
+				<ExtrinsicObject id = "jaxrSpecificationPFD">
+					<Name>
+						<LocalizedString value = "JAXR 1.0 Proposed Final Draft"/>
+					</Name>
+					<Description>
+						<LocalizedString value = "Proposed Final Draft of Java API for XML Registries (JAXR) specification"/>
+					</Description>
+										
+				</ExtrinsicObject>
+
+				<ExternalLink id = "jaxrWebsite" externalURI="http://jcp.org/jsr/detail/93.jsp">
+					<Name>
+						<LocalizedString value = "JAXR Website"/>
+					</Name>
+					<Description>
+						<LocalizedString value = "JAXR Website"/>
+					</Description>
+				</ExternalLink>    
+				<Association id = "jaxrWebsite-jaxrSpecificationPFD" associationType = "ExternallyLinks" sourceObject = "jaxrWebsite" targetObject = "jaxrSpecificationPFD" />    
+				<Association id = "jaxrWebsite-jaxrSpecificationFinal" associationType = "ExternallyLinks" sourceObject = "jaxrWebsite" targetObject = "jaxrSpecificationFinal" />    
+				<Association id = "jaxrSpecificationFinal-jaxrSpecificationPFD" associationType = "Supersedes" sourceObject = "jaxrSpecificationFinal" targetObject = "jaxrSpecificationPFD" />    
+				    
+				
+				<ExtrinsicObject id = "jaxmSpecification">
+					<Name>
+						<LocalizedString value = "JAXM Specification"/>
+					</Name>
+					<Description>
+						<LocalizedString value = "Java API for XML Messaging (JAXM) specification"/>
+					</Description>
+				</ExtrinsicObject>
+
+				<ExternalLink id = "jaxmWebsite" externalURI="http://jcp.org/jsr/detail/67.jsp">
+					<Name>
+						<LocalizedString value = "JAXM Website"/>
+					</Name>
+					<Description>
+						<LocalizedString value = "JAXM Website"/>
+					</Description>
+				</ExternalLink>    
+				<Association id = "jaxmWebsite-jaxmSpecification" associationType = "ExternallyLinks" sourceObject = "jaxmWebsite" targetObject = "jaxmSpecification" />    
+			</RegistryObjectList>   
+
+		</RegistryPackage>    
+
+		    
+		<RegistryPackage id = "hardwarePackage">
+			<Name>
+				<LocalizedString value = "Suns hardware package"/>
+			</Name>
+			<Description>
+				<LocalizedString value = "Suns package for hardware related products and sevice"/>
+			</Description>
+
+			<RegistryObjectList>
+				<ExternalLink id = "hardwareWebsite" externalURI="http://www.sun.com/hardware/">
+					<Name>
+						<LocalizedString value = "Sun Microsystems Hardware"/>
+					</Name>
+					<Description>
+						<LocalizedString value = "Sun Microsystems Hardware products"/>
+					</Description>
+				</ExternalLink>    
+			</RegistryObjectList>
+		</RegistryPackage>    
+		    
+		    
+
+
+	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

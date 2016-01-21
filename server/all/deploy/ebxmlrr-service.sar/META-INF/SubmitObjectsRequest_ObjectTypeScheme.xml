@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_ObjectTypeScheme.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rs.xsd" xmlns:rim="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:rs="urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1">
+	<LeafRegistryObjectList>
+		<ClassificationNode id="urn:uuid:538a9e2f-e664-4bcf-8898-867625f5c802" parent="urn:uuid:baa2e6c8-873e-4624-8f2d-b9c7230eb4f8" code="cppa">
+			<ClassificationNode id="urn:uuid:2cad7eac-bc4d-42e8-9c98-d27982270496" code="CPP"/>
+			<ClassificationNode id="urn:uuid:efd5ba84-9b78-4e68-b1e9-95b6bc23b747" code="CPA"/>
+		</ClassificationNode>
+		<!--The canonical ExtrinsicObject ClassificationNode -->
+		<ObjectRef id="urn:uuid:baa2e6c8-873e-4624-8f2d-b9c7230eb4f8"/>
+	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

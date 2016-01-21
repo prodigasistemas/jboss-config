@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_ErrorHandlingModelScheme.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rs.xsd" xmlns:rim="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" xmlns:rs="urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1">
+	<LeafRegistryObjectList>
+		<ClassificationScheme id="urn:uuid:e0fa634c-6c06-4036-9f65-c1a466f8b070" objectType="ClassificationScheme" isInternal="true" nodeType="UniqueCode" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">
+			<Name>
+				<LocalizedString lang="en-US" charset="UTF-8" value="ErrorHandlingModel"/>
+			</Name>
+			<Description>
+				<LocalizedString lang="en-US" charset="UTF-8" value="Describes a content management services error handling behavior."/>
+			</Description>
+			<ClassificationNode id="urn:uuid:112e3809-65b4-41b4-a8c5-e08756385c6d" objectType="Concept" parent="urn:uuid:e0fa634c-6c06-4036-9f65-c1a466f8b070" code="FailOnError" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">
+				<Name>
+					<LocalizedString lang="en-US" charset="UTF-8" value="FailOnError"/>
+				</Name>
+				<Description>
+					<LocalizedString lang="en-US" charset="UTF-8" value="Error handling behavior where service should fail on the first error encountered."/>
+				</Description>
+			</ClassificationNode>
+			<ClassificationNode id="urn:uuid:a2dd1036-8e0d-4cdb-bc1b-88fcf3c2542a" objectType="Concept" parent="urn:uuid:e0fa634c-6c06-4036-9f65-c1a466f8b070" code="LogErrorAndContinue" xmlns="urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1">
+				<Name>
+					<LocalizedString lang="en-US" charset="UTF-8" value="LogErrorAndContinue"/>
+				</Name>
+				<Description>
+					<LocalizedString lang="en-US" charset="UTF-8" value="Error handling behavior where service should log errors and continue rather than fail."/>
+				</Description>
+			</ClassificationNode>
+		</ClassificationScheme>
+	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

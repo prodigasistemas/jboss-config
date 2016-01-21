@@ -1,0 +1,30 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest_TarabaSunAssoc.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<rs:SubmitObjectsRequest 
+	xmlns = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" 
+	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1 http://www.oasis-open.org/committees/regrep/documents/2.1/schema/rs.xsd" 
+	xmlns:rim = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1" 
+	xmlns:rs = "urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1">  
+
+	<LeafRegistryObjectList>
+		
+		
+		<!--
+		Association declaring Taraba Inc. is a preferred partner of Sun.
+		Example of Extramural Associations. Used in confirmation tests. 
+		
+		Source is Taraba's id while target is Sun's id
+		-->
+		<Association id="urn:uuid:8dd5e9cc-098f-47ab-bb0a-f7d9199147f8" 
+			associationType="PartnerOf"
+			sourceObject="urn:uuid:1dfcfec4-acdf-4adc-8a68-937ecd72bf16" 
+			targetObject="urn:uuid:dafa4da3-1d92-4757-8fd8-ff2b8ce7a1bf">
+		</Association>   
+
+		<!-- Refs to existing source and target objects in registry -->
+		<ObjectRef id="urn:uuid:1dfcfec4-acdf-4adc-8a68-937ecd72bf16"/>
+		<ObjectRef id="urn:uuid:dafa4da3-1d92-4757-8fd8-ff2b8ce7a1bf"/>
+				
+   	</LeafRegistryObjectList>
+</rs:SubmitObjectsRequest>

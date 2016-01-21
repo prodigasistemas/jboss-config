@@ -1,0 +1,221 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!--$Header: /cvsroot/jboss/contrib/varia/src/resources/jaxr/SubmitObjectsRequest.xml,v 1.1 2004/09/01 03:25:15 osdchicago Exp $-->
+<SubmitObjectsRequest 
+	xmlns = "urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.0" 
+	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0 rim.xsd urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.0 rs.xsd"
+	xmlns:rim = "urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.0"
+	xmlns:rs = "urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.0"	 	 
+	>  
+
+	<rim:LeafRegistryObjectList>    
+
+		<!--
+ 		The following 3 objects package specified ExtrinsicObject in specified 
+    	RegistryPackage, where both the RegistryPackage and the ExtrinsicObject are 
+    	being  submitted 
+    	-->
+	    
+		<rim:RegistryPackage id = "acmePackage1" >
+			<rim:Name>
+				<rim:LocalizedString value = "RegistryPackage #1"/>
+			</rim:Name>
+			<rim:Description>
+				<rim:LocalizedString value = "ACME's package #1"/>
+			</rim:Description>
+		</rim:RegistryPackage>    
+
+		<rim:ExtrinsicObject id = "acmeCPP1"  >
+			<rim:Name>
+				<rim:LocalizedString value = "Widget Profile" />
+			</rim:Name>
+			<rim:Description>
+				<rim:LocalizedString value = "ACME's profile for selling widgets" />
+			</rim:Description>
+		</rim:ExtrinsicObject>    
+
+		<rim:Association id = "acmePackage1-acmeCPP1-Assoc" associationType = "Packages" sourceObject = "acmePackage1" targetObject = "acmeCPP1" />    
+
+		<!--
+    	The following 3 objects package specified ExtrinsicObject in specified RegistryPackage, 
+    	Where the RegistryPackage is being submitted and the ExtrinsicObject is 
+    	already in registry 
+    	-->
+		    
+		<rim:RegistryPackage id = "acmePackage2" >
+			<rim:Name>
+				<rim:LocalizedString value = "RegistryPackage #2"/>
+			</rim:Name>
+			<rim:Description>
+				<rim:LocalizedString value = "ACME's package #2"/>
+			</rim:Description>
+		</rim:RegistryPackage>    
+
+		<rim:ObjectRef id = "urn:uuid:a2345678-1234-1234-123456789012"/>    
+
+		<rim:Association id = "acmePackage2-alreadySubmittedCPP-Assoc" associationType = "Packages" sourceObject = "acmePackage2" targetObject = "urn:uuid:a2345678-1234-1234-123456789012"/>    
+		
+		<!--
+    	The following 3 objects package specified ExtrinsicObject in specified RegistryPackage, 
+    	where the RegistryPackage and the ExtrinsicObject are already in registry 
+    	-->
+		    
+		<rim:ObjectRef id = "urn:uuid:b2345678-1234-1234-123456789012"/>    
+		<rim:ObjectRef id = "urn:uuid:c2345678-1234-1234-123456789012"/>    
+		
+		<!-- id is unspecified implying that registry must create a uuid for this object -->
+		    
+		<rim:Association associationType = "Packages" sourceObject = "urn:uuid:b2345678-1234-1234-123456789012" targetObject = "urn:uuid:c2345678-1234-1234-123456789012"/>    
+		
+		<!--
+    	The following 3 objects externally link specified ExtrinsicObject using 
+    	specified ExternalLink, where both the ExternalLink and the ExtrinsicObject 
+    	are being submitted 
+    	-->
+		    
+		<rim:ExternalLink id = "acmeLink1" externalURI="http://www.sun.com">    
+			<rim:Name>
+				<rim:LocalizedString value = "Link #1"/>
+			</rim:Name>
+			<rim:Description>
+				<rim:LocalizedString value = "ACME's Link #1"/>
+			</rim:Description>
+		</rim:ExternalLink>
+
+		<rim:ExtrinsicObject id = "acmeCPP2"  >    
+			<rim:Name>
+				<rim:LocalizedString value = "Sprockets Profile" />
+			</rim:Name>
+			<rim:Description>
+				<rim:LocalizedString value = "ACME's profile for selling sprockets"/>
+			</rim:Description>
+		</rim:ExtrinsicObject>
+
+		<rim:Association id = "acmeLink1-acmeCPP2-Assoc" associationType = "ExternallyLinks" sourceObject = "acmeLink1" targetObject = "acmeCPP2"/>    
+		
+		<!--
+    	The following 2 objects externally link specified ExtrinsicObject using specified
+    	ExternalLink, where the ExternalLink is being submitted and the ExtrinsicObject
+    	is already in registry. Note that the targetObject points to an ObjectRef in a
+    	previous line 
+    	-->
+		    
+		<rim:ExternalLink id = "acmeLink2" externalURI="http://java.sun.com">
+			<rim:Name>
+				<rim:LocalizedString value = "Link #2"/>
+			</rim:Name>
+			<rim:Description>
+				<rim:LocalizedString value = "ACME's Link #2"/>
+			</rim:Description>
+		</rim:ExternalLink>
+		    
+		<rim:Association id = "acmeLink2-alreadySubmittedCPP-Assoc" associationType = "ExternallyLinks" sourceObject = "acmeLink2" targetObject = "urn:uuid:a2345678-1234-1234-123456789012"/>    
+		
+		<!--
+    	The following 3 objects externally identify specified ExtrinsicObject using specified
+    	ExternalIdentifier, where the ExternalIdentifier is being submitted and the 
+    	ExtrinsicObject is already in registry. Note that the targetObject points to an  
+    	ObjectRef in a previous line 
+    	-->
+		    
+		<rim:ClassificationScheme id = "DUNS-id" isInternal="false" nodeType="UniqueCode" >
+			<rim:Name>
+				<rim:LocalizedString value = "DUNS"/>
+			</rim:Name>
+
+			<rim:Description>
+				<rim:LocalizedString value = "This is the DUNS scheme"/>
+			</rim:Description>
+		</rim:ClassificationScheme>
+		
+		<rim:ExternalIdentifier id = "acmeDUNSId"  identificationScheme="DUNS-id" value = "13456789012">    
+			<rim:Name>
+				<rim:LocalizedString value = "DUNS" />
+			</rim:Name>
+			<rim:Description>
+				<rim:LocalizedString value = "DUNS ID for ACME"/>
+			</rim:Description>
+		</rim:ExternalIdentifier>
+
+		<rim:Association id = "acmeDUNSId-alreadySubmittedCPP-Assoc" associationType = "ExternallyIdentifies" sourceObject = "acmeDUNSId" targetObject = "urn:uuid:a2345678-1234-1234-123456789012"/>    
+		
+		<!--
+    	The following show submission of a brand new classification scheme in its entirety
+    	-->
+		<rim:ClassificationScheme id = "Geography-id" isInternal="true" nodeType="UniqueCode" >
+			<rim:Name>
+				<rim:LocalizedString value = "Geography"/>
+			</rim:Name>
+
+			<rim:Description>
+				<rim:LocalizedString value = "This is a sample Geography scheme"/>
+			</rim:Description>
+
+			<rim:ClassificationNode id = "NorthAmerica-id" parent = "Geography-id" code = "NorthAmerica" > 
+				<rim:ClassificationNode id = "UnitedStates-id" parent = "NorthAmerica-id" code = "UnitedStates" /> 
+				<rim:ClassificationNode id = "Canada-id" parent = "NorthAmerica-id" code = "Canada" /> 
+			</rim:ClassificationNode>
+
+			<rim:ClassificationNode id = "Asia-id" parent = "Geography-id" code = "Asia" > 
+				<rim:ClassificationNode id = "Japan-id" parent = "Asia-id" code = "Japan" >
+					<rim:ClassificationNode id = "Tokyo-id" parent = "Japan-id" code = "Tokyo" />
+				</rim:ClassificationNode>
+			</rim:ClassificationNode>
+		</rim:ClassificationScheme>
+		    
+    
+		<!--
+    	The following show submission of a Automotive sub-tree of ClassificationNodes that
+    	gets added to an existing classification scheme named 'Industry' 
+    	that is already in the registry
+    	-->
+		    
+		<rim:ObjectRef id = "urn:uuid:d2345678-1234-1234-123456789012"/>    
+		<rim:ClassificationNode id = "automotiveNode" parent = "urn:uuid:d2345678-1234-1234-123456789012">    
+			<rim:Name>
+				<rim:LocalizedString value = "Automotive" />
+			</rim:Name>
+			<rim:Description>
+				<rim:LocalizedString value = "The Automotive sub-tree under Industry scheme"/>
+			</rim:Description>
+		</rim:ClassificationNode>
+
+		<rim:ClassificationNode id = "partSuppliersNode" parent = "automotiveNode">    
+			<rim:Name>
+				<rim:LocalizedString value = "Parts Supplier" />
+			</rim:Name>
+			<rim:Description>
+				<rim:LocalizedString value = "The Parts Supplier node under the Automotive node" />
+			</rim:Description>
+		</rim:ClassificationNode>
+
+		<rim:ClassificationNode id = "engineSuppliersNode" parent = "automotiveNode">    
+			<rim:Name>
+				<rim:LocalizedString value = "Engine Supplier" />
+			</rim:Name>
+			<rim:Description>
+				<rim:LocalizedString value = "The Engine Supplier node under the Automotive node" />
+			</rim:Description>
+		</rim:ClassificationNode>
+		
+		<!--
+	    The following show submission of 2 Classifications of an object  that is already in
+    	the registry using 2 ClassificationNodes. One ClassificationNode
+    	is being submitted in this request (Japan) while the other is already in the registry.
+    	-->
+		    
+		<rim:Classification id = "japanClassification" classifiedObject = "urn:uuid:a2345678-1234-1234-123456789012" classificationNode = "Japan-id">    
+			<rim:Description>
+				<rim:LocalizedString value = "Classifies object by /Geography/Asia/Japan node"/>
+			</rim:Description>
+		</rim:Classification>
+
+		<rim:Classification id = "classificationUsingExistingNode" classifiedObject = "urn:uuid:a2345678-1234-1234-123456789012" classificationNode = "urn:uuid:e2345678-1234-1234-123456789012">    
+			<rim:Description>
+				<rim:LocalizedString value = "Classifies object using a node in the registry" />
+			</rim:Description>
+		</rim:Classification>
+
+		<rim:ObjectRef id = "urn:uuid:e2345678-1234-1234-123456789012"/>  
+	</rim:LeafRegistryObjectList>
+</SubmitObjectsRequest>

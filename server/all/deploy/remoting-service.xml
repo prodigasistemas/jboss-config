@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE server>
+
+<!-- ======================================================== -->
+<!-- Example JBoss Remoting Service Configuration file        -->
+<!-- ======================================================== -->
+<server>
+
+    <!-- NOTE: set this up to the path where your libraries are -->
+    <classpath codebase="lib"
+               archives="*"/>
+
+    <mbean code="org.jboss.remoting.network.NetworkRegistry"
+           name="jboss.remoting:service=NetworkRegistry"/>
+
+    <mbean code="org.jboss.remoting.transport.Connector"
+           xmbean-dd="org/jboss/remoting/transport/Connector.xml"
+           name="jboss.remoting:service=Connector,transport=Socket"
+           display-name="Socket transport Connector">
+
+        <attribute name="InvokerLocator">socket://${jboss.bind.address}:8084</attribute>
+
+        <!-- Uncomment when JMXSubsystemInvocationHandler is finished
+        <attribute name="Configuration">
+            <handlers>
+                <handler subsystem="JMX">org.jboss.mx.remoting.JMXSubsystemInvocationHandler</handler>
+            </handlers>
+        </attribute>
+         -->
+
+    </mbean>
+
+    <mbean code="org.jboss.remoting.transport.Connector"
+           xmbean-dd="org/jboss/remoting/transport/Connector.xml"
+           name="jboss.remoting:service=Connector,transport=Async"
+           display-name="Async transport Connector">
+        <attribute name="InvokerLocator">async://${jboss.bind.address}:8085/?compression=-1&amp;tcp.nodelay=true</attribute>
+    </mbean>    
+
+    <!-- you must have axis.jar, saaj.jar and jaxrpc.jar in your lib path for soap -->
+    <!--mbean code="org.jboss.remoting.transport.Connector"
+           xmbean-dd="org/jboss/remoting/transport/Connector.xml"
+           name="jboss.remoting:service=Connector,transport=soap">
+
+        <attribute name="InvokerLocator">soap://localhost</attribute>
+        <attribute name="Configuration">
+            <handlers>
+                <handler subsystem="JMX">org.jboss.mx.remoting.JMXSubsystemInvocationHandler</handler>
+            </handlers>
+        </attribute>
+    </mbean-->
+
+    <mbean code="org.jboss.remoting.detection.multicast.MulticastDetector"
+           name="jboss.remoting:service=Detector,transport=multicast">
+        <!-- you can specifically bind the detector to a specific IP address here
+        <attribute name="BindAddress">${jboss.bind.address}</attribute>
+        -->
+        <attribute name="Port">5555</attribute>
+    </mbean>
+
+    <mbean code="org.jboss.remoting.ClientInvokerAdapter"
+           xmbean-dd="org/jboss/remoting/ClientInvokerAdapter.xml"
+           name="jboss.remoting:service=InterceptorAdapter">
+    </mbean>
+
+</server>
