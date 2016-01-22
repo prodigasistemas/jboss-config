@@ -7,9 +7,6 @@
 
 JBOSS_HOME=/opt/jboss
 
-# Source function library.
-. /etc/rc.d/init.d/functions
-
 case "$1" in
   start)
     echo "INICIANDO JBOSS ..."
