@@ -12,22 +12,22 @@ case "$1" in
     echo "INICIANDO JBOSS ..."
     cd /opt/jboss/bin/
 		
-		if [ "$USER" = "root" ]; then
+    if [ "$USER" = "root" ]; then
       su -l jenkins -c "nohup $JBOSS_HOME/bin/run.sh > /dev/null &"
-		else
+    else
       nohup $JBOSS_HOME/bin/run.sh > /dev/null &
-		fi
+    fi
     ;;
 
   stop)
     echo "PARANDO JBOSS ..."
-		JBOSSPID=`ps aux | grep "org.jboss.Main" | grep -v grep | awk '{print $2}'`
+    JBOSSPID=`ps aux | grep "org.jboss.Main" | grep -v grep | awk '{print $2}'`
 	
-		if [ ! -z "$JBOSSPID" ]; then
-			kill -9 $JBOSSPID
-		else
-			echo "Servidor Jboss nao esta iniciado"
-		fi
+    if [ ! -z "$JBOSSPID" ]; then
+      kill -9 $JBOSSPID
+    else
+      echo "Servidor Jboss nao esta iniciado"
+    fi
     ;;
 
   restart)
