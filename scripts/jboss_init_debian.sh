@@ -12,7 +12,7 @@ case "$1" in
     echo "INICIANDO JBOSS ..."
     cd /opt/jboss/bin/
 		
-    if [ "$USER" = "root" ]; then
+    if [ "$USER" != "jenkins" ]; then
       su -l jenkins -c "nohup $JBOSS_HOME/bin/run.sh > /dev/null &"
     else
       nohup $JBOSS_HOME/bin/run.sh > /dev/null &
