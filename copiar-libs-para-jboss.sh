@@ -8,6 +8,7 @@ cp -vR ./postgres/*.jar $JBOSS_HOME/server/default/lib/
 cp -vR ./mondrian.war $JBOSS_HOME/server/default/deploy/
 
 cp -v ./scripts/jboss_init_debian.sh $JBOSS_HOME/bin/
+cp -v ./scripts/deploy.sh $JBOSS_HOME/server/default/
 
 rm $JBOSS_HOME/server/default/deploy/jboss-hibernate.deployer/cglib-full-2.0.1.jar
 rm $JBOSS_HOME/server/default/deploy/jboss-hibernate.deployer/hibernate2.jar
