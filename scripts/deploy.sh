@@ -11,7 +11,7 @@ else
     exit 1
   else
     echo "> Descompactando o build $ARQUIVO_ZIP"
-    unzip $ARQUIVO_ZIP
+    unzip -q $ARQUIVO_ZIP
 
     mv $ARQUIVO_ZIP versions/
 
